@@ -343,33 +343,34 @@ svg { display: block; }
   font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
 }
 .svg-wrap svg .op-kicker {
-  font-size: 19px !important;
+  font-size: 15px;
 }
 .svg-wrap svg .op-label {
-  font-size: 28px !important;
+  font-size: 22px;
   font-weight: 600;
 }
 .svg-wrap svg .op-sub {
-  font-size: 18px !important;
+  font-size: 15px;
 }
 .svg-wrap svg .opr-branch {
-  font-size: 17px !important;
+  font-size: 15px;
   font-family: 'JetBrains Mono', monospace;
 }
 .svg-wrap svg .op-mono {
+  fill: var(--text);
   font-family: 'JetBrains Mono', monospace;
-  font-size: 18px !important;
+  font-size: 15px;
 }
 .svg-wrap svg .ops-kicker {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 17px !important;
+  font-size: 15px;
 }
 .svg-wrap svg .ops-name {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 21px !important;
+  font-size: 18px;
 }
 .svg-wrap svg .ops-detail {
-  font-size: 17px !important;
+  font-size: 15px;
 }
 
 /* Dense diagram slides — reclaim vertical space for the SVG */

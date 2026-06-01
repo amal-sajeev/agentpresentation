@@ -625,8 +625,9 @@
         <g class="rag-in d6">
           <rect x="1034" y="368" width="268" height="240" rx="16" class="op-node" stroke="#fbbf24"/>
           <text x="1168" y="404" text-anchor="middle" class="op-kicker" fill="#fbbf24">EMBED</text>
-          <text x="1168" y="460" text-anchor="middle" class="op-label">ColQwen-Omni</text>
-          <text x="1168" y="520" text-anchor="middle" class="op-sub">multi-vector page embeddings</text>
+          <text x="1168" y="456" text-anchor="middle" class="op-label">ColQwen-Omni</text>
+          <text x="1168" y="506" text-anchor="middle" class="op-sub">multi-vector</text>
+          <text x="1168" y="530" text-anchor="middle" class="op-sub">page embeddings</text>
         </g>
         <line x1="1302" y1="488" x2="1330" y2="488" class="opr-link schema" marker-end="url(#rag-am)"/>
 
@@ -1040,8 +1041,8 @@
         <!-- ===================== LANE A — sales runs ===================== -->
         <!-- input A -->
         <rect x="44" y="72" width="262" height="140" rx="16" class="op-node opr-input" stroke="#22d3ee" filter="drop-shadow(0 0 10px rgba(34,211,238,0.26))"/>
-        <text x="68" y="118" class="op-text-start op-label">"Sell SaaS analytics</text>
-        <text x="68" y="148" class="op-text-start op-label">to <tspan fill="#22d3ee">Microsoft</tspan> &amp; <tspan fill="#22d3ee">Google</tspan>"</text>
+        <text x="68" y="115" class="op-text-start" fill="#e8eefb" style="font-size:16px">"Sell SaaS analytics</text>
+        <text x="68" y="142" class="op-text-start" fill="#e8eefb" style="font-size:16px">to <tspan fill="#22d3ee">Microsoft</tspan> &amp; <tspan fill="#22d3ee">Google</tspan>"</text>
         <text x="68" y="188" class="op-text-start op-mono" fill="#34d399">&rarr; names a target org</text>
 
         <line x1="306" y1="142" x2="400" y2="142" class="opr-link flow" marker-end="url(#mr-flow)"/>
@@ -1060,7 +1061,7 @@
         <!-- gate A -->
         <rect x="755" y="72" width="200" height="140" rx="16" class="op-node" stroke="#f472b6"/>
         <text x="855" y="112" text-anchor="middle" class="op-kicker" fill="#f472b6">PYTHON GATE</text>
-        <text x="855" y="148" text-anchor="middle" class="op-label">sales_prompt_builder</text>
+        <text x="855" y="148" text-anchor="middle" class="op-label" style="font-size:15px">sales_prompt_builder</text>
         <text x="855" y="180" text-anchor="middle" class="op-sub">reads skip_sales</text>
 
         <line x1="955" y1="142" x2="1045" y2="142" class="opr-link route" marker-end="url(#mr-route)"/>
@@ -1069,14 +1070,14 @@
         <!-- runs A -->
         <rect x="1045" y="72" width="290" height="140" rx="16" class="op-node" stroke="#22d3ee" filter="drop-shadow(0 0 12px rgba(34,211,238,0.32))"/>
         <text x="1190" y="112" text-anchor="middle" class="op-kicker" fill="#22d3ee">RUNS</text>
-        <text x="1190" y="152" text-anchor="middle" class="op-label">sales_intelligence_agent</text>
-        <text x="1190" y="188" text-anchor="middle" class="op-sub">full sales pipeline &rarr; target_org</text>
+        <text x="1190" y="152" text-anchor="middle" class="op-label" style="font-size:17px">sales_intelligence_agent</text>
+        <text x="1190" y="188" text-anchor="middle" class="op-sub" style="font-size:13px">full sales pipeline &rarr; target_org</text>
 
         <!-- ===================== LANE B — skips ===================== -->
         <!-- input B -->
         <rect x="44" y="308" width="262" height="140" rx="16" class="op-node opr-input" stroke="#8593ab"/>
-        <text x="68" y="354" class="op-text-start op-label">"Research the SaaS</text>
-        <text x="68" y="384" class="op-text-start op-label">analytics market"</text>
+        <text x="68" y="354" class="op-text-start" fill="#e8eefb" style="font-size:16px">"Research the SaaS</text>
+        <text x="68" y="382" class="op-text-start" fill="#e8eefb" style="font-size:16px">analytics market"</text>
         <text x="68" y="424" class="op-text-start op-mono" fill="#94a3b8">&rarr; no target org</text>
 
         <line x1="306" y1="378" x2="400" y2="378" class="opr-link flow b" marker-end="url(#mr-flow)"/>
@@ -1095,7 +1096,7 @@
         <!-- gate B -->
         <rect x="755" y="308" width="200" height="140" rx="16" class="op-node" stroke="#f472b6"/>
         <text x="855" y="348" text-anchor="middle" class="op-kicker" fill="#f472b6">PYTHON GATE</text>
-        <text x="855" y="384" text-anchor="middle" class="op-label">sales_prompt_builder</text>
+        <text x="855" y="384" text-anchor="middle" class="op-label" style="font-size:15px">sales_prompt_builder</text>
         <text x="855" y="416" text-anchor="middle" class="op-sub">reads skip_sales</text>
 
         <line x1="955" y1="378" x2="1045" y2="378" class="opr-link skip" marker-end="url(#mr-skip)"/>
