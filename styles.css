@@ -337,6 +337,68 @@ svg { display: block; }
   width: auto;
   height: auto;
 }
+
+/* ---------- Diagram typography (readable when deck is scaled down) ---------- */
+.svg-wrap svg text {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+.svg-wrap svg .op-kicker {
+  font-size: 19px !important;
+}
+.svg-wrap svg .op-label {
+  font-size: 28px !important;
+  font-weight: 600;
+}
+.svg-wrap svg .op-sub {
+  font-size: 18px !important;
+}
+.svg-wrap svg .opr-branch {
+  font-size: 17px !important;
+  font-family: 'JetBrains Mono', monospace;
+}
+.svg-wrap svg .op-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px !important;
+}
+.svg-wrap svg .ops-kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 17px !important;
+}
+.svg-wrap svg .ops-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 21px !important;
+}
+.svg-wrap svg .ops-detail {
+  font-size: 17px !important;
+}
+
+/* Dense diagram slides — reclaim vertical space for the SVG */
+.sl-rag .subtitle,
+.op-rag .subtitle,
+.op-route .subtitle,
+.op-spine .subtitle,
+.sl-mem .subtitle {
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+  line-height: 1.35;
+}
+.sl-rag .slide-body,
+.op-rag .slide-body,
+.op-route .slide-body,
+.op-spine .slide-body,
+.sl-mem .slide-body {
+  align-items: stretch;
+  min-height: 520px;
+}
+.sl-rag .svg-wrap > svg,
+.op-rag .svg-wrap > svg,
+.op-route .svg-wrap > svg,
+.op-spine .svg-wrap > svg,
+.sl-mem .svg-wrap > svg {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+}
 .node-rect {
   fill: var(--bg-elev);
   stroke: var(--line);
@@ -1227,7 +1289,7 @@ svg { display: block; }
 .ops-token {
   fill: var(--worker);
   filter: drop-shadow(0 0 16px rgba(34,211,238,1));
-  offset-path: path("M 280 210 L 1420 210 L 1420 370 L 280 370 L 280 530 L 1420 530");
+  offset-path: path("M 280 218 L 1420 218 L 1420 388 L 280 388 L 280 558 L 1420 558");
   animation: tokenFlow 9s linear infinite;
   animation-play-state: paused;
 }
@@ -1238,6 +1300,8 @@ svg { display: block; }
 .ops-box.builder { stroke: var(--critic); }
 .ops-box.agent { stroke: var(--worker); }
 .ops-box.cond  { stroke: var(--route); stroke-dasharray: 6 6; }
+.op-spine .ops-box { stroke-width: 2.5; }
+.op-spine .slide-body { min-height: 540px; }
 
 /* ---- OP D: classifier / router / skip ---- */
 .op-route .subtitle { margin-bottom: 22px; }
@@ -1267,6 +1331,8 @@ svg { display: block; }
 @keyframes oprFlow { to { stroke-dashoffset: -28; } }
 
 /* ---- Document RAG slides (sl-rag / op-rag) ---- */
+.sl-rag .slide-body,
+.op-rag .slide-body { min-height: 560px; }
 .sl-rag .rag-in, .op-rag .rag-in { opacity: 0; }
 .sl-rag.is-active .rag-in, .op-rag.is-active .rag-in { animation: ragIn 0.55s ease both; }
 .sl-rag.is-active .d1, .op-rag.is-active .d1 { animation-delay: 0.15s; }
