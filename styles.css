@@ -11,11 +11,11 @@
   --bg-elev-3:   #18223c;
   --line:        #1e293b;
   --line-soft:   #182037;
-  --line-strong: #334155;
+  --line-strong: #6b7a94;
 
   --text:        #e8eefb;
-  --text-soft:   #94a3b8;
-  --text-mute:   #5b6781;
+  --text-soft:   #aab6c9;
+  --text-mute:   #aeb8c9;
 
   --worker:      #22d3ee;
   --worker-2:    #06b6d4;
@@ -214,8 +214,8 @@ code, .mono { font-family: 'JetBrains Mono', 'Consolas', monospace; }
 .sl-obs .ob-otel { fill: rgba(34,211,238,0.08); stroke: #22d3ee; stroke-width: 2; }
 .sl-obs .ob-lf   { fill: rgba(167,139,250,0.07); stroke: #a78bfa; stroke-width: 2; }
 .sl-obs .ob-title { fill:#e8eefb; font-family:'Inter',sans-serif; font-weight:600; }
-.sl-obs .ob-sub  { fill:#94a3b8; font-family:'JetBrains Mono', monospace; }
-.sl-obs .ob-kick { fill:#5b6781; font-family:'JetBrains Mono', monospace; letter-spacing:0.12em; }
+.sl-obs .ob-sub  { fill:#aab6c9; font-family:'JetBrains Mono', monospace; }
+.sl-obs .ob-kick { fill:#aeb8c9; font-family:'JetBrains Mono', monospace; letter-spacing:0.12em; }
 .sl-obs .ob-edge { fill:none; stroke:#22d3ee; stroke-width:2; stroke-dasharray:7 7; opacity:0.65; animation: obDash 0.9s linear infinite; }
 .sl-obs .ob-edge.otlp { stroke:#a78bfa; }
 @keyframes obDash { to { stroke-dashoffset: -28; } }
@@ -766,7 +766,7 @@ svg { display: block; }
   stroke-dasharray: 5 5;
 }
 .sl-mem .mem-flow {
-  stroke: #5b6781;
+  stroke: #8593ab;
   stroke-width: 2.5;
   stroke-dasharray: 7 7;
   animation: oprFlow 0.9s linear infinite;
@@ -1260,9 +1260,24 @@ svg { display: block; }
 .opr-link.flow   { stroke: #22d3ee; }
 .opr-link.schema { stroke: #fbbf24; }
 .opr-link.route  { stroke: #f472b6; }
-.opr-link.skip   { stroke: #64748b; opacity: 0.8; }
+.opr-link.skip   { stroke: #8593ab; opacity: 0.9; }
+.opr-link.crit   { stroke: #a78bfa; }
+.opr-link.pass   { stroke: #34d399; }
 .opr-link.b      { animation-delay: 0.4s; }
 @keyframes oprFlow { to { stroke-dashoffset: -28; } }
+
+/* ---- Document RAG slides (sl-rag / op-rag) ---- */
+.sl-rag .rag-in, .op-rag .rag-in { opacity: 0; }
+.sl-rag.is-active .rag-in, .op-rag.is-active .rag-in { animation: ragIn 0.55s ease both; }
+.sl-rag.is-active .d1, .op-rag.is-active .d1 { animation-delay: 0.15s; }
+.sl-rag.is-active .d2, .op-rag.is-active .d2 { animation-delay: 0.40s; }
+.sl-rag.is-active .d3, .op-rag.is-active .d3 { animation-delay: 0.65s; }
+.sl-rag.is-active .d4, .op-rag.is-active .d4 { animation-delay: 0.90s; }
+.sl-rag.is-active .d5, .op-rag.is-active .d5 { animation-delay: 1.15s; }
+.sl-rag.is-active .d6, .op-rag.is-active .d6 { animation-delay: 1.40s; }
+@keyframes ragIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.rag-db { fill: var(--bg-elev); stroke: var(--pass); stroke-width: 2.5; }
+.rag-pageicon { fill: #0a1020; stroke: #22d3ee; stroke-width: 1.5; }
 
 /* ---- OP E: callbacks -> MongoDB ---- */
 .opm-token { fill: var(--tool); filter: drop-shadow(0 0 12px rgba(251,191,36,0.95)); opacity: 0; }
@@ -1509,7 +1524,7 @@ svg { display: block; }
 @keyframes faPulse { 0%, 100% { filter: drop-shadow(0 0 2px rgba(251,191,36,0.2)); } 50% { filter: drop-shadow(0 0 12px rgba(251,191,36,0.7)); } }
 
 /* score gauge */
-.fa-gauge-track { fill: none; stroke: #1b2740; stroke-width: 16; }
+.fa-gauge-track { fill: none; stroke: #33405c; stroke-width: 16; }
 .fa-gauge-arc { fill: none; stroke: var(--pass); stroke-width: 16; stroke-linecap: round; stroke-dasharray: 528; stroke-dashoffset: 528; }
 .slide.is-active .fa-gauge-arc { animation: faGauge 1.7s cubic-bezier(.2,.7,.3,1) 0.5s forwards; }
 @keyframes faGauge { to { stroke-dashoffset: 69; } }

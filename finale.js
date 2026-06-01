@@ -5,7 +5,7 @@
    execution-order playhead animation.
    ============================================================ */
 (() => {
-  const slide = document.getElementById('slide-18');
+  const slide = document.getElementById('slide-20');
   if (!slide) return;
   const stage = slide.querySelector('.finale-stage');
   const svg = slide.querySelector('.mf-svg');
@@ -50,9 +50,9 @@
     const h = 286;
     addNode({ id: key + '_loop', x: cx - 190, y: topY, w: 380, h, kind: 'loop', kicker });
     const ey = topY + 64, sy = topY + 132, ny = topY + 200; // mini node tops
-    addNode({ id: key + '_eval', x: cx - 100, y: ey, w: 200, h: 48, cls: 'critic mini', title: evalLabel, tsize: evalLabel.length > 11 ? 15 : 20 });
-    addNode({ id: key + '_esc', x: cx - 100, y: sy, w: 200, h: 48, cls: 'mini', title: 'escalation_checker', tsize: 15 });
-    addNode({ id: key + '_enh', x: cx - 100, y: ny, w: 200, h: 48, cls: 'worker mini', title: enhLabel, tsize: enhLabel.length > 13 ? 15 : 16 });
+    addNode({ id: key + '_eval', x: cx - 100, y: ey, w: 200, h: 48, cls: 'critic mini', title: evalLabel, tsize: evalLabel.length > 11 ? 17 : 20 });
+    addNode({ id: key + '_esc', x: cx - 100, y: sy, w: 200, h: 48, cls: 'mini', title: 'escalation_checker', tsize: 17 });
+    addNode({ id: key + '_enh', x: cx - 100, y: ny, w: 200, h: 48, cls: 'worker mini', title: enhLabel, tsize: enhLabel.length > 13 ? 17 : 18 });
     vline(cx, ey + 48, sy, '', key + '_esc');                                      // evaluator → escalation_checker
     edges.push({ d: `M ${cx} ${sy + 48} L ${cx} ${ny}`, cls: 'fail', to: key + '_enh' });  // FAIL → refine
     path(`M ${cx - 100} ${ny + 24} L ${cx - 168} ${ny + 24} L ${cx - 168} ${ey + 24} L ${cx - 100} ${ey + 24}`, 'loopback', null); // loop back to re-grade
@@ -94,7 +94,7 @@
     addLabel(cx + 22, 738, 'PASS → exit', 'mf-pass-lbl', 13, 'start');
     vline(cx, 818, 846, '', key + '_apollo');
     vline(cx, 920, MONGO_TOP, 'store', 'prospect_research');
-    addLabel(cx + 174, 892, 'no composer', 'mf-kicker', 14, 'start');
+    addLabel(cx + 174, 892, 'no composer', 'mf-kicker', 16, 'start');
     fields.push({ id: 'prospect_research', label: 'prospect_research', cx });
   }
 
@@ -142,10 +142,10 @@
   prospectPipe(4300, 'prospect');
 
   // project_creator tool + init edge
-  addNode({ id: 'project_creator_tool', x: 740, y: 236, w: 240, h: 50, cls: 'tool', title: 'create_blank_project', tsize: 15 });
+  addNode({ id: 'project_creator_tool', x: 740, y: 236, w: 240, h: 50, cls: 'tool', title: 'create_blank_project', tsize: 17 });
   vline(860, 196, 236, 'tool', 'project_creator_tool');
   path('M 860 286 L 860 1204 L 1240 1204', 'init', 'mongo_init');
-  addLabel(872, 1150, 'create_blank_project → blank doc', 'mf-kicker', 14, 'start');
+  addLabel(872, 1150, 'create_blank_project → blank doc', 'mf-kicker', 16, 'start');
 
   // spine horizontal edges
   for (let i = 0; i < SP.length - 1; i++) {
@@ -243,7 +243,7 @@
     m.appendChild(el('path', { d: 'M0,0 L10,5 L0,10 z', fill }));
     return m;
   };
-  defs.appendChild(mk('mfa', '#3b4a66'));
+  defs.appendChild(mk('mfa', '#6b7a94'));
   defs.appendChild(mk('mfa-store', '#34d399'));
   defs.appendChild(mk('mfa-tool', '#fbbf24'));
   defs.appendChild(mk('mfa-route', '#f472b6'));

@@ -116,7 +116,7 @@
           <svg viewBox="0 0 320 200" width="320" height="200">
             <rect x="40" y="40" width="240" height="120" rx="16" fill="#0d1322" stroke="#22d3ee" stroke-width="3" filter="drop-shadow(0 0 12px rgba(34,211,238,0.5))"/>
             <text x="160" y="100" text-anchor="middle" fill="#e8eefb" font-size="22" font-weight="600" font-family="JetBrains Mono, monospace">LlmAgent</text>
-            <text x="160" y="130" text-anchor="middle" fill="#22d3ee" font-size="14" font-family="JetBrains Mono, monospace">gemini-2.5</text>
+            <text x="160" y="130" text-anchor="middle" fill="#22d3ee" font-size="16" font-family="JetBrains Mono, monospace">gemini-2.5</text>
           </svg>
         </div>
         <h4>LlmAgent</h4>
@@ -133,7 +133,7 @@
             <rect x="260" y="70" width="80" height="60" rx="10" fill="#0d1322" stroke="#22d3ee" stroke-width="2.5"/>
             <line x1="100" y1="100" x2="140" y2="100" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#s2a-arr)"/>
             <line x1="220" y1="100" x2="260" y2="100" stroke="#22d3ee" stroke-width="2.5" marker-end="url(#s2a-arr)"/>
-            <text x="180" y="40" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, monospace" letter-spacing="2">SEQUENTIAL</text>
+            <text x="180" y="40" text-anchor="middle" fill="#94a3b8" font-size="16" font-family="JetBrains Mono, monospace" letter-spacing="2">SEQUENTIAL</text>
           </svg>
         </div>
         <h4>SequentialAgent</h4>
@@ -149,7 +149,7 @@
             <text x="160" y="110" text-anchor="middle" fill="#e8eefb" font-size="20" font-weight="600">worker</text>
             <path d="M 60 75 Q 30 110 60 145" fill="none" stroke="#a78bfa" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#s2b-arr)"/>
             <path d="M 260 145 Q 290 110 260 75" fill="none" stroke="#a78bfa" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#s2b-arr)"/>
-            <text x="160" y="35" text-anchor="middle" fill="#a78bfa" font-size="14" font-family="JetBrains Mono, monospace" letter-spacing="2">LOOP &middot; MAX 5</text>
+            <text x="160" y="35" text-anchor="middle" fill="#a78bfa" font-size="16" font-family="JetBrains Mono, monospace" letter-spacing="2">LOOP &middot; MAX 5</text>
           </svg>
         </div>
         <h4>LoopAgent</h4>
@@ -177,8 +177,8 @@
             <text x="100" y="105" text-anchor="middle" fill="#e8eefb" font-size="16">LlmAgent</text>
             <path d="M 180 100 C 220 60, 260 60, 300 100" fill="none" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="3 4"/>
             <circle cx="300" cy="100" r="20" fill="#0d1322" stroke="#fbbf24" stroke-width="2.5"/>
-            <text x="300" y="106" text-anchor="middle" fill="#fbbf24" font-size="14" font-family="JetBrains Mono, monospace">cb</text>
-            <text x="180" y="160" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, monospace">after_agent_callback</text>
+            <text x="300" y="106" text-anchor="middle" fill="#fbbf24" font-size="16" font-family="JetBrains Mono, monospace">cb</text>
+            <text x="180" y="160" text-anchor="middle" fill="#94a3b8" font-size="16" font-family="JetBrains Mono, monospace">after_agent_callback</text>
           </svg>
         </div>
         <h4>Callback</h4>
@@ -189,13 +189,13 @@
         <span class="badge">06</span>
         <div class="demo">
           <svg viewBox="0 0 360 200" width="360" height="200">
-            <line x1="40" y1="100" x2="320" y2="100" stroke="#1e293b" stroke-width="2" stroke-dasharray="4 6"/>
+            <line x1="40" y1="100" x2="320" y2="100" stroke="#6b7a94" stroke-width="2" stroke-dasharray="4 6"/>
             <circle cx="40" cy="100" r="8" fill="#22d3ee"/>
             <circle cx="320" cy="100" r="8" fill="#a78bfa"/>
             <circle cx="180" cy="100" r="14" fill="#22d3ee" filter="drop-shadow(0 0 14px rgba(34,211,238,1))">
               <animate attributeName="cx" values="40;320;40" dur="3s" repeatCount="indefinite"/>
             </circle>
-            <text x="180" y="160" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, monospace">state flowing</text>
+            <text x="180" y="160" text-anchor="middle" fill="#94a3b8" font-size="16" font-family="JetBrains Mono, monospace">state flowing</text>
           </svg>
         </div>
         <h4>Token / state</h4>
@@ -215,8 +215,9 @@
     <span class="slide-num">03 / PROVABILITY</span>
     <span class="eyebrow">REQUIREMENT &sect;1.1</span>
   </div>
-  <h2>A stronger model grades every answer</h2>
-  <p class="subtitle">No report leaves the pipeline until a <span class="k-critic">critic</span> on a stronger Gemini tier accepts it. <strong>Up to five iterations, then a deterministic exit.</strong></p>
+  <h1> </h1>
+  <h1>A stronger model grades every answer</h1>
+  <p class="subtitle">No report leaves the pipeline until a <span class="k-critic">critic</span> on a stronger tier accepts it. <strong>Up to five iterations, then a deterministic exit.</strong></p>
 
   <div class="slide-body">
     <div class="svg-wrap">
@@ -467,7 +468,7 @@
           <marker id="mc-crit" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#a78bfa"/></marker>
         </defs>
 
-        <text x="80" y="150" fill="#5b6781" font-family="JetBrains Mono, monospace" font-size="18" letter-spacing="3" text-anchor="start">PHASE 1 &middot; HARVEST</text>
+        <text x="80" y="150" fill="#aeb8c9" font-family="JetBrains Mono, monospace" font-size="18" letter-spacing="3" text-anchor="start">PHASE 1 &middot; HARVEST</text>
 
         <!-- researcher -->
         <rect x="80" y="220" width="380" height="160" rx="18" class="op-node opc-tool" stroke="#22d3ee"/>
@@ -509,10 +510,10 @@
           <text x="1355" y="384" fill="#e8eefb" font-size="17" font-family="JetBrains Mono, monospace">3: { url, title,</text>
           <text x="1380" y="410" fill="#34d399" font-size="17" font-family="JetBrains Mono, monospace">conf 0.81 }</text>
         </g>
-        <text x="1355" y="450" fill="#5b6781" font-size="15" font-family="JetBrains Mono, monospace">persisted to session</text>
+        <text x="1355" y="450" fill="#aeb8c9" font-size="15" font-family="JetBrains Mono, monospace">persisted to session</text>
 
         <!-- phase 2 -->
-        <text x="80" y="470" fill="#5b6781" font-family="JetBrains Mono, monospace" font-size="18" letter-spacing="3" text-anchor="start">PHASE 2 &middot; RENDER</text>
+        <text x="80" y="470" fill="#aeb8c9" font-family="JetBrains Mono, monospace" font-size="18" letter-spacing="3" text-anchor="start">PHASE 2 &middot; RENDER</text>
         <rect x="80" y="500" width="460" height="110" rx="16" class="op-node" stroke="#a78bfa"/>
         <text x="310" y="540" class="op-kicker" font-size="17" fill="#a78bfa">CRITIC</text>
         <text x="310" y="576" class="op-label" font-size="24">market_report_composer</text>
@@ -533,11 +534,241 @@
 
 
 <!-- ============================================================
+     SLIDE 7 — DOCUMENT RAG · EMBEDDING / INGEST WORKFLOW
+     ============================================================ -->
+<section class="slide sl-rag" id="slide-7">
+  <div class="slide-header">
+    <span class="slide-num">07 / DOCUMENT RAG</span>
+    <span class="eyebrow">PROPOSED &middot; INGEST</span>
+  </div>
+  <h2>Documents are embedded once, then reused</h2>
+  <p class="subtitle">A <span class="k-tool">metadata check</span> short-circuits re-embedding. A new document first runs through a <span class="k-critic">small agent network</span> that reads pages 1&ndash;3 to build shared context &mdash; then every page becomes an image embedded by <strong>ColQwen-Omni</strong> into <span class="k-pass">Qdrant</span>.</p>
+
+  <div class="slide-body">
+    <div class="svg-wrap">
+      <svg viewBox="0 0 1720 720" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <marker id="rag-cy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#22d3ee"/></marker>
+          <marker id="rag-am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#fbbf24"/></marker>
+          <marker id="rag-gr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#34d399"/></marker>
+          <marker id="rag-pu" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#a78bfa"/></marker>
+        </defs>
+
+        <!-- ===== top band: cache check ===== -->
+        <text x="40" y="92" class="op-kicker start" font-size="16" fill="#aeb8c9">STEP 0 &middot; HAS THIS DOC BEEN EMBEDDED?</text>
+
+        <g class="rag-in d1">
+          <rect x="40" y="116" width="210" height="96" rx="16" class="op-node" stroke="#22d3ee"/>
+          <text x="145" y="150" text-anchor="middle" class="op-kicker" font-size="15" fill="#22d3ee">INPUT</text>
+          <text x="145" y="182" text-anchor="middle" class="op-label" font-size="24">document</text>
+          <text x="145" y="204" text-anchor="middle" class="op-sub" font-size="15">PDF / report</text>
+
+          <rect x="360" y="110" width="270" height="108" rx="16" class="op-node" stroke="#fbbf24" stroke-dasharray="7 5"/>
+          <text x="495" y="142" text-anchor="middle" class="op-kicker" font-size="15" fill="#fbbf24">METADATA CHECK</text>
+          <text x="495" y="174" text-anchor="middle" class="op-label" font-size="22">seen this doc?</text>
+          <text x="495" y="200" text-anchor="middle" class="op-sub" font-size="15">lookup by content hash</text>
+        </g>
+        <line x1="250" y1="164" x2="356" y2="164" class="opr-link flow" marker-end="url(#rag-cy)"/>
+
+        <!-- YES branch -> reuse -->
+        <line x1="630" y1="164" x2="756" y2="164" class="opr-link pass" marker-end="url(#rag-gr)"/>
+        <text x="693" y="150" text-anchor="middle" class="op-sub" font-size="15" fill="#34d399">hash hit</text>
+        <g class="rag-in d2">
+          <rect x="760" y="116" width="300" height="96" rx="16" class="op-node" stroke="#34d399"/>
+          <text x="910" y="150" text-anchor="middle" class="op-kicker" font-size="15" fill="#34d399">CACHE HIT</text>
+          <text x="910" y="182" text-anchor="middle" class="op-label" font-size="22">reuse vectors</text>
+          <text x="910" y="204" text-anchor="middle" class="op-sub" font-size="15">skip embedding entirely</text>
+        </g>
+
+        <!-- NO branch down into pipeline -->
+        <path d="M 495 218 L 495 300 L 205 300 L 205 348" class="opr-link flow" fill="none" marker-end="url(#rag-cy)"/>
+        <text x="512" y="272" text-anchor="start" class="op-sub" font-size="15" fill="#22d3ee">no &middot; first time &darr;</text>
+
+        <!-- ===== bottom band: first-time ingest ===== -->
+        <text x="40" y="336" class="op-kicker start" font-size="16" fill="#aeb8c9">FIRST-TIME INGEST</text>
+
+        <!-- context agent network -->
+        <g class="rag-in d3">
+          <rect x="40" y="350" width="330" height="220" rx="18" class="op-node" stroke="#a78bfa"/>
+          <text x="205" y="384" text-anchor="middle" class="op-kicker" font-size="15" fill="#a78bfa">CONTEXT NETWORK &middot; PAGES 1&ndash;3</text>
+          <rect x="70" y="404" width="130" height="58" rx="12" fill="#0d1322" stroke="#a78bfa" stroke-width="1.5"/>
+          <text x="135" y="439" text-anchor="middle" fill="#e8eefb" font-size="15" font-family="JetBrains Mono, monospace">page_reader</text>
+          <line x1="200" y1="433" x2="236" y2="433" class="opr-link crit" marker-end="url(#rag-pu)"/>
+          <rect x="240" y="404" width="110" height="58" rx="12" fill="#0d1322" stroke="#a78bfa" stroke-width="1.5"/>
+          <text x="295" y="439" text-anchor="middle" fill="#e8eefb" font-size="15" font-family="JetBrains Mono, monospace">key_facts</text>
+          <text x="205" y="506" text-anchor="middle" class="op-sub" font-size="15">scans for doc context</text>
+          <text x="205" y="532" text-anchor="middle" class="op-sub" font-size="15">+ key facts to read any page</text>
+        </g>
+        <line x1="370" y1="460" x2="466" y2="460" class="opr-link crit" marker-end="url(#rag-pu)"/>
+
+        <!-- common metadata -->
+        <g class="rag-in d4">
+          <rect x="470" y="372" width="262" height="176" rx="16" class="op-node" stroke="#fbbf24"/>
+          <text x="601" y="404" text-anchor="middle" class="op-kicker" font-size="15" fill="#fbbf24">COMMON METADATA</text>
+          <text x="494" y="442" text-anchor="start" fill="#e8eefb" font-size="16" font-family="JetBrains Mono, monospace">&bull; context + key facts</text>
+          <text x="494" y="472" text-anchor="start" fill="#e8eefb" font-size="16" font-family="JetBrains Mono, monospace">&bull; shared headers/footers</text>
+          <text x="494" y="514" text-anchor="start" class="op-sub" font-size="15" fill="#fbbf24">&rarr; attached to every chunk</text>
+        </g>
+        <line x1="732" y1="460" x2="828" y2="460" class="opr-link schema" marker-end="url(#rag-am)"/>
+
+        <!-- page -> image -->
+        <g class="rag-in d5">
+          <rect x="832" y="372" width="236" height="176" rx="16" class="op-node" stroke="#22d3ee"/>
+          <text x="950" y="404" text-anchor="middle" class="op-kicker" font-size="15" fill="#22d3ee">PAGE &rarr; IMAGE</text>
+          <rect x="902" y="424" width="78" height="64" rx="6" class="rag-pageicon"/>
+          <rect x="918" y="436" width="78" height="64" rx="6" class="rag-pageicon"/>
+          <rect x="934" y="448" width="78" height="64" rx="6" class="rag-pageicon"/>
+          <text x="950" y="534" text-anchor="middle" class="op-sub" font-size="15">1 page = 1 image</text>
+        </g>
+        <line x1="1068" y1="460" x2="1164" y2="460" class="opr-link flow" marker-end="url(#rag-cy)"/>
+
+        <!-- ColQwen-Omni embed -->
+        <g class="rag-in d5">
+          <rect x="1168" y="372" width="240" height="176" rx="16" class="op-node" stroke="#fbbf24"/>
+          <text x="1288" y="404" text-anchor="middle" class="op-kicker" font-size="15" fill="#fbbf24">EMBED</text>
+          <text x="1288" y="452" text-anchor="middle" class="op-label" font-size="23">ColQwen-Omni</text>
+          <text x="1288" y="490" text-anchor="middle" class="op-sub" font-size="15">multi-vector</text>
+          <text x="1288" y="514" text-anchor="middle" class="op-sub" font-size="15">page embeddings</text>
+        </g>
+        <line x1="1408" y1="460" x2="1496" y2="460" class="opr-link schema" marker-end="url(#rag-am)"/>
+
+        <!-- Qdrant -->
+        <g class="rag-in d6">
+          <rect x="1500" y="398" width="176" height="122" fill="var(--bg-elev)"/>
+          <path d="M 1500 520 A 88 18 0 0 0 1676 520" fill="none" stroke="#34d399" stroke-width="2.5"/>
+          <line x1="1500" y1="398" x2="1500" y2="520" stroke="#34d399" stroke-width="2.5"/>
+          <line x1="1676" y1="398" x2="1676" y2="520" stroke="#34d399" stroke-width="2.5"/>
+          <ellipse cx="1588" cy="398" rx="88" ry="18" class="rag-db"/>
+          <text x="1588" y="452" text-anchor="middle" class="op-label" font-size="22" fill="#34d399">Qdrant</text>
+          <text x="1588" y="482" text-anchor="middle" class="op-sub" font-size="15">page vectors</text>
+          <text x="1588" y="504" text-anchor="middle" class="op-sub" font-size="15">+ common metadata</text>
+        </g>
+
+        <text x="860" y="676" text-anchor="middle" class="op-sub" font-size="16" fill="#aeb8c9">Embed once per document &middot; cache by content hash &middot; every page is one ColQwen-Omni vector in Qdrant.</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="slide-footer">
+    <span class="cite">tools/doc_rag/ingest.py &middot; embed_document(doc) &middot; metadata-gated &rarr; ColQwen-Omni &rarr; Qdrant upsert</span>
+    <span class="req-pill">&sect; DOCUMENT RAG</span>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SLIDE 8 — DOCUMENT RAG · doc_search TOOL (IN OPERATION)
+     ============================================================ -->
+<section class="slide op-rag" id="slide-8">
+  <div class="slide-header">
+    <span class="slide-num">08 / DOCUMENT RAG</span>
+    <span class="eyebrow op">IN OPERATION</span>
+    <span class="op-tag"><span class="live-dot"></span>RUNTIME</span>
+  </div>
+  <h2>Search agents now query the web <em>and</em> the docs</h2>
+  <p class="subtitle">Every search worker emits two query sets: web queries for <span class="k-tool">google_search</span> and semantic queries for the custom <span class="k-critic">doc_search</span> tool &mdash; which embeds each query with ColQwen-Omni and pulls the closest <span class="k-pass">Qdrant</span> page-chunks. Both streams ground one answer.</p>
+
+  <div class="slide-body">
+    <div class="svg-wrap">
+      <svg viewBox="0 0 1820 720" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <marker id="ds-cy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#22d3ee"/></marker>
+          <marker id="ds-am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#fbbf24"/></marker>
+          <marker id="ds-pu" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#a78bfa"/></marker>
+          <marker id="ds-gr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#34d399"/></marker>
+        </defs>
+
+        <!-- search agent -->
+        <g class="rag-in d1">
+          <rect x="40" y="282" width="290" height="156" rx="18" class="op-node" stroke="#22d3ee" filter="drop-shadow(0 0 10px rgba(34,211,238,0.35))"/>
+          <text x="185" y="320" text-anchor="middle" class="op-kicker" font-size="15" fill="#22d3ee">SEARCH AGENT</text>
+          <text x="185" y="356" text-anchor="middle" class="op-label" font-size="25">researcher</text>
+          <text x="185" y="390" text-anchor="middle" class="op-sub" font-size="15">tools=[google_search,</text>
+          <text x="185" y="412" text-anchor="middle" class="op-sub" font-size="15">doc_search]</text>
+        </g>
+
+        <!-- branch to two lanes -->
+        <path d="M 330 330 C 400 330, 410 152, 466 152" class="opr-link schema" fill="none" marker-end="url(#ds-am)"/>
+        <text x="404" y="214" text-anchor="middle" class="op-sub" font-size="15" fill="#fbbf24">web queries</text>
+        <path d="M 330 392 C 400 392, 410 566, 466 566" class="opr-link crit" fill="none" marker-end="url(#ds-pu)"/>
+        <text x="404" y="500" text-anchor="middle" class="op-sub" font-size="15" fill="#a78bfa">doc_search queries</text>
+
+        <!-- ===== top lane: google_search ===== -->
+        <g class="rag-in d2">
+          <rect x="470" y="104" width="240" height="96" rx="16" class="op-node" stroke="#fbbf24"/>
+          <text x="590" y="138" text-anchor="middle" class="op-kicker" font-size="15" fill="#fbbf24">BUILT-IN TOOL</text>
+          <text x="590" y="170" text-anchor="middle" class="op-label" font-size="22">google_search</text>
+        </g>
+        <line x1="710" y1="152" x2="806" y2="152" class="opr-link schema" marker-end="url(#ds-am)"/>
+        <g class="rag-in d3">
+          <rect x="810" y="104" width="270" height="96" rx="16" class="op-node" stroke="#fbbf24"/>
+          <text x="945" y="138" text-anchor="middle" class="op-kicker" font-size="15" fill="#fbbf24">WEB RESULTS</text>
+          <text x="945" y="170" text-anchor="middle" class="op-label" font-size="20">grounding chunks</text>
+        </g>
+
+        <!-- ===== bottom lane: doc_search ===== -->
+        <g class="rag-in d2">
+          <rect x="470" y="510" width="240" height="110" rx="16" class="op-node" stroke="#a78bfa"/>
+          <text x="590" y="544" text-anchor="middle" class="op-kicker" font-size="15" fill="#a78bfa">CUSTOM TOOL</text>
+          <text x="590" y="578" text-anchor="middle" class="op-label" font-size="22">doc_search</text>
+          <text x="590" y="602" text-anchor="middle" class="op-sub" font-size="15">semantic query</text>
+        </g>
+        <line x1="710" y1="565" x2="806" y2="565" class="opr-link crit" marker-end="url(#ds-pu)"/>
+        <g class="rag-in d3">
+          <rect x="810" y="510" width="240" height="110" rx="16" class="op-node" stroke="#fbbf24"/>
+          <text x="930" y="544" text-anchor="middle" class="op-kicker" font-size="15" fill="#fbbf24">EMBED</text>
+          <text x="930" y="578" text-anchor="middle" class="op-label" font-size="21">ColQwen-Omni</text>
+          <text x="930" y="602" text-anchor="middle" class="op-sub" font-size="15">embed the query</text>
+        </g>
+        <line x1="1050" y1="565" x2="1112" y2="565" class="opr-link schema" marker-end="url(#ds-am)"/>
+
+        <!-- Qdrant -->
+        <g class="rag-in d4">
+          <rect x="1118" y="500" width="170" height="100" fill="var(--bg-elev)"/>
+          <path d="M 1118 600 A 85 17 0 0 0 1288 600" fill="none" stroke="#34d399" stroke-width="2.5"/>
+          <line x1="1118" y1="500" x2="1118" y2="600" stroke="#34d399" stroke-width="2.5"/>
+          <line x1="1288" y1="500" x2="1288" y2="600" stroke="#34d399" stroke-width="2.5"/>
+          <ellipse cx="1203" cy="500" rx="85" ry="17" class="rag-db"/>
+          <text x="1203" y="552" text-anchor="middle" class="op-label" font-size="21" fill="#34d399">Qdrant</text>
+          <text x="1203" y="580" text-anchor="middle" class="op-sub" font-size="15">similarity search</text>
+        </g>
+        <line x1="1288" y1="548" x2="1356" y2="548" class="opr-link pass" marker-end="url(#ds-gr)"/>
+        <g class="rag-in d5">
+          <rect x="1360" y="500" width="236" height="110" rx="16" class="op-node" stroke="#34d399"/>
+          <text x="1478" y="534" text-anchor="middle" class="op-kicker" font-size="15" fill="#34d399">RETRIEVED</text>
+          <text x="1478" y="566" text-anchor="middle" class="op-label" font-size="20">top page-chunks</text>
+          <text x="1478" y="590" text-anchor="middle" class="op-sub" font-size="15">+ shared metadata</text>
+        </g>
+
+        <!-- converge into grounded answer -->
+        <g class="rag-in d6">
+          <rect x="1576" y="284" width="216" height="152" rx="18" class="op-node" stroke="#22d3ee" filter="drop-shadow(0 0 10px rgba(34,211,238,0.35))"/>
+          <text x="1684" y="320" text-anchor="middle" class="op-kicker" font-size="15" fill="#22d3ee">GROUNDED</text>
+          <text x="1684" y="356" text-anchor="middle" class="op-label" font-size="22">one answer</text>
+          <text x="1684" y="390" text-anchor="middle" class="op-sub" font-size="15">web + document</text>
+          <text x="1684" y="412" text-anchor="middle" class="op-sub" font-size="15">evidence</text>
+        </g>
+        <path d="M 1080 152 C 1400 152, 1430 300, 1572 326" class="opr-link schema" fill="none" marker-end="url(#ds-am)"/>
+        <path d="M 1596 500 C 1660 460, 1672 430, 1684 440" class="opr-link pass" fill="none" marker-end="url(#ds-gr)"/>
+
+        <text x="900" y="690" text-anchor="middle" class="op-sub" font-size="16" fill="#aeb8c9">One worker, two retrieval channels &mdash; the web via <tspan fill="#fbbf24">google_search</tspan>, your documents via <tspan fill="#a78bfa">doc_search</tspan> over <tspan fill="#34d399">Qdrant</tspan>.</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="slide-footer">
+    <span class="cite">tools/doc_rag/doc_search.py &middot; doc_search(queries) &middot; ColQwen-Omni embed &rarr; Qdrant top-k page-chunks</span>
+    <span class="req-pill">&sect; DOCUMENT RAG</span>
+  </div>
+</section>
+
+
+<!-- ============================================================
      SLIDE 7 — DESIGN FLOW (§1.3) SEQUENTIAL CHANCELLOR
      ============================================================ -->
-<section class="slide sl-flow" id="slide-7">
+<section class="slide sl-flow" id="slide-9">
   <div class="slide-header">
-    <span class="slide-num">07 / DESIGN FLOW</span>
+    <span class="slide-num">09 / DESIGN FLOW</span>
     <span class="eyebrow">REQUIREMENT &sect;1.3</span>
   </div>
   <h2>Five sub-pipelines, one chancellor</h2>
@@ -672,9 +903,9 @@
 <!-- ============================================================
      SLIDE 8 — DESIGN FLOW IN OPERATION (12-step spine)
      ============================================================ -->
-<section class="slide op-spine" id="slide-8">
+<section class="slide op-spine" id="slide-10">
   <div class="slide-header">
-    <span class="slide-num">08 / DESIGN FLOW</span>
+    <span class="slide-num">10 / DESIGN FLOW</span>
     <span class="eyebrow op">IN OPERATION</span>
     <span class="op-tag"><span class="live-dot"></span>RUNTIME</span>
   </div>
@@ -687,7 +918,7 @@
         <text x="850" y="55" text-anchor="middle" fill="#a78bfa" font-size="20" font-family="JetBrains Mono, monospace" letter-spacing="2">SequentialAgent &middot; comprehensive_intelligence_chancellor</text>
 
         <!-- snake connectors -->
-        <path d="M 280 210 L 1420 210 L 1420 370 L 280 370 L 280 530 L 1420 530" fill="none" stroke="#1e293b" stroke-width="2.5" stroke-dasharray="5 7"/>
+        <path d="M 280 210 L 1420 210 L 1420 370 L 280 370 L 280 530 L 1420 530" fill="none" stroke="#6b7a94" stroke-width="2.5" stroke-dasharray="5 7"/>
 
         <!-- ROW 1 (L->R): 01-04 -->
         <g>
@@ -783,9 +1014,9 @@
 <!-- ============================================================
      SLIDE 9 — NLP ROUTING (§1.2) classifier / router / skip
      ============================================================ -->
-<section class="slide op-route" id="slide-9">
+<section class="slide op-route" id="slide-11">
   <div class="slide-header">
-    <span class="slide-num">09 / AGENT GARDEN</span>
+    <span class="slide-num">11 / AGENT GARDEN</span>
     <span class="eyebrow">REQUIREMENT &sect;1.2</span>
     <span class="op-tag"><span class="live-dot"></span>RUNTIME</span>
   </div>
@@ -798,87 +1029,87 @@
         <defs>
           <marker id="mr-flow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#22d3ee"/></marker>
           <marker id="mr-route" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#f472b6"/></marker>
-          <marker id="mr-skip" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker>
+          <marker id="mr-skip" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8593ab"/></marker>
           <marker id="mr-schema" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#fbbf24"/></marker>
         </defs>
 
         <!-- column headers -->
-        <text x="175"  y="40" text-anchor="middle" class="op-kicker" font-size="13">USER INPUT</text>
-        <text x="530"  y="40" text-anchor="middle" class="op-kicker" font-size="13">TYPED VERDICT &middot; UserAnalysis</text>
-        <text x="855"  y="40" text-anchor="middle" class="op-kicker" font-size="13">PYTHON GATE</text>
-        <text x="1190" y="40" text-anchor="middle" class="op-kicker" font-size="13">OUTCOME</text>
+        <text x="175"  y="40" text-anchor="middle" class="op-kicker" font-size="15">USER INPUT</text>
+        <text x="530"  y="40" text-anchor="middle" class="op-kicker" font-size="15">TYPED VERDICT &middot; UserAnalysis</text>
+        <text x="855"  y="40" text-anchor="middle" class="op-kicker" font-size="15">PYTHON GATE</text>
+        <text x="1190" y="40" text-anchor="middle" class="op-kicker" font-size="15">OUTCOME</text>
 
         <!-- ===================== LANE A — sales runs ===================== -->
         <!-- input A -->
         <rect x="44" y="78" width="262" height="126" rx="16" class="op-node opr-input" stroke="#22d3ee" filter="drop-shadow(0 0 10px rgba(34,211,238,0.26))"/>
         <text x="68" y="120" class="op-text-start" fill="#e8eefb" font-size="16">"Sell SaaS analytics</text>
         <text x="68" y="146" class="op-text-start" fill="#e8eefb" font-size="16">to <tspan fill="#22d3ee">Microsoft</tspan> &amp; <tspan fill="#22d3ee">Google</tspan>"</text>
-        <text x="68" y="182" class="op-text-start" fill="#34d399" font-size="13" font-family="JetBrains Mono, monospace">&rarr; names a target org</text>
+        <text x="68" y="182" class="op-text-start" fill="#34d399" font-size="15" font-family="JetBrains Mono, monospace">&rarr; names a target org</text>
 
         <line x1="306" y1="141" x2="400" y2="141" class="opr-link flow" marker-end="url(#mr-flow)"/>
-        <text x="353" y="128" text-anchor="middle" class="op-sub" font-size="12">classifier</text>
+        <text x="353" y="128" text-anchor="middle" class="op-sub" font-size="15">classifier</text>
 
         <!-- verdict A -->
         <rect x="400" y="78" width="260" height="126" rx="14" fill="#060912" stroke="#34d399" stroke-width="2"/>
-        <text x="424" y="110" class="op-text-start" fill="#34d399" font-size="13" font-family="JetBrains Mono, monospace">user_analysis</text>
-        <text x="424" y="136" class="op-text-start" fill="#e8eefb" font-size="13" font-family="JetBrains Mono, monospace">has_target: true</text>
-        <text x="424" y="162" class="op-text-start" fill="#e8eefb" font-size="13" font-family="JetBrains Mono, monospace">needs_sales: true</text>
-        <text x="424" y="188" class="op-text-start" fill="#34d399" font-size="13" font-family="JetBrains Mono, monospace">skip_sales: false</text>
+        <text x="424" y="110" class="op-text-start" fill="#34d399" font-size="15" font-family="JetBrains Mono, monospace">user_analysis</text>
+        <text x="424" y="136" class="op-text-start" fill="#e8eefb" font-size="15" font-family="JetBrains Mono, monospace">has_target: true</text>
+        <text x="424" y="162" class="op-text-start" fill="#e8eefb" font-size="15" font-family="JetBrains Mono, monospace">needs_sales: true</text>
+        <text x="424" y="188" class="op-text-start" fill="#34d399" font-size="15" font-family="JetBrains Mono, monospace">skip_sales: false</text>
 
         <line x1="660" y1="141" x2="755" y2="141" class="opr-link schema" marker-end="url(#mr-schema)"/>
-        <text x="707" y="128" text-anchor="middle" class="op-sub" font-size="12" fill="#fbbf24">typed JSON</text>
+        <text x="707" y="128" text-anchor="middle" class="op-sub" font-size="15" fill="#fbbf24">typed JSON</text>
 
         <!-- gate A -->
         <rect x="755" y="78" width="200" height="126" rx="16" class="op-node" stroke="#f472b6"/>
-        <text x="855" y="116" text-anchor="middle" class="op-kicker" font-size="12" fill="#f472b6">PYTHON GATE</text>
+        <text x="855" y="116" text-anchor="middle" class="op-kicker" font-size="15" fill="#f472b6">PYTHON GATE</text>
         <text x="855" y="146" text-anchor="middle" class="op-label" font-size="15">sales_prompt_builder</text>
-        <text x="855" y="172" text-anchor="middle" class="op-sub" font-size="12">reads skip_sales</text>
+        <text x="855" y="172" text-anchor="middle" class="op-sub" font-size="15">reads skip_sales</text>
 
         <line x1="955" y1="141" x2="1045" y2="141" class="opr-link route" marker-end="url(#mr-route)"/>
-        <text x="1000" y="128" text-anchor="middle" class="opr-branch" font-size="12" fill="#34d399">false</text>
+        <text x="1000" y="128" text-anchor="middle" class="opr-branch" font-size="15" fill="#34d399">false</text>
 
         <!-- runs A -->
         <rect x="1045" y="78" width="290" height="126" rx="16" class="op-node" stroke="#22d3ee" filter="drop-shadow(0 0 12px rgba(34,211,238,0.32))"/>
-        <text x="1190" y="116" text-anchor="middle" class="op-kicker" font-size="13" fill="#22d3ee">RUNS</text>
+        <text x="1190" y="116" text-anchor="middle" class="op-kicker" font-size="15" fill="#22d3ee">RUNS</text>
         <text x="1190" y="150" text-anchor="middle" class="op-label" font-size="17">sales_intelligence_agent</text>
-        <text x="1190" y="180" text-anchor="middle" class="op-sub" font-size="13">full sales pipeline &rarr; target_org</text>
+        <text x="1190" y="180" text-anchor="middle" class="op-sub" font-size="15">full sales pipeline &rarr; target_org</text>
 
         <!-- ===================== LANE B — skips ===================== -->
         <!-- input B -->
-        <rect x="44" y="296" width="262" height="126" rx="16" class="op-node opr-input" stroke="#64748b"/>
+        <rect x="44" y="296" width="262" height="126" rx="16" class="op-node opr-input" stroke="#8593ab"/>
         <text x="68" y="338" class="op-text-start" fill="#e8eefb" font-size="16">"Research the SaaS</text>
         <text x="68" y="364" class="op-text-start" fill="#e8eefb" font-size="16">analytics market"</text>
-        <text x="68" y="400" class="op-text-start" fill="#94a3b8" font-size="13" font-family="JetBrains Mono, monospace">&rarr; no target org</text>
+        <text x="68" y="400" class="op-text-start" fill="#94a3b8" font-size="15" font-family="JetBrains Mono, monospace">&rarr; no target org</text>
 
         <line x1="306" y1="359" x2="400" y2="359" class="opr-link flow b" marker-end="url(#mr-flow)"/>
-        <text x="353" y="346" text-anchor="middle" class="op-sub" font-size="12">classifier</text>
+        <text x="353" y="346" text-anchor="middle" class="op-sub" font-size="15">classifier</text>
 
         <!-- verdict B -->
         <rect x="400" y="296" width="260" height="126" rx="14" fill="#060912" stroke="#fbbf24" stroke-width="2" stroke-dasharray="6 5"/>
-        <text x="424" y="328" class="op-text-start" fill="#fbbf24" font-size="13" font-family="JetBrains Mono, monospace">user_analysis</text>
-        <text x="424" y="354" class="op-text-start" fill="#e8eefb" font-size="13" font-family="JetBrains Mono, monospace">has_target: false</text>
-        <text x="424" y="380" class="op-text-start" fill="#e8eefb" font-size="13" font-family="JetBrains Mono, monospace">needs_sales: false</text>
-        <text x="424" y="406" class="op-text-start" fill="#f472b6" font-size="13" font-family="JetBrains Mono, monospace">skip_sales: true</text>
+        <text x="424" y="328" class="op-text-start" fill="#fbbf24" font-size="15" font-family="JetBrains Mono, monospace">user_analysis</text>
+        <text x="424" y="354" class="op-text-start" fill="#e8eefb" font-size="15" font-family="JetBrains Mono, monospace">has_target: false</text>
+        <text x="424" y="380" class="op-text-start" fill="#e8eefb" font-size="15" font-family="JetBrains Mono, monospace">needs_sales: false</text>
+        <text x="424" y="406" class="op-text-start" fill="#f472b6" font-size="15" font-family="JetBrains Mono, monospace">skip_sales: true</text>
 
         <line x1="660" y1="359" x2="755" y2="359" class="opr-link schema b" marker-end="url(#mr-schema)"/>
-        <text x="707" y="346" text-anchor="middle" class="op-sub" font-size="12" fill="#fbbf24">typed JSON</text>
+        <text x="707" y="346" text-anchor="middle" class="op-sub" font-size="15" fill="#fbbf24">typed JSON</text>
 
         <!-- gate B -->
         <rect x="755" y="296" width="200" height="126" rx="16" class="op-node" stroke="#f472b6"/>
-        <text x="855" y="334" text-anchor="middle" class="op-kicker" font-size="12" fill="#f472b6">PYTHON GATE</text>
+        <text x="855" y="334" text-anchor="middle" class="op-kicker" font-size="15" fill="#f472b6">PYTHON GATE</text>
         <text x="855" y="364" text-anchor="middle" class="op-label" font-size="15">sales_prompt_builder</text>
-        <text x="855" y="390" text-anchor="middle" class="op-sub" font-size="12">reads skip_sales</text>
+        <text x="855" y="390" text-anchor="middle" class="op-sub" font-size="15">reads skip_sales</text>
 
         <line x1="955" y1="359" x2="1045" y2="359" class="opr-link skip" marker-end="url(#mr-skip)"/>
-        <text x="1000" y="346" text-anchor="middle" class="opr-branch" font-size="12" fill="#f472b6">true</text>
+        <text x="1000" y="346" text-anchor="middle" class="opr-branch" font-size="15" fill="#f472b6">true</text>
 
         <!-- skip B (alternative, shown clearly) -->
-        <rect x="1045" y="296" width="290" height="126" rx="16" fill="#0d1322" stroke="#64748b" stroke-width="2" stroke-dasharray="8 6" class="opr-skip"/>
+        <rect x="1045" y="296" width="290" height="126" rx="16" fill="#0d1322" stroke="#8593ab" stroke-width="2" stroke-dasharray="8 6" class="opr-skip"/>
         <text x="1190" y="346" text-anchor="middle" fill="#94a3b8" font-size="17">else: SKIP</text>
-        <text x="1190" y="378" text-anchor="middle" fill="#f472b6" font-size="13" font-family="JetBrains Mono, monospace">0 tokens &middot; branch stays dark</text>
+        <text x="1190" y="378" text-anchor="middle" fill="#f472b6" font-size="15" font-family="JetBrains Mono, monospace">0 tokens &middot; branch stays dark</text>
 
         <!-- caption -->
-        <text x="700" y="454" text-anchor="middle" class="op-sub" font-size="13" fill="#5b6781">Same <tspan fill="#7f8aa3">user_input_analyzer</tspan> + gate code &mdash; the typed <tspan fill="#7f8aa3">skip_sales</tspan> verdict alone picks the route.</text>
+        <text x="700" y="454" text-anchor="middle" class="op-sub" font-size="15" fill="#aeb8c9">Same <tspan fill="#aeb8c9">user_input_analyzer</tspan> + gate code &mdash; the typed <tspan fill="#aeb8c9">skip_sales</tspan> verdict alone picks the route.</text>
       </svg>
     </div>
   </div>
@@ -893,9 +1124,9 @@
 <!-- ============================================================
      SLIDE 11 — MEMORY (§1.2)
      ============================================================ -->
-<section class="slide sl-mem" id="slide-10">
+<section class="slide sl-mem" id="slide-12">
   <div class="slide-header">
-    <span class="slide-num">10 / MEMORY</span>
+    <span class="slide-num">12 / MEMORY</span>
     <span class="eyebrow">REQUIREMENT &sect;1.2 &middot; PARTIAL</span>
   </div>
   <h2>Short-term today, semantic &amp; long-term next</h2>
@@ -905,30 +1136,30 @@
     <div class="svg-wrap">
       <svg viewBox="0 0 1560 640" preserveAspectRatio="xMidYMid meet">
         <defs>
-          <marker id="mem-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5b6781"/></marker>
-          <marker id="mem-arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#7f8aa3"/></marker>
+          <marker id="mem-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#aeb8c9"/></marker>
+          <marker id="mem-arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#aeb8c9"/></marker>
         </defs>
 
         <!-- agent (reads/writes) -->
         <rect x="40" y="252" width="248" height="136" rx="18" class="op-node" stroke="#22d3ee" filter="drop-shadow(0 0 12px rgba(34,211,238,0.3))"/>
-        <text x="164" y="296" text-anchor="middle" class="op-kicker" font-size="13" fill="#22d3ee">market_research</text>
+        <text x="164" y="296" text-anchor="middle" class="op-kicker" font-size="15" fill="#22d3ee">market_research</text>
         <text x="164" y="328" text-anchor="middle" class="op-label" font-size="20">prompt-builders</text>
-        <text x="164" y="358" text-anchor="middle" class="op-sub" font-size="14">read &amp; write every step</text>
+        <text x="164" y="358" text-anchor="middle" class="op-sub" font-size="16">read &amp; write every step</text>
 
         <!-- agent <-> surface (read/write) -->
         <line x1="288" y1="306" x2="372" y2="306" class="mem-flow" marker-end="url(#mem-arr-r)"/>
         <line x1="372" y1="338" x2="288" y2="338" class="mem-flow" marker-end="url(#mem-arr-r)"/>
-        <text x="330" y="296" text-anchor="middle" class="op-sub" font-size="12">write</text>
-        <text x="330" y="360" text-anchor="middle" class="op-sub" font-size="12">read</text>
+        <text x="330" y="296" text-anchor="middle" class="op-sub" font-size="15">write</text>
+        <text x="330" y="360" text-anchor="middle" class="op-sub" font-size="15">read</text>
 
         <!-- unified access surface -->
         <rect x="376" y="170" width="150" height="300" rx="20" class="mem-surface"/>
-        <text x="451" y="214" text-anchor="middle" class="op-kicker" font-size="12" fill="#e8eefb">ONE SURFACE</text>
+        <text x="451" y="214" text-anchor="middle" class="op-kicker" font-size="15" fill="#e8eefb">ONE SURFACE</text>
         <text x="451" y="312" text-anchor="middle" fill="#e8eefb" font-size="17" font-family="JetBrains Mono, monospace">callback</text>
         <text x="451" y="336" text-anchor="middle" fill="#e8eefb" font-size="17" font-family="JetBrains Mono, monospace">_context</text>
         <text x="451" y="360" text-anchor="middle" fill="#22d3ee" font-size="17" font-family="JetBrains Mono, monospace">.state</text>
-        <text x="451" y="430" text-anchor="middle" class="op-sub" font-size="12">same API,</text>
-        <text x="451" y="448" text-anchor="middle" class="op-sub" font-size="12">3 backends</text>
+        <text x="451" y="430" text-anchor="middle" class="op-sub" font-size="15">same API,</text>
+        <text x="451" y="448" text-anchor="middle" class="op-sub" font-size="15">3 backends</text>
 
         <!-- fan-out to tiers -->
         <path d="M 526 250 C 575 250, 585 150, 632 150" class="mem-flow" fill="none" marker-end="url(#mem-arr)"/>
@@ -939,44 +1170,44 @@
         <g class="mem-tier" style="--d:0.1s">
           <rect x="636" y="84" width="884" height="132" rx="16" fill="#0d1322" stroke="#22d3ee" stroke-width="2.5"/>
           <rect x="636" y="84" width="9" height="132" rx="4" fill="#22d3ee"/>
-          <text x="672" y="124" class="op-kicker start" font-size="13" fill="#22d3ee">SHORT-TERM &middot; THIS RUN</text>
+          <text x="672" y="124" class="op-kicker start" font-size="15" fill="#22d3ee">SHORT-TERM &middot; THIS RUN</text>
           <text x="672" y="160" class="op-text-start" fill="#e8eefb" font-size="25" font-weight="600">callback_context.state</text>
           <text x="672" y="192" class="op-text-start" fill="#94a3b8" font-size="16">In-memory dict shared by every prompt-builder during one run.</text>
           <!-- status pill -->
           <rect x="1360" y="104" width="132" height="34" rx="17" fill="rgba(52,211,153,0.14)" stroke="#34d399" stroke-width="1.5"/>
-          <text x="1426" y="126" text-anchor="middle" fill="#34d399" font-size="14" font-family="JetBrains Mono, monospace" letter-spacing="0.1em">BUILT</text>
+          <text x="1426" y="126" text-anchor="middle" fill="#34d399" font-size="16" font-family="JetBrains Mono, monospace" letter-spacing="0.1em">BUILT</text>
           <!-- lifetime meter -->
           <rect x="1188" y="170" width="304" height="9" rx="4" fill="#1e293b"/>
           <rect x="1188" y="170" width="78" height="9" rx="4" fill="#22d3ee"/>
-          <text x="1492" y="200" class="op-sub op-text-end" font-size="12" fill="#5b6781">lifetime: one run</text>
+          <text x="1492" y="200" class="op-sub op-text-end" font-size="15" fill="#aeb8c9">lifetime: one run</text>
         </g>
 
         <!-- ===== Tier 2: semantic (PROPOSED) ===== -->
         <g class="mem-tier" style="--d:0.25s">
           <rect x="636" y="254" width="884" height="132" rx="16" fill="#0d1322" stroke="#a78bfa" stroke-width="2.5" stroke-dasharray="7 6"/>
           <rect x="636" y="254" width="9" height="132" rx="4" fill="#a78bfa"/>
-          <text x="672" y="294" class="op-kicker start" font-size="13" fill="#a78bfa">SEMANTIC &middot; ACROSS PROJECTS</text>
+          <text x="672" y="294" class="op-kicker start" font-size="15" fill="#a78bfa">SEMANTIC &middot; ACROSS PROJECTS</text>
           <text x="672" y="330" class="op-text-start" fill="#e8eefb" font-size="25" font-weight="600">Vertex AI Vector Search</text>
           <text x="672" y="362" class="op-text-start" fill="#94a3b8" font-size="16">Embeds past findings so the agent recalls similar projects.</text>
           <rect x="1340" y="274" width="152" height="34" rx="17" fill="rgba(167,139,250,0.14)" stroke="#a78bfa" stroke-width="1.5"/>
-          <text x="1416" y="296" text-anchor="middle" fill="#a78bfa" font-size="14" font-family="JetBrains Mono, monospace" letter-spacing="0.1em">PROPOSED</text>
+          <text x="1416" y="296" text-anchor="middle" fill="#a78bfa" font-size="16" font-family="JetBrains Mono, monospace" letter-spacing="0.1em">PROPOSED</text>
           <rect x="1188" y="340" width="304" height="9" rx="4" fill="#1e293b"/>
           <rect x="1188" y="340" width="186" height="9" rx="4" fill="#a78bfa"/>
-          <text x="1492" y="370" class="op-sub op-text-end" font-size="12" fill="#5b6781">lifetime: across sessions</text>
+          <text x="1492" y="370" class="op-sub op-text-end" font-size="15" fill="#aeb8c9">lifetime: across sessions</text>
         </g>
 
         <!-- ===== Tier 3: long-term (PROPOSED) ===== -->
         <g class="mem-tier" style="--d:0.4s">
           <rect x="636" y="424" width="884" height="132" rx="16" fill="#0d1322" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="7 6"/>
           <rect x="636" y="424" width="9" height="132" rx="4" fill="#fbbf24"/>
-          <text x="672" y="464" class="op-kicker start" font-size="13" fill="#fbbf24">LONG-TERM &middot; PER-TENANT</text>
+          <text x="672" y="464" class="op-kicker start" font-size="15" fill="#fbbf24">LONG-TERM &middot; PER-TENANT</text>
           <text x="672" y="500" class="op-text-start" fill="#e8eefb" font-size="25" font-weight="600">Vertex AI Memory Bank</text>
           <text x="672" y="532" class="op-text-start" fill="#94a3b8" font-size="16">Per-client memory that outlives the ADK Session lifecycle.</text>
           <rect x="1340" y="444" width="152" height="34" rx="17" fill="rgba(251,191,36,0.14)" stroke="#fbbf24" stroke-width="1.5"/>
-          <text x="1416" y="466" text-anchor="middle" fill="#fbbf24" font-size="14" font-family="JetBrains Mono, monospace" letter-spacing="0.1em">PROPOSED</text>
+          <text x="1416" y="466" text-anchor="middle" fill="#fbbf24" font-size="16" font-family="JetBrains Mono, monospace" letter-spacing="0.1em">PROPOSED</text>
           <rect x="1188" y="510" width="304" height="9" rx="4" fill="#1e293b"/>
           <rect x="1188" y="510" width="304" height="9" rx="4" fill="#fbbf24"/>
-          <text x="1492" y="540" class="op-sub op-text-end" font-size="12" fill="#5b6781">lifetime: retained per client</text>
+          <text x="1492" y="540" class="op-sub op-text-end" font-size="15" fill="#aeb8c9">lifetime: retained per client</text>
         </g>
       </svg>
     </div>
@@ -992,9 +1223,9 @@
 <!-- ============================================================
      SLIDE 8 — INTEGRATION (§1.3) MONGO PERSISTENCE
      ============================================================ -->
-<section class="slide sl-integ" id="slide-11">
+<section class="slide sl-integ" id="slide-13">
   <div class="slide-header">
-    <span class="slide-num">11 / INTEGRATION</span>
+    <span class="slide-num">13 / INTEGRATION</span>
     <span class="eyebrow">REQUIREMENT &sect;1.3</span>
   </div>
   <h2>Downstream subscribes to MongoDB, not the agent</h2>
@@ -1021,39 +1252,39 @@
         <text x="190" y="191" text-anchor="middle" fill="#e8eefb" font-size="17" font-family="JetBrains Mono, monospace">market_intelligence_agent</text>
         <line x1="340" y1="185" x2="560" y2="185" class="opr-link schema" marker-end="url(#s8-arr)"/>
         <rect x="408" y="169" width="64" height="32" rx="16" fill="#0d1322" stroke="#fbbf24" stroke-width="1.5"/>
-        <text x="440" y="190" text-anchor="middle" fill="#fbbf24" font-size="13" font-family="JetBrains Mono, monospace">cb</text>
+        <text x="440" y="190" text-anchor="middle" fill="#fbbf24" font-size="15" font-family="JetBrains Mono, monospace">cb</text>
 
         <!-- row 2 · center 271 -->
         <rect x="40" y="243" width="300" height="56" rx="13" fill="#0d1322" stroke="#22d3ee" stroke-width="2" class="s8b-agent"/>
         <text x="190" y="277" text-anchor="middle" fill="#e8eefb" font-size="17" font-family="JetBrains Mono, monospace">segmentation_intel_agent</text>
         <line x1="340" y1="271" x2="560" y2="271" class="opr-link schema" marker-end="url(#s8-arr)"/>
         <rect x="408" y="255" width="64" height="32" rx="16" fill="#0d1322" stroke="#fbbf24" stroke-width="1.5"/>
-        <text x="440" y="276" text-anchor="middle" fill="#fbbf24" font-size="13" font-family="JetBrains Mono, monospace">cb</text>
+        <text x="440" y="276" text-anchor="middle" fill="#fbbf24" font-size="15" font-family="JetBrains Mono, monospace">cb</text>
 
         <!-- row 3 · center 357 -->
         <rect x="40" y="329" width="300" height="56" rx="13" fill="#0d1322" stroke="#22d3ee" stroke-width="2" class="s8b-agent"/>
         <text x="190" y="363" text-anchor="middle" fill="#e8eefb" font-size="17" font-family="JetBrains Mono, monospace">org_intelligence_agent</text>
         <line x1="340" y1="357" x2="560" y2="357" class="opr-link schema" marker-end="url(#s8-arr)"/>
         <rect x="408" y="341" width="64" height="32" rx="16" fill="#0d1322" stroke="#fbbf24" stroke-width="1.5"/>
-        <text x="440" y="362" text-anchor="middle" fill="#fbbf24" font-size="13" font-family="JetBrains Mono, monospace">cb</text>
+        <text x="440" y="362" text-anchor="middle" fill="#fbbf24" font-size="15" font-family="JetBrains Mono, monospace">cb</text>
 
         <!-- row 4 (conditional sales — may skip) · center 443 -->
         <rect x="40" y="415" width="300" height="56" rx="13" fill="#0d1322" stroke="#f472b6" stroke-width="2" stroke-dasharray="6 5" class="s8b-agent"/>
         <text x="190" y="449" text-anchor="middle" fill="#e8eefb" font-size="17" font-family="JetBrains Mono, monospace">conditional_sales_agent</text>
         <line x1="340" y1="443" x2="560" y2="443" class="opr-link route" marker-end="url(#s8-pink)"/>
         <rect x="404" y="427" width="72" height="32" rx="16" fill="#0d1322" stroke="#f472b6" stroke-width="1.5"/>
-        <text x="440" y="448" text-anchor="middle" fill="#f472b6" font-size="12" font-family="JetBrains Mono, monospace">skip</text>
+        <text x="440" y="448" text-anchor="middle" fill="#f472b6" font-size="15" font-family="JetBrains Mono, monospace">skip</text>
 
         <!-- row 5 · center 529 -->
         <rect x="40" y="501" width="300" height="56" rx="13" fill="#0d1322" stroke="#22d3ee" stroke-width="2" class="s8b-agent"/>
         <text x="190" y="535" text-anchor="middle" fill="#e8eefb" font-size="17" font-family="JetBrains Mono, monospace">prospect_researcher</text>
         <line x1="340" y1="529" x2="560" y2="529" class="opr-link schema" marker-end="url(#s8-arr)"/>
         <rect x="408" y="513" width="64" height="32" rx="16" fill="#0d1322" stroke="#fbbf24" stroke-width="1.5"/>
-        <text x="440" y="534" text-anchor="middle" fill="#fbbf24" font-size="13" font-family="JetBrains Mono, monospace">cb</text>
+        <text x="440" y="534" text-anchor="middle" fill="#fbbf24" font-size="15" font-family="JetBrains Mono, monospace">cb</text>
 
         <!-- ===== MongoDB document (fields aligned to source agents) ===== -->
         <rect x="560" y="96" width="474" height="486" rx="20" fill="#060912" stroke="#34d399" stroke-width="2.5" filter="drop-shadow(0 0 16px rgba(52,211,153,0.2))"/>
-        <text x="586" y="134" fill="#34d399" font-size="17" font-family="JetBrains Mono, monospace">project &#123; <tspan fill="#5b6781" font-size="13">// acme-2031</tspan></text>
+        <text x="586" y="134" fill="#34d399" font-size="17" font-family="JetBrains Mono, monospace">project &#123; <tspan fill="#aeb8c9" font-size="15">// acme-2031</tspan></text>
 
         <!-- field rows aligned to source agent rows -->
         <text x="586" y="190" fill="#e8eefb" font-size="16" font-family="JetBrains Mono, monospace" class="s8b-key">market_context:</text>
@@ -1075,7 +1306,7 @@
 
         <!-- ===== downstream readers (subscribe to the doc, not the agent) ===== -->
         <line x1="1034" y1="357" x2="1300" y2="357" class="opr-link flow" marker-end="url(#s8-cyan)"/>
-        <text x="1167" y="343" text-anchor="middle" class="op-sub" font-size="13" fill="#22d3ee">poll / read</text>
+        <text x="1167" y="343" text-anchor="middle" class="op-sub" font-size="15" fill="#22d3ee">poll / read</text>
 
         <rect x="1300" y="213" width="300" height="288" rx="18" fill="#0d1322" stroke="#22d3ee" stroke-width="2"/>
         <text x="1450" y="250" text-anchor="middle" class="op-kicker" font-size="15" letter-spacing="1.2" fill="#22d3ee">CONSUMERS</text>
@@ -1092,10 +1323,10 @@
           <rect x="1324" y="390" width="252" height="50" rx="11" fill="#0a1020" stroke="#1e293b"/>
           <text x="1450" y="421" text-anchor="middle" fill="#e8eefb" font-size="17">BI / exports</text>
         </g>
-        <text x="1450" y="474" text-anchor="middle" class="op-sub" font-size="13" fill="#5b6781">never call the agent</text>
+        <text x="1450" y="474" text-anchor="middle" class="op-sub" font-size="15" fill="#aeb8c9">never call the agent</text>
 
         <!-- caption -->
-        <text x="700" y="636" text-anchor="middle" class="op-sub" font-size="14" fill="#5b6781">Five agents &middot; five idempotent upserts to one document &middot; no shared bus, no direct coupling.</text>
+        <text x="700" y="636" text-anchor="middle" class="op-sub" font-size="16" fill="#aeb8c9">Five agents &middot; five idempotent upserts to one document &middot; no shared bus, no direct coupling.</text>
       </svg>
     </div>
   </div>
@@ -1110,9 +1341,9 @@
 <!-- ============================================================
      SLIDE 13 — INTEGRATION IN OPERATION (callbacks -> Mongo)
      ============================================================ -->
-<section class="slide op-mongo" id="slide-12">
+<section class="slide op-mongo" id="slide-14">
   <div class="slide-header">
-    <span class="slide-num">12 / INTEGRATION</span>
+    <span class="slide-num">14 / INTEGRATION</span>
     <span class="eyebrow op">IN OPERATION</span>
     <span class="op-tag"><span class="live-dot"></span>RUNTIME</span>
   </div>
@@ -1137,8 +1368,8 @@
         <text x="250" y="207" text-anchor="middle" fill="#e8eefb" font-size="19" font-family="JetBrains Mono, monospace">market_intelligence</text>
         <line x1="440" y1="200" x2="700" y2="200" class="op-edge cb" marker-end="url(#mm-cb)"/>
         <rect x="700" y="165" width="240" height="70" rx="10" fill="#0d1322" stroke="#fbbf24" stroke-width="2" stroke-dasharray="4 5"/>
-        <text x="820" y="198" text-anchor="middle" fill="#fbbf24" font-size="14" font-family="JetBrains Mono, monospace">store_market_report</text>
-        <text x="820" y="220" text-anchor="middle" fill="#94a3b8" font-size="13" font-family="JetBrains Mono, monospace">update_project_report()</text>
+        <text x="820" y="198" text-anchor="middle" fill="#fbbf24" font-size="16" font-family="JetBrains Mono, monospace">store_market_report</text>
+        <text x="820" y="220" text-anchor="middle" fill="#94a3b8" font-size="15" font-family="JetBrains Mono, monospace">update_project_report()</text>
         <line x1="940" y1="200" x2="1170" y2="200" class="op-edge cb" marker-end="url(#mm-cb)"/>
 
         <!-- row 2 -->
@@ -1146,8 +1377,8 @@
         <text x="250" y="337" text-anchor="middle" fill="#e8eefb" font-size="19" font-family="JetBrains Mono, monospace">segmentation_intel</text>
         <line x1="440" y1="330" x2="700" y2="330" class="op-edge cb" marker-end="url(#mm-cb)"/>
         <rect x="700" y="295" width="240" height="70" rx="10" fill="#0d1322" stroke="#fbbf24" stroke-width="2" stroke-dasharray="4 5"/>
-        <text x="820" y="328" text-anchor="middle" fill="#fbbf24" font-size="14" font-family="JetBrains Mono, monospace">store_segment_report</text>
-        <text x="820" y="350" text-anchor="middle" fill="#94a3b8" font-size="13" font-family="JetBrains Mono, monospace">update_project_report()</text>
+        <text x="820" y="328" text-anchor="middle" fill="#fbbf24" font-size="16" font-family="JetBrains Mono, monospace">store_segment_report</text>
+        <text x="820" y="350" text-anchor="middle" fill="#94a3b8" font-size="15" font-family="JetBrains Mono, monospace">update_project_report()</text>
         <line x1="940" y1="330" x2="1170" y2="330" class="op-edge cb" marker-end="url(#mm-cb)"/>
 
         <!-- row 3 -->
@@ -1155,8 +1386,8 @@
         <text x="250" y="467" text-anchor="middle" fill="#e8eefb" font-size="19" font-family="JetBrains Mono, monospace">org_intelligence</text>
         <line x1="440" y1="460" x2="700" y2="460" class="op-edge cb" marker-end="url(#mm-cb)"/>
         <rect x="700" y="425" width="240" height="70" rx="10" fill="#0d1322" stroke="#fbbf24" stroke-width="2" stroke-dasharray="4 5"/>
-        <text x="820" y="458" text-anchor="middle" fill="#fbbf24" font-size="14" font-family="JetBrains Mono, monospace">store_org_report</text>
-        <text x="820" y="480" text-anchor="middle" fill="#94a3b8" font-size="13" font-family="JetBrains Mono, monospace">update_project_report()</text>
+        <text x="820" y="458" text-anchor="middle" fill="#fbbf24" font-size="16" font-family="JetBrains Mono, monospace">store_org_report</text>
+        <text x="820" y="480" text-anchor="middle" fill="#94a3b8" font-size="15" font-family="JetBrains Mono, monospace">update_project_report()</text>
         <line x1="940" y1="460" x2="1170" y2="460" class="op-edge cb" marker-end="url(#mm-cb)"/>
 
         <!-- row 4 (skip) -->
@@ -1164,8 +1395,8 @@
         <text x="250" y="597" text-anchor="middle" fill="#e8eefb" font-size="19" font-family="JetBrains Mono, monospace">sales_intelligence</text>
         <line x1="440" y1="590" x2="700" y2="590" class="op-edge skip" marker-end="url(#mm-skip)"/>
         <rect x="700" y="555" width="240" height="70" rx="10" fill="#0d1322" stroke="#f472b6" stroke-width="2" stroke-dasharray="4 5"/>
-        <text x="820" y="588" text-anchor="middle" fill="#f472b6" font-size="14" font-family="JetBrains Mono, monospace">store_sales_report</text>
-        <text x="820" y="610" text-anchor="middle" fill="#f472b6" font-size="13" font-family="JetBrains Mono, monospace">skip if skipped=True</text>
+        <text x="820" y="588" text-anchor="middle" fill="#f472b6" font-size="16" font-family="JetBrains Mono, monospace">store_sales_report</text>
+        <text x="820" y="610" text-anchor="middle" fill="#f472b6" font-size="15" font-family="JetBrains Mono, monospace">skip if skipped=True</text>
         <line x1="940" y1="590" x2="1170" y2="590" class="op-edge skip" marker-end="url(#mm-skip)"/>
 
         <!-- row 5 -->
@@ -1173,8 +1404,8 @@
         <text x="250" y="727" text-anchor="middle" fill="#e8eefb" font-size="19" font-family="JetBrains Mono, monospace">prospect_researcher</text>
         <line x1="440" y1="720" x2="700" y2="720" class="op-edge cb" marker-end="url(#mm-cb)"/>
         <rect x="700" y="685" width="240" height="70" rx="10" fill="#0d1322" stroke="#fbbf24" stroke-width="2" stroke-dasharray="4 5"/>
-        <text x="820" y="718" text-anchor="middle" fill="#fbbf24" font-size="14" font-family="JetBrains Mono, monospace">store_prospect_report</text>
-        <text x="820" y="740" text-anchor="middle" fill="#94a3b8" font-size="13" font-family="JetBrains Mono, monospace">update_project_report()</text>
+        <text x="820" y="718" text-anchor="middle" fill="#fbbf24" font-size="16" font-family="JetBrains Mono, monospace">store_prospect_report</text>
+        <text x="820" y="740" text-anchor="middle" fill="#94a3b8" font-size="15" font-family="JetBrains Mono, monospace">update_project_report()</text>
         <line x1="940" y1="720" x2="1170" y2="720" class="op-edge cb" marker-end="url(#mm-cb)"/>
 
         <!-- mongo doc -->
@@ -1182,23 +1413,23 @@
         <text x="1205" y="190" fill="#34d399" font-size="18" font-family="JetBrains Mono, monospace">project { "abc-123"</text>
 
         <text x="1205" y="250" fill="#e8eefb" font-size="18" font-family="JetBrains Mono, monospace">market_context:</text>
-        <text x="1560" y="250" fill="#5b6781" font-size="18" font-family="JetBrains Mono, monospace" text-anchor="end" class="opm-null n1">null</text>
+        <text x="1560" y="250" fill="#aeb8c9" font-size="18" font-family="JetBrains Mono, monospace" text-anchor="end" class="opm-null n1">null</text>
         <text x="1560" y="250" fill="#34d399" font-size="18" font-family="JetBrains Mono, monospace" text-anchor="end" class="opm-fill f1">&#10003; written</text>
 
         <text x="1205" y="375" fill="#e8eefb" font-size="18" font-family="JetBrains Mono, monospace">market_segment:</text>
-        <text x="1560" y="375" fill="#5b6781" font-size="18" font-family="JetBrains Mono, monospace" text-anchor="end" class="opm-null n2">null</text>
+        <text x="1560" y="375" fill="#aeb8c9" font-size="18" font-family="JetBrains Mono, monospace" text-anchor="end" class="opm-null n2">null</text>
         <text x="1560" y="375" fill="#34d399" font-size="18" font-family="JetBrains Mono, monospace" text-anchor="end" class="opm-fill f2">&#10003; written</text>
 
         <text x="1205" y="500" fill="#e8eefb" font-size="18" font-family="JetBrains Mono, monospace">client_org_research:</text>
-        <text x="1560" y="500" fill="#5b6781" font-size="18" font-family="JetBrains Mono, monospace" text-anchor="end" class="opm-null n3">null</text>
+        <text x="1560" y="500" fill="#aeb8c9" font-size="18" font-family="JetBrains Mono, monospace" text-anchor="end" class="opm-null n3">null</text>
         <text x="1560" y="500" fill="#34d399" font-size="18" font-family="JetBrains Mono, monospace" text-anchor="end" class="opm-fill f3">&#10003; written</text>
 
         <text x="1205" y="625" fill="#e8eefb" font-size="18" font-family="JetBrains Mono, monospace">target_org_research:</text>
-        <text x="1560" y="625" fill="#5b6781" font-size="18" font-family="JetBrains Mono, monospace" text-anchor="end" class="opm-null n4">null</text>
+        <text x="1560" y="625" fill="#aeb8c9" font-size="18" font-family="JetBrains Mono, monospace" text-anchor="end" class="opm-null n4">null</text>
         <text x="1560" y="625" fill="#f472b6" font-size="16" font-family="JetBrains Mono, monospace" text-anchor="end" class="opm-fill f4">null &middot; skipped</text>
 
         <text x="1205" y="750" fill="#e8eefb" font-size="18" font-family="JetBrains Mono, monospace">prospect_research:</text>
-        <text x="1560" y="750" fill="#5b6781" font-size="18" font-family="JetBrains Mono, monospace" text-anchor="end" class="opm-null n5">null</text>
+        <text x="1560" y="750" fill="#aeb8c9" font-size="18" font-family="JetBrains Mono, monospace" text-anchor="end" class="opm-null n5">null</text>
         <text x="1560" y="750" fill="#34d399" font-size="18" font-family="JetBrains Mono, monospace" text-anchor="end" class="opm-fill f5">&#10003; written</text>
 
         <!-- tokens -->
@@ -1221,9 +1452,9 @@
 <!-- ============================================================
      SLIDE 14 — COST (§1.4)
      ============================================================ -->
-<section class="slide" id="slide-13">
+<section class="slide" id="slide-15">
   <div class="slide-header">
-    <span class="slide-num">13 / COST</span>
+    <span class="slide-num">15 / COST</span>
     <span class="eyebrow">REQUIREMENT &sect;1.4 &middot; PARTIAL</span>
   </div>
   <h2>Cheap by construction, not by luck</h2>
@@ -1298,9 +1529,9 @@
 <!-- ============================================================
      SLIDE 10 — OBSERVABILITY (§2.3)
      ============================================================ -->
-<section class="slide sl-obs" id="slide-14">
+<section class="slide sl-obs" id="slide-16">
   <div class="slide-header">
-    <span class="slide-num">14 / OBSERVABILITY</span>
+    <span class="slide-num">16 / OBSERVABILITY</span>
     <span class="eyebrow">PROPOSED SOLUTION &middot; &sect;2.3</span>
   </div>
   <h2>From print-logs to full-trace governance</h2>
@@ -1325,17 +1556,17 @@
           <!-- agent nodes -->
           <rect class="ob-node" x="40" y="112" width="196" height="86" rx="12"/>
           <text class="ob-title" x="138" y="150" text-anchor="middle" font-size="18">analysis agents</text>
-          <text class="ob-sub" x="138" y="176" text-anchor="middle" font-size="13">after_agent_callback</text>
+          <text class="ob-sub" x="138" y="176" text-anchor="middle" font-size="15">after_agent_callback</text>
 
           <rect class="ob-node crit" x="40" y="218" width="196" height="86" rx="12"/>
           <text class="ob-title" x="138" y="256" text-anchor="middle" font-size="18">critic LoopAgent</text>
-          <text class="ob-sub" x="138" y="282" text-anchor="middle" font-size="13">grade = pass / fail</text>
+          <text class="ob-sub" x="138" y="282" text-anchor="middle" font-size="15">grade = pass / fail</text>
 
           <rect class="ob-node" x="40" y="324" width="196" height="86" rx="12"/>
           <text class="ob-title" x="138" y="362" text-anchor="middle" font-size="18">MongoDB write</text>
-          <text class="ob-sub" x="138" y="388" text-anchor="middle" font-size="13">report persisted</text>
+          <text class="ob-sub" x="138" y="388" text-anchor="middle" font-size="15">report persisted</text>
 
-          <text class="ob-kick" x="138" y="446" text-anchor="middle" font-size="13" fill="#22d3ee">emits spans &darr;</text>
+          <text class="ob-kick" x="138" y="446" text-anchor="middle" font-size="15" fill="#22d3ee">emits spans &darr;</text>
 
           <!-- converging edges into OTel -->
           <path id="ob-p1" class="ob-edge" d="M 236 155 C 300 155, 320 280, 372 270" marker-end="url(#ob-arr)"/>
@@ -1345,11 +1576,11 @@
           <!-- OpenTelemetry node (built-in) -->
           <rect class="ob-otel" x="376" y="240" width="150" height="92" rx="14"/>
           <text class="ob-title" x="451" y="280" text-anchor="middle" font-size="16">OpenTelemetry</text>
-          <text class="ob-sub" x="451" y="304" text-anchor="middle" font-size="13" fill="#22d3ee">built-in &middot; ADK</text>
+          <text class="ob-sub" x="451" y="304" text-anchor="middle" font-size="15" fill="#22d3ee">built-in &middot; ADK</text>
 
           <!-- OTLP export edge -->
           <path id="ob-p4" class="ob-edge otlp" d="M 526 286 L 568 280" marker-end="url(#ob-arr-v)"/>
-          <text class="ob-kick" x="547" y="262" text-anchor="middle" font-size="12" fill="#a78bfa">OTLP</text>
+          <text class="ob-kick" x="547" y="262" text-anchor="middle" font-size="15" fill="#a78bfa">OTLP</text>
 
           <!-- Langfuse panel (cx = 686) -->
           <rect class="ob-lf" x="568" y="92" width="236" height="360" rx="16"/>
@@ -1358,7 +1589,7 @@
           <rect x="625" y="112" width="34" height="34" rx="9" fill="rgba(167,139,250,0.18)"/>
           <text x="642" y="136" text-anchor="middle" font-size="20" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-weight="700">L</text>
           <text class="ob-title" x="669" y="128" text-anchor="start" font-size="20">Langfuse</text>
-          <text class="ob-sub" x="686" y="170" text-anchor="middle" font-size="12">trace &middot; project run</text>
+          <text class="ob-sub" x="686" y="170" text-anchor="middle" font-size="15">trace &middot; project run</text>
 
           <!-- trace waterfall bars -->
           <rect class="ob-bar" x="591" y="186" width="190" height="16" rx="5" fill="rgba(34,211,238,0.55)" style="animation-delay:0.35s;"/>
@@ -1372,9 +1603,9 @@
             <rect x="607" y="322" width="158" height="44" rx="11" fill="rgba(52,211,153,0.12)" stroke="#34d399" stroke-width="1.5"/>
             <circle cx="635" cy="344" r="9" fill="none" stroke="#34d399" stroke-width="3"/>
             <path d="M 630 344 L 634 348 L 641 339" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <text x="652" y="349" text-anchor="start" font-size="14" fill="#34d399" font-family="JetBrains Mono, monospace">critic: pass</text>
+            <text x="652" y="349" text-anchor="start" font-size="16" fill="#34d399" font-family="JetBrains Mono, monospace">critic: pass</text>
           </g>
-          <text class="ob-sub" x="686" y="404" text-anchor="middle" font-size="12">p95 &middot; cost &middot; replay &#10003;</text>
+          <text class="ob-sub" x="686" y="404" text-anchor="middle" font-size="15">p95 &middot; cost &middot; replay &#10003;</text>
 
           <!-- flowing dots -->
           <circle class="ob-dot" r="4.5"><animateMotion dur="1.9s" repeatCount="indefinite" begin="0s"><mpath href="#ob-p1"/></animateMotion></circle>
@@ -1400,12 +1631,12 @@
         </div>
         <div style="display:flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:1.0rem; flex-wrap:wrap;">
           <span style="padding:7px 13px; border-radius:8px; background:rgba(34,211,238,0.12); color:#22d3ee;">ADK callbacks</span>
-          <span style="color:#5b6781;">&rarr;</span>
+          <span style="color:#aeb8c9;">&rarr;</span>
           <span style="padding:7px 13px; border-radius:8px; background:rgba(34,211,238,0.12); color:#22d3ee;">built-in OpenTelemetry</span>
-          <span style="color:#5b6781;">&rarr;</span>
+          <span style="color:#aeb8c9;">&rarr;</span>
           <span style="padding:7px 13px; border-radius:8px; background:rgba(167,139,250,0.18); color:#a78bfa;">Langfuse</span>
         </div>
-        <div style="color:#7f8aa3; font-size:1.0rem;">One dependency &middot; two env vars (OTLP endpoint + key) &middot; zero new infra.</div>
+        <div style="color:#aeb8c9; font-size:1.05rem;">One dependency &middot; two env vars (OTLP endpoint + key) &middot; zero new infra.</div>
       </div>
 
       <!-- what the one framework gives you -->
@@ -1441,9 +1672,9 @@
 <!-- ============================================================
      SLIDE 11 — EVALUATION (§2.2)
      ============================================================ -->
-<section class="slide" id="slide-15">
+<section class="slide" id="slide-17">
   <div class="slide-header">
-    <span class="slide-num">15 / EVALUATION</span>
+    <span class="slide-num">17 / EVALUATION</span>
     <span class="eyebrow">REQUIREMENT &sect;2.2 &middot; PARTIAL</span>
   </div>
   <h2>In-loop critic + offline benchmarks + runtime guardrail</h2>
@@ -1505,9 +1736,9 @@
 <!-- ============================================================
      SLIDE 12 — NETWORK OVERVIEW
      ============================================================ -->
-<section class="slide" id="slide-16">
+<section class="slide" id="slide-18">
   <div class="slide-header">
-    <span class="slide-num">16 / NETWORK</span>
+    <span class="slide-num">18 / NETWORK</span>
     <span class="eyebrow">THE WHOLE PICTURE</span>
   </div>
   <h2>One chancellor, five domain pipelines</h2>
@@ -1580,9 +1811,9 @@
 <!-- ============================================================
      SLIDE 18 — NETWORK IN OPERATION (composed sub-pipelines)
      ============================================================ -->
-<section class="slide op-net" id="slide-17">
+<section class="slide op-net" id="slide-19">
   <div class="slide-header">
-    <span class="slide-num">17 / NETWORK</span>
+    <span class="slide-num">19 / NETWORK</span>
     <span class="eyebrow op">IN OPERATION</span>
     <span class="op-tag"><span class="live-dot"></span>RUNTIME</span>
   </div>
@@ -1599,7 +1830,7 @@
         </defs>
 
         <!-- ============ ROW A: the canonical pipeline ============ -->
-        <text x="40" y="46" font-size="22" style="text-anchor:start; fill:#5b6781; font-family:'JetBrains Mono',monospace; letter-spacing:0.16em;">THE CANONICAL SUB-PIPELINE&#160;&#160;&#183;&#160;&#160;built once, instantiated five times</text>
+        <text x="40" y="46" font-size="22" style="text-anchor:start; fill:#aeb8c9; font-family:'JetBrains Mono',monospace; letter-spacing:0.16em;">THE CANONICAL SUB-PIPELINE&#160;&#160;&#183;&#160;&#160;built once, instantiated five times</text>
 
         <!-- STEP 1 planner -->
         <rect x="30" y="80" width="250" height="150" class="opn-inner" rx="14"/>
@@ -1638,12 +1869,12 @@
         <text x="1611" y="196" text-anchor="middle" fill="#34d399" font-size="22" font-family="JetBrains Mono, monospace">.state[ field ]</text>
 
         <!-- ============ ROW B: five instances ============ -->
-        <text x="40" y="338" font-size="22" style="text-anchor:start; fill:#5b6781; font-family:'JetBrains Mono',monospace; letter-spacing:0.16em;">THE SAME LOOP, FIVE DOMAINS</text>
+        <text x="40" y="338" font-size="22" style="text-anchor:start; fill:#aeb8c9; font-family:'JetBrains Mono',monospace; letter-spacing:0.16em;">THE SAME LOOP, FIVE DOMAINS</text>
 
         <!-- card 1 -->
         <g class="opn-card">
           <rect x="20" y="368" width="336" height="372" class="opn-tile" rx="16"/>
-          <text x="44" y="412" fill="#5b6781" font-size="18" font-family="JetBrains Mono, monospace">#1</text>
+          <text x="44" y="412" fill="#aeb8c9" font-size="18" font-family="JetBrains Mono, monospace">#1</text>
           <text x="44" y="468" fill="#e8eefb" font-size="23" font-family="JetBrains Mono, monospace">market_</text>
           <text x="44" y="500" fill="#e8eefb" font-size="23" font-family="JetBrains Mono, monospace">intelligence</text>
           <text x="44" y="560" fill="#94a3b8" font-size="17">writes</text>
@@ -1655,7 +1886,7 @@
         <!-- card 2 -->
         <g class="opn-card">
           <rect x="380" y="368" width="336" height="372" class="opn-tile" rx="16"/>
-          <text x="404" y="412" fill="#5b6781" font-size="18" font-family="JetBrains Mono, monospace">#2</text>
+          <text x="404" y="412" fill="#aeb8c9" font-size="18" font-family="JetBrains Mono, monospace">#2</text>
           <text x="404" y="468" fill="#e8eefb" font-size="23" font-family="JetBrains Mono, monospace">segmentation_</text>
           <text x="404" y="500" fill="#e8eefb" font-size="23" font-family="JetBrains Mono, monospace">intel</text>
           <text x="404" y="560" fill="#94a3b8" font-size="17">writes</text>
@@ -1667,7 +1898,7 @@
         <!-- card 3 -->
         <g class="opn-card">
           <rect x="740" y="368" width="336" height="372" class="opn-tile" rx="16"/>
-          <text x="764" y="412" fill="#5b6781" font-size="18" font-family="JetBrains Mono, monospace">#3</text>
+          <text x="764" y="412" fill="#aeb8c9" font-size="18" font-family="JetBrains Mono, monospace">#3</text>
           <text x="764" y="468" fill="#e8eefb" font-size="23" font-family="JetBrains Mono, monospace">org_</text>
           <text x="764" y="500" fill="#e8eefb" font-size="23" font-family="JetBrains Mono, monospace">intelligence</text>
           <text x="764" y="560" fill="#94a3b8" font-size="17">writes</text>
@@ -1679,7 +1910,7 @@
         <!-- card 4 sales conditional -->
         <g class="opn-card">
           <rect x="1100" y="368" width="336" height="372" class="opn-tile cond" rx="16"/>
-          <text x="1124" y="412" fill="#5b6781" font-size="18" font-family="JetBrains Mono, monospace">#4</text>
+          <text x="1124" y="412" fill="#aeb8c9" font-size="18" font-family="JetBrains Mono, monospace">#4</text>
           <text x="1124" y="468" fill="#f472b6" font-size="23" font-family="JetBrains Mono, monospace">sales_</text>
           <text x="1124" y="500" fill="#f472b6" font-size="23" font-family="JetBrains Mono, monospace">intelligence</text>
           <text x="1124" y="560" fill="#94a3b8" font-size="17">writes</text>
@@ -1691,7 +1922,7 @@
         <!-- card 5 prospect no composer -->
         <g class="opn-card">
           <rect x="1460" y="368" width="320" height="372" class="opn-tile" rx="16" stroke="#fbbf24"/>
-          <text x="1484" y="412" fill="#5b6781" font-size="18" font-family="JetBrains Mono, monospace">#5</text>
+          <text x="1484" y="412" fill="#aeb8c9" font-size="18" font-family="JetBrains Mono, monospace">#5</text>
           <text x="1484" y="468" fill="#e8eefb" font-size="23" font-family="JetBrains Mono, monospace">prospect_</text>
           <text x="1484" y="500" fill="#e8eefb" font-size="23" font-family="JetBrains Mono, monospace">researcher</text>
           <text x="1484" y="560" fill="#94a3b8" font-size="17">emits</text>
@@ -1713,9 +1944,9 @@
 <!-- ============================================================
      SLIDE 19 — LIVE TRACE (END-TO-END RUN)
      ============================================================ -->
-<section class="slide sl-trace" id="slide-18">
+<section class="slide sl-trace" id="slide-20">
   <div class="slide-header">
-    <span class="slide-num">18 / LIVE TRACE</span>
+    <span class="slide-num">20 / LIVE TRACE</span>
     <span class="eyebrow op">THE GRAND FINALE</span>
     <span class="op-tag"><span class="live-dot"></span>DRAG &middot; SCROLL &middot; CLICK TO ZOOM</span>
   </div>
@@ -1743,9 +1974,9 @@
 <!-- ============================================================
      SLIDE 19 — FINAL ANALYSIS (proposed scoring/validation capstone)
      ============================================================ -->
-<section class="slide fa-slide" id="slide-19">
+<section class="slide fa-slide" id="slide-21">
   <div class="slide-header">
-    <span class="slide-num">19 / FINAL ANALYSIS</span>
+    <span class="slide-num">21 / FINAL ANALYSIS</span>
     <span class="eyebrow op">PROPOSED &middot; VALIDATION CAPSTONE</span>
     <span class="op-tag"><span class="live-dot"></span>SCORE + REPORT</span>
   </div>
@@ -1756,7 +1987,7 @@
     <div class="svg-wrap">
       <svg viewBox="0 0 2240 760" preserveAspectRatio="xMidYMid meet">
         <defs>
-          <marker id="fa-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker>
+          <marker id="fa-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8593ab"/></marker>
           <marker id="fa-arr-p" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#34d399"/></marker>
           <marker id="fa-arr-c" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#a78bfa"/></marker>
           <marker id="fa-arr-t" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#fbbf24"/></marker>
@@ -1765,7 +1996,7 @@
         <!-- INPUT: chancellor reports in MongoDB -->
         <rect x="30" y="170" width="290" height="420" rx="18" class="fa-mongo"/>
         <text x="175" y="214" text-anchor="middle" class="fa-kicker" font-size="17">MongoDB &middot; INPUT</text>
-        <text x="175" y="240" text-anchor="middle" class="fa-kicker" font-size="14">chancellor reports</text>
+        <text x="175" y="240" text-anchor="middle" class="fa-kicker" font-size="16">chancellor reports</text>
         <text x="175" y="308" text-anchor="middle" class="fa-mono" font-size="16" fill="#34d399">&bull; market_context</text>
         <text x="175" y="368" text-anchor="middle" class="fa-mono" font-size="16" fill="#34d399">&bull; market_segment</text>
         <text x="175" y="428" text-anchor="middle" class="fa-mono" font-size="16" fill="#34d399">&bull; client_org_research</text>
@@ -1776,7 +2007,7 @@
 
         <!-- report_loader -->
         <rect x="404" y="308" width="210" height="144" rx="14" class="fa-node load"/>
-        <text x="509" y="346" text-anchor="middle" class="fa-kicker" font-size="14">STEP 1</text>
+        <text x="509" y="346" text-anchor="middle" class="fa-kicker" font-size="16">STEP 1</text>
         <text x="509" y="384" text-anchor="middle" class="fa-title" font-size="20">report_loader</text>
         <text x="509" y="416" text-anchor="middle" class="fa-sub" font-size="15">reports &rarr; state</text>
 
@@ -1784,7 +2015,7 @@
 
         <!-- analysis_planner -->
         <rect x="704" y="308" width="210" height="144" rx="14" class="fa-node plan"/>
-        <text x="809" y="346" text-anchor="middle" class="fa-kicker" font-size="14">STEP 2</text>
+        <text x="809" y="346" text-anchor="middle" class="fa-kicker" font-size="16">STEP 2</text>
         <text x="809" y="384" text-anchor="middle" class="fa-title" font-size="18">analysis_planner</text>
         <text x="809" y="416" text-anchor="middle" class="fa-sub" font-size="15">scoring rubric</text>
 
@@ -1795,11 +2026,11 @@
         <text x="1030" y="160" text-anchor="start" class="fa-kicker" font-size="17">analysis_quality_loop</text>
         <rect x="1470" y="130" width="182" height="38" rx="19" class="fa-loopbadge"/>
         <circle cx="1496" cy="149" r="10" class="fa-loopring"/>
-        <text x="1518" y="155" text-anchor="start" class="fa-loopbadge-txt" font-size="14">LoopAgent &le; 4&times;</text>
+        <text x="1518" y="155" text-anchor="start" class="fa-loopbadge-txt" font-size="16">LoopAgent &le; 4&times;</text>
 
         <!-- analysis_worker + google_search -->
         <rect x="1064" y="212" width="540" height="150" rx="14" class="fa-node worker"/>
-        <text x="1334" y="248" text-anchor="middle" class="fa-kicker" font-size="14">worker_model &middot; gemini-3.1-flash-lite</text>
+        <text x="1334" y="248" text-anchor="middle" class="fa-kicker" font-size="16">worker_model &middot; gemini-3.1-flash-lite</text>
         <text x="1334" y="290" text-anchor="middle" class="fa-title" font-size="26">analysis_worker</text>
         <rect x="1114" y="312" width="440" height="44" rx="12" class="fa-node tool fa-search-pill"/>
         <text x="1334" y="340" text-anchor="middle" class="fa-mono" font-size="15" fill="#fbbf24">google_search &mdash; confirm / look up facts</text>
@@ -1809,29 +2040,29 @@
         <!-- score_evaluator (critic) -->
         <rect x="1064" y="404" width="540" height="118" rx="14" class="fa-node critic"/>
         <text x="1334" y="448" text-anchor="middle" class="fa-title" font-size="22">analysis_evaluator <tspan fill="#a78bfa">(critic)</tspan></text>
-        <text x="1334" y="484" text-anchor="middle" class="fa-sub" font-size="14">grades evidence + cross-report consistency</text>
+        <text x="1334" y="484" text-anchor="middle" class="fa-sub" font-size="16">grades evidence + cross-report consistency</text>
 
         <line x1="1334" y1="522" x2="1334" y2="562" class="fa-edge" marker-end="url(#fa-arr)"/>
 
         <!-- escalation_checker -->
         <rect x="1064" y="566" width="540" height="104" rx="14" class="fa-node"/>
         <text x="1334" y="604" text-anchor="middle" class="fa-title" font-size="20">escalation_checker</text>
-        <text x="1334" y="636" text-anchor="middle" class="fa-sub" font-size="14">grade == pass &rarr; exit &middot; else &rarr; next iteration</text>
+        <text x="1334" y="636" text-anchor="middle" class="fa-sub" font-size="16">grade == pass &rarr; exit &middot; else &rarr; next iteration</text>
 
         <!-- loop-back arrow -->
         <path d="M 1064 616 L 1036 616 L 1036 287 L 1064 287" class="fa-edge loop" marker-end="url(#fa-arr-c)"/>
         <text x="1028" y="460" text-anchor="middle" class="fa-loopback-ico" font-size="30">&#8635;</text>
-        <text x="1048" y="266" text-anchor="start" class="fa-mono" font-size="13" fill="#f472b6">FAIL &rarr; re-search</text>
+        <text x="1048" y="266" text-anchor="start" class="fa-mono" font-size="15" fill="#f472b6">FAIL &rarr; re-search</text>
 
         <!-- exit to composer -->
         <line x1="1668" y1="380" x2="1736" y2="380" class="fa-edge pass" marker-end="url(#fa-arr-p)"/>
-        <text x="1702" y="364" text-anchor="middle" class="fa-mono" font-size="13" fill="#34d399">PASS</text>
+        <text x="1702" y="364" text-anchor="middle" class="fa-mono" font-size="15" fill="#34d399">PASS</text>
 
         <!-- final_report_composer -->
         <rect x="1740" y="308" width="210" height="144" rx="14" class="fa-node composer"/>
-        <text x="1845" y="346" text-anchor="middle" class="fa-kicker" font-size="14">STEP 4</text>
+        <text x="1845" y="346" text-anchor="middle" class="fa-kicker" font-size="16">STEP 4</text>
         <text x="1845" y="382" text-anchor="middle" class="fa-title" font-size="15">final_report_composer</text>
-        <text x="1845" y="414" text-anchor="middle" class="fa-sub" font-size="14">score + report</text>
+        <text x="1845" y="414" text-anchor="middle" class="fa-sub" font-size="16">score + report</text>
 
         <!-- composer -> score gauge -->
         <line x1="1950" y1="380" x2="2006" y2="380" class="fa-edge" marker-end="url(#fa-arr)"/>
@@ -1846,7 +2077,7 @@
         <rect x="1740" y="518" width="210" height="132" rx="14" class="fa-mongo"/>
         <text x="1845" y="556" text-anchor="middle" class="fa-kicker" font-size="15">MongoDB &middot; OUTPUT</text>
         <text x="1845" y="592" text-anchor="middle" class="fa-mono" font-size="17" fill="#34d399">final_analysis</text>
-        <text x="1845" y="622" text-anchor="middle" class="fa-mono" font-size="14" fill="#34d399">{ score, report } &#10003;</text>
+        <text x="1845" y="622" text-anchor="middle" class="fa-mono" font-size="16" fill="#34d399">{ score, report } &#10003;</text>
       </svg>
     </div>
   </div>
@@ -1861,9 +2092,9 @@
 <!-- ============================================================
      SLIDE 14 — CROSSWALK MATRIX
      ============================================================ -->
-<section class="slide" id="slide-20">
+<section class="slide" id="slide-22">
   <div class="slide-header">
-    <span class="slide-num">20 / CROSSWALK</span>
+    <span class="slide-num">22 / CROSSWALK</span>
     <span class="eyebrow">REQUIREMENT &rarr; STATUS &rarr; NEXT</span>
   </div>
   <h2>Mapped Requirements</h2>
@@ -1872,7 +2103,7 @@
   <div class="slide-body">
     <div class="s14-table">
       <div class="s14-th">REQUIREMENT</div>
-      <div class="s14-th">WHAT SHIPS TODAY</div>
+      <div class="s14-th">WHAT CAN SHIP TODAY</div>
       <div class="s14-th">PROPOSED NEXT</div>
 
       <div class="s14-row">
@@ -1935,7 +2166,7 @@
 <div class="chrome">
   <div class="stage-pips"></div>
   <div class="progress"><div class="progress-fill"></div></div>
-  <div class="counter"><span class="current">01</span><span class="total"> / 20</span></div>
+  <div class="counter"><span class="current">01</span><span class="total"> / 22</span></div>
   <div class="nav-btns">
     <button class="nav-btn prev" aria-label="Previous">
       <svg width="18" height="18" viewBox="0 0 18 18"><path d="M11 4 L5 9 L11 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
