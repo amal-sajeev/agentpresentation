@@ -315,30 +315,33 @@
                 <marker id="e1g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#38e0a0"/></marker>
                 <marker id="e1p" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9b7bff"/></marker>
               </defs>
-              <!-- draft -->
-              <rect x="130" y="40" width="180" height="100" rx="16" fill="rgba(56,224,160,0.07)" stroke="#38e0a0" stroke-width="2.5"/>
-              <text class="dg-lbl" x="220" y="86" text-anchor="middle" font-size="30">draft</text>
-              <text class="dg-sub" x="220" y="118" text-anchor="middle" font-size="19">worker · flash-lite</text>
-              <!-- critic -->
-              <rect x="130" y="280" width="180" height="100" rx="16" fill="rgba(155,123,255,0.07)" stroke="#9b7bff" stroke-width="2.5"/>
-              <text class="dg-lbl" x="220" y="326" text-anchor="middle" font-size="30">critic</text>
-              <text class="dg-sub" x="220" y="358" text-anchor="middle" font-size="19">grades it · flash</text>
-              <!-- forward -->
-              <path id="e1fwd" d="M220 140 L220 280" stroke="#38e0a0" stroke-width="3" fill="none" marker-end="url(#e1g)"/>
+              <!-- draft — wider box so sub-label fits comfortably -->
+              <rect x="76" y="40" width="288" height="106" rx="16" fill="rgba(56,224,160,0.07)" stroke="#38e0a0" stroke-width="2.5"/>
+              <text class="dg-lbl" x="220" y="87" text-anchor="middle" font-size="34">draft</text>
+              <text class="dg-sub" x="220" y="122" text-anchor="middle" font-size="22">flash-lite · worker</text>
+              <!-- critic — same width -->
+              <rect x="76" y="278" width="288" height="106" rx="16" fill="rgba(155,123,255,0.07)" stroke="#9b7bff" stroke-width="2.5"/>
+              <text class="dg-lbl" x="220" y="325" text-anchor="middle" font-size="34">critic</text>
+              <text class="dg-sub" x="220" y="360" text-anchor="middle" font-size="22">flash · evaluator</text>
+              <!-- forward arrow with animated dot -->
+              <path id="e1fwd" d="M220 146 L220 278" stroke="#38e0a0" stroke-width="3" fill="none" marker-end="url(#e1g)"/>
               <circle r="8" fill="#38e0a0"><animateMotion dur="1.5s" repeatCount="indefinite"><mpath href="#e1fwd"/></animateMotion></circle>
-              <!-- fail loop back (left) -->
-              <path d="M130 330 C 44 330, 44 90, 130 90" stroke="#9b7bff" stroke-width="2.5" fill="none" stroke-dasharray="8 8" marker-end="url(#e1p)">
+              <!-- fail loop on left — arc from critic-left to draft-left -->
+              <path d="M76 331 C 14 331, 14 93, 76 93" stroke="#9b7bff" stroke-width="2.5" fill="none" stroke-dasharray="8 8" marker-end="url(#e1p)">
                 <animate attributeName="stroke-dashoffset" values="32;0" dur="1.2s" repeatCount="indefinite"/>
               </path>
-              <text class="dg-sub" x="40" y="205" text-anchor="middle" font-size="20" fill="#9b7bff" transform="rotate(-90 40 205)">fail · retry ≤ 5×</text>
-              <!-- pass exit (right) -->
-              <path d="M310 330 L356 330" stroke="#38e0a0" stroke-width="3" fill="none" marker-end="url(#e1g)"/>
-              <circle cx="398" cy="330" r="26" fill="rgba(56,224,160,0.16)" stroke="#38e0a0" stroke-width="2.5">
-                <animate attributeName="r" values="22;28;22" dur="1.5s" repeatCount="indefinite"/>
+              <!-- fail label: dark rect masks the arc so text is clean and readable -->
+              <rect x="0" y="186" width="68" height="54" rx="8" fill="#07070f"/>
+              <text x="34" y="212" text-anchor="middle" font-size="20" fill="#9b7bff" font-family="JetBrains Mono">fail</text>
+              <text x="34" y="234" text-anchor="middle" font-size="20" fill="#9b7bff" font-family="JetBrains Mono">≤ 5×</text>
+              <!-- PASS exit right — arrow from critic-right to pulsing checkmark -->
+              <path d="M364 331 L398 331" stroke="#38e0a0" stroke-width="3" fill="none" marker-end="url(#e1g)"/>
+              <circle cx="420" cy="331" r="18" fill="rgba(56,224,160,0.16)" stroke="#38e0a0" stroke-width="2.5">
+                <animate attributeName="r" values="15;21;15" dur="1.5s" repeatCount="indefinite"/>
               </circle>
-              <path d="M387 330 l8 9 l15 -19" stroke="#38e0a0" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <text class="dg-sub" x="398" y="290" text-anchor="middle" font-size="19" fill="#38e0a0">PASS</text>
-              <text class="dg-sub" x="398" y="382" text-anchor="middle" font-size="19" fill="#38e0a0">exit</text>
+              <path d="M411 331 l7 8 l12 -16" stroke="#38e0a0" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="421" y="298" text-anchor="middle" font-size="20" fill="#38e0a0" font-family="JetBrains Mono">PASS</text>
+              <text x="421" y="368" text-anchor="middle" font-size="20" fill="#38e0a0" font-family="JetBrains Mono">exit</text>
             </svg>
           </div>
         </div>
@@ -353,28 +356,39 @@
           <div class="diag">
             <svg viewBox="0 0 440 460" preserveAspectRatio="xMidYMid meet">
               <defs><marker id="e2a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9b7bff"/></marker></defs>
-              <!-- golden set -->
-              <rect x="26" y="78" width="110" height="68" rx="12" fill="rgba(255,194,75,0.10)" stroke="#ffc24b" stroke-width="2.5"/>
-              <rect x="40" y="62" width="110" height="68" rx="12" fill="rgba(255,194,75,0.13)" stroke="#ffc24b" stroke-width="2.5"/>
-              <rect x="54" y="46" width="110" height="68" rx="12" fill="rgba(255,194,75,0.16)" stroke="#ffc24b" stroke-width="2.5"/>
-              <text class="dg-sub" x="109" y="76" text-anchor="middle" font-size="20" fill="#ffc24b">golden</text>
-              <text class="dg-sub" x="109" y="100" text-anchor="middle" font-size="20" fill="#ffc24b">set</text>
-              <!-- eval -->
-              <path id="e2fwd" d="M170 80 L256 80" stroke="#9b7bff" stroke-width="3" fill="none" marker-end="url(#e2a)"/>
-              <circle r="7" fill="#ffc24b"><animateMotion dur="1.2s" repeatCount="indefinite"><mpath href="#e2fwd"/></animateMotion></circle>
-              <rect x="260" y="44" width="150" height="74" rx="16" fill="rgba(155,123,255,0.08)" stroke="#9b7bff" stroke-width="2.5"/>
-              <text class="dg-lbl" x="335" y="78" text-anchor="middle" font-size="26">Ragas</text>
-              <text class="dg-sub" x="335" y="104" text-anchor="middle" font-size="19">+ DP Val</text>
-              <!-- score bars -->
-              <line x1="34" y1="400" x2="412" y2="400" stroke="#26263a" stroke-width="2.5"/>
-              <g>
-                <rect x="44"  y="400" width="62" height="0" rx="7" fill="#56c9ff"><animate attributeName="height" values="0;150;150;0" keyTimes="0;0.4;0.85;1" dur="3.2s" repeatCount="indefinite"/><animate attributeName="y" values="400;250;250;400" keyTimes="0;0.4;0.85;1" dur="3.2s" repeatCount="indefinite"/></rect>
-                <rect x="120" y="400" width="62" height="0" rx="7" fill="#38e0a0"><animate attributeName="height" values="0;218;218;0" keyTimes="0;0.5;0.85;1" dur="3.2s" begin="0.15s" repeatCount="indefinite"/><animate attributeName="y" values="400;182;182;400" keyTimes="0;0.5;0.85;1" dur="3.2s" begin="0.15s" repeatCount="indefinite"/></rect>
-                <rect x="196" y="400" width="62" height="0" rx="7" fill="#9b7bff"><animate attributeName="height" values="0;176;176;0" keyTimes="0;0.45;0.85;1" dur="3.2s" begin="0.3s" repeatCount="indefinite"/><animate attributeName="y" values="400;224;224;400" keyTimes="0;0.45;0.85;1" dur="3.2s" begin="0.3s" repeatCount="indefinite"/></rect>
-                <rect x="272" y="400" width="62" height="0" rx="7" fill="#ff4d97"><animate attributeName="height" values="0;120;120;0" keyTimes="0;0.5;0.85;1" dur="3.2s" begin="0.45s" repeatCount="indefinite"/><animate attributeName="y" values="400;280;280;400" keyTimes="0;0.5;0.85;1" dur="3.2s" begin="0.45s" repeatCount="indefinite"/></rect>
-                <rect x="348" y="400" width="62" height="0" rx="7" fill="#ffc24b"><animate attributeName="height" values="0;198;198;0" keyTimes="0;0.55;0.85;1" dur="3.2s" begin="0.6s" repeatCount="indefinite"/><animate attributeName="y" values="400;202;202;400" keyTimes="0;0.55;0.85;1" dur="3.2s" begin="0.6s" repeatCount="indefinite"/></rect>
-              </g>
-              <text class="dg-sub" x="223" y="438" text-anchor="middle" font-size="19">metrics scored per sample</text>
+
+              <!-- ── golden dataset: labeled row-table ── -->
+              <text x="14" y="20" font-size="16" fill="#ffc24b" font-family="JetBrains Mono" letter-spacing="0.08em">GOLDEN DATASET</text>
+              <!-- table border -->
+              <rect x="14" y="28" width="196" height="148" rx="12" fill="rgba(255,194,75,0.05)" stroke="#ffc24b" stroke-width="2"/>
+              <!-- row 1 -->
+              <rect x="22" y="36" width="180" height="30" rx="6" fill="rgba(255,194,75,0.14)"/>
+              <text x="32" y="57" font-size="17" fill="#f6f4ff" font-family="JetBrains Mono">market sizing</text>
+              <!-- row 2 -->
+              <rect x="22" y="74" width="180" height="30" rx="6" fill="rgba(255,194,75,0.08)"/>
+              <text x="32" y="95" font-size="17" fill="#f6f4ff" font-family="JetBrains Mono">ICP personas</text>
+              <!-- row 3 -->
+              <rect x="22" y="112" width="180" height="30" rx="6" fill="rgba(255,194,75,0.14)"/>
+              <text x="32" y="133" font-size="17" fill="#f6f4ff" font-family="JetBrains Mono">sector research</text>
+              <!-- row 4 — trailing indicator -->
+              <rect x="22" y="150" width="180" height="18" rx="6" fill="rgba(255,194,75,0.04)"/>
+              <text x="112" y="163" text-anchor="middle" font-size="14" fill="#5c5c70" font-family="JetBrains Mono">· · · more samples</text>
+
+              <!-- ── arrow + scorer ── -->
+              <path id="e2fwd" d="M210 102 L274 102" stroke="#9b7bff" stroke-width="3" fill="none" marker-end="url(#e2a)"/>
+              <circle r="7" fill="#ffc24b"><animateMotion dur="1.1s" repeatCount="indefinite"><mpath href="#e2fwd"/></animateMotion></circle>
+              <rect x="278" y="60" width="146" height="84" rx="14" fill="rgba(155,123,255,0.08)" stroke="#9b7bff" stroke-width="2.5"/>
+              <text x="351" y="97" text-anchor="middle" font-size="27" font-weight="700" fill="#f6f4ff" font-family="Space Grotesk">Ragas</text>
+              <text x="351" y="124" text-anchor="middle" font-size="19" fill="#8f8bb3" font-family="JetBrains Mono">+ DP Val</text>
+
+              <!-- ── animated score bars ── -->
+              <line x1="22" y1="412" x2="424" y2="412" stroke="#26263a" stroke-width="2"/>
+              <rect x="32"  y="412" width="64" height="0" rx="7" fill="#56c9ff"><animate attributeName="height" values="0;158;158;0" keyTimes="0;0.4;0.85;1" dur="3.2s" repeatCount="indefinite"/><animate attributeName="y" values="412;254;254;412" keyTimes="0;0.4;0.85;1" dur="3.2s" repeatCount="indefinite"/></rect>
+              <rect x="112" y="412" width="64" height="0" rx="7" fill="#38e0a0"><animate attributeName="height" values="0;222;222;0" keyTimes="0;0.5;0.85;1" dur="3.2s" begin="0.18s" repeatCount="indefinite"/><animate attributeName="y" values="412;190;190;412" keyTimes="0;0.5;0.85;1" dur="3.2s" begin="0.18s" repeatCount="indefinite"/></rect>
+              <rect x="192" y="412" width="64" height="0" rx="7" fill="#9b7bff"><animate attributeName="height" values="0;178;178;0" keyTimes="0;0.45;0.85;1" dur="3.2s" begin="0.36s" repeatCount="indefinite"/><animate attributeName="y" values="412;234;234;412" keyTimes="0;0.45;0.85;1" dur="3.2s" begin="0.36s" repeatCount="indefinite"/></rect>
+              <rect x="272" y="412" width="64" height="0" rx="7" fill="#ff4d97"><animate attributeName="height" values="0;128;128;0" keyTimes="0;0.5;0.85;1" dur="3.2s" begin="0.54s" repeatCount="indefinite"/><animate attributeName="y" values="412;284;284;412" keyTimes="0;0.5;0.85;1" dur="3.2s" begin="0.54s" repeatCount="indefinite"/></rect>
+              <rect x="352" y="412" width="64" height="0" rx="7" fill="#ffc24b"><animate attributeName="height" values="0;202;202;0" keyTimes="0;0.55;0.85;1" dur="3.2s" begin="0.72s" repeatCount="indefinite"/><animate attributeName="y" values="412;210;210;412" keyTimes="0;0.55;0.85;1" dur="3.2s" begin="0.72s" repeatCount="indefinite"/></rect>
+              <text x="224" y="444" text-anchor="middle" font-size="17" fill="#8f8bb3" font-family="JetBrains Mono">metrics scored per sample</text>
             </svg>
           </div>
         </div>
@@ -388,25 +402,28 @@
           <div class="rp">Model Armor filters PII &amp; jailbreaks on live traffic — clean requests pass.</div>
           <div class="diag">
             <svg viewBox="0 0 440 460" preserveAspectRatio="xMidYMid meet">
-              <!-- shield -->
-              <path d="M220 110 L300 142 V250 C300 314 264 352 220 372 C176 352 140 314 140 250 V142 Z" fill="rgba(255,77,151,0.08)" stroke="#ff4d97" stroke-width="3"/>
-              <text class="dg-lbl" x="220" y="244" text-anchor="middle" font-size="24" fill="#ff4d97">Model</text>
-              <text class="dg-lbl" x="220" y="274" text-anchor="middle" font-size="24" fill="#ff4d97">Armor</text>
-              <!-- pass lane -->
-              <text class="dg-sub" x="30" y="150" text-anchor="start" font-size="20">request</text>
-              <text class="dg-sub" x="410" y="150" text-anchor="end" font-size="20" fill="#38e0a0">allowed ✓</text>
-              <line x1="30" y1="172" x2="410" y2="172" stroke="#1c1c2c" stroke-width="2.5" stroke-dasharray="3 7"/>
-              <circle r="9" fill="#38e0a0"><animateMotion dur="2.4s" repeatCount="indefinite" path="M30 172 L410 172"/></circle>
+              <!-- shield — slightly taller, labels inside -->
+              <path d="M220 90 L308 126 V238 C308 308 268 348 220 366 C172 348 132 308 132 238 V126 Z" fill="rgba(255,77,151,0.08)" stroke="#ff4d97" stroke-width="3"/>
+              <text class="dg-lbl" x="220" y="236" text-anchor="middle" font-size="28" fill="#ff4d97">Model</text>
+              <text class="dg-lbl" x="220" y="268" text-anchor="middle" font-size="28" fill="#ff4d97">Armor</text>
+              <!-- pass lane — labels clear of shield edges -->
+              <rect x="14" y="122" width="98" height="30" rx="6" fill="#07070f"/>
+              <text x="16" y="145" text-anchor="start" font-size="24" fill="#c7c3e6" font-family="Space Grotesk">request</text>
+              <rect x="300" y="122" width="126" height="30" rx="6" fill="#07070f"/>
+              <text x="424" y="145" text-anchor="end" font-size="24" fill="#38e0a0" font-family="Space Grotesk">allowed ✓</text>
+              <line x1="14" y1="164" x2="426" y2="164" stroke="#1c1c2c" stroke-width="2.5" stroke-dasharray="3 7"/>
+              <circle r="10" fill="#38e0a0"><animateMotion dur="2.4s" repeatCount="indefinite" path="M14 164 L426 164"/></circle>
               <!-- block lane -->
-              <text class="dg-sub" x="30" y="318" text-anchor="start" font-size="20" fill="#ff4d97">PII · jailbreak</text>
-              <line x1="30" y1="340" x2="178" y2="340" stroke="#1c1c2c" stroke-width="2.5" stroke-dasharray="3 7"/>
-              <circle r="9" fill="#ff4d97">
-                <animateMotion dur="2.2s" repeatCount="indefinite" keyTimes="0;0.5;1" keyPoints="0;1;1" calcMode="linear" path="M30 340 L174 340"/>
+              <rect x="14" y="310" width="148" height="30" rx="6" fill="#07070f"/>
+              <text x="16" y="333" text-anchor="start" font-size="24" fill="#ff4d97" font-family="Space Grotesk">PII · jailbreak</text>
+              <line x1="14" y1="356" x2="168" y2="356" stroke="#1c1c2c" stroke-width="2.5" stroke-dasharray="3 7"/>
+              <circle r="10" fill="#ff4d97">
+                <animateMotion dur="2.2s" repeatCount="indefinite" keyTimes="0;0.5;1" keyPoints="0;1;1" calcMode="linear" path="M14 356 L164 356"/>
                 <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.46;0.5;1" dur="2.2s" repeatCount="indefinite"/>
               </circle>
               <g>
                 <animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.45;0.52;0.62;1" dur="2.2s" repeatCount="indefinite"/>
-                <path d="M196 322 l22 22 M218 322 l-22 22" stroke="#ff4d97" stroke-width="4" stroke-linecap="round"/>
+                <path d="M180 338 l24 24 M204 338 l-24 24" stroke="#ff4d97" stroke-width="4" stroke-linecap="round"/>
               </g>
             </svg>
           </div>
