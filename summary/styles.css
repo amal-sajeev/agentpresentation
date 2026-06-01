@@ -1,0 +1,527 @@
+/* ============================================================
+   summary/styles.css
+   Executive summary deck — punchy, big-type, animated.
+   Original styling (does NOT inherit from presenta).
+   Fixed 1920x1080 stage, scaled to fit any screen.
+   ============================================================ */
+
+/* ---------- design tokens ---------- */
+:root {
+  --bg:        #0a0a12;
+  --bg-2:      #10101e;
+  --panel:     rgba(255, 255, 255, 0.035);
+  --panel-2:   rgba(255, 255, 255, 0.06);
+  --line:      rgba(255, 255, 255, 0.10);
+  --line-hi:   rgba(255, 255, 255, 0.22);
+
+  --ink:       #f6f4ff;
+  --ink-soft:  #c7c3e6;
+  --muted:     #8f8bb3;
+
+  --violet:    #9b7bff;
+  --pink:      #ff4d97;
+  --teal:      #2ee6c8;
+  --amber:     #ffc24b;
+  --emerald:   #38e0a0;
+  --sky:       #56c9ff;
+
+  --grad:      linear-gradient(100deg, #9b7bff 0%, #ff4d97 55%, #ff8a5b 100%);
+  --grad-cool: linear-gradient(100deg, #2ee6c8 0%, #56c9ff 50%, #9b7bff 100%);
+
+  --stage-w: 1920px;
+  --stage-h: 1080px;
+}
+
+/* ---------- reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+h1, h2, h3, h4 { margin: 0; font-weight: 700; line-height: 1.02; letter-spacing: -0.02em; }
+p { margin: 0; }
+.display { font-family: 'Space Grotesk', 'Inter', sans-serif; }
+.mono { font-family: 'JetBrains Mono', 'Consolas', monospace; }
+
+/* ---------- fixed canvas frame ---------- */
+.deck-wrap {
+  position: fixed; inset: 0;
+  display: grid; place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(1200px 800px at 18% -10%, rgba(155,123,255,0.16), transparent 60%),
+    radial-gradient(1100px 700px at 110% 120%, rgba(255,77,151,0.14), transparent 55%),
+    #000;
+}
+.deck {
+  position: relative;
+  width: var(--stage-w);
+  height: var(--stage-h);
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 2px;
+  background:
+    radial-gradient(1400px 900px at 12% 0%, #15132a 0%, transparent 55%),
+    radial-gradient(1200px 900px at 100% 100%, #1a1024 0%, transparent 50%),
+    var(--bg);
+  transform: scale(var(--scale, 1));
+  transform-origin: center center;
+}
+
+/* floating ambient orbs */
+.orb {
+  position: absolute; border-radius: 50%;
+  filter: blur(70px); opacity: 0.5; pointer-events: none;
+  mix-blend-mode: screen;
+}
+.orb.a { width: 620px; height: 620px; left: -160px; top: -200px;
+  background: radial-gradient(circle, #6d4bff, transparent 65%); animation: float1 16s ease-in-out infinite; }
+.orb.b { width: 560px; height: 560px; right: -180px; bottom: -220px;
+  background: radial-gradient(circle, #ff3d86, transparent 65%); animation: float2 19s ease-in-out infinite; }
+.orb.c { width: 420px; height: 420px; right: 30%; top: -260px;
+  background: radial-gradient(circle, #2ee6c8, transparent 65%); animation: float1 22s ease-in-out infinite; }
+@keyframes float1 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(60px, 70px); } }
+@keyframes float2 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-70px, -50px); } }
+
+/* ---------- slides ---------- */
+.slide {
+  position: absolute; inset: 0;
+  width: var(--stage-w); height: var(--stage-h);
+  padding: 88px 124px 116px;
+  display: flex; flex-direction: column;
+  opacity: 0; visibility: hidden;
+  transform: translateY(26px) scale(0.99);
+  transition: opacity .5s ease, transform .6s cubic-bezier(.2,.7,.2,1), visibility 0s linear .5s;
+}
+.slide.is-active {
+  opacity: 1; visibility: visible;
+  transform: none;
+  transition: opacity .55s ease, transform .7s cubic-bezier(.2,.7,.2,1);
+}
+
+/* ---------- shared header ---------- */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 21px; letter-spacing: 0.34em; text-transform: uppercase;
+  color: var(--muted); font-weight: 500;
+}
+.eyebrow .dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--grad); box-shadow: 0 0 16px rgba(255,77,151,.8);
+}
+.lead {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700; letter-spacing: -0.025em;
+  font-size: 92px; line-height: 0.98;
+  margin-top: 22px;
+}
+.lead .grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.lead .grad-cool { background: var(--grad-cool); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.sub {
+  font-size: 32px; line-height: 1.4; color: var(--ink-soft);
+  max-width: 1500px; margin-top: 22px; font-weight: 400;
+}
+.sub strong { color: var(--ink); font-weight: 700; }
+.sub .hl { color: var(--teal); font-weight: 600; }
+
+/* ---------- staged reveal ---------- */
+.slide .r { opacity: 0; }
+.slide.is-active .r {
+  animation: rise .66s cubic-bezier(.2,.7,.2,1) both;
+  animation-delay: calc(var(--d, 0) * 1ms);
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(34px); }
+  to   { opacity: 1; transform: none; }
+}
+.slide .pop { opacity: 0; }
+.slide.is-active .pop {
+  animation: pop .6s cubic-bezier(.2,1.2,.4,1) both;
+  animation-delay: calc(var(--d, 0) * 1ms);
+}
+@keyframes pop {
+  from { opacity: 0; transform: scale(.86); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ============================================================
+   SLIDE 1 — TITLE
+   ============================================================ */
+.s1 { justify-content: center; }
+.s1-eyebrow { margin-bottom: 18px; }
+.s1-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 188px; line-height: 0.92; font-weight: 700;
+  letter-spacing: -0.04em;
+}
+.s1-title .by {
+  display: block;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.s1-sub {
+  font-size: 38px; color: var(--ink-soft); margin-top: 40px; max-width: 1380px; line-height: 1.4;
+}
+.s1-sub b { color: var(--ink); }
+.s1-chips { display: flex; gap: 18px; margin-top: 54px; flex-wrap: wrap; }
+.chip {
+  padding: 18px 30px; border-radius: 999px;
+  border: 1.5px solid var(--line-hi);
+  background: var(--panel);
+  font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 26px;
+  display: inline-flex; align-items: center; gap: 14px;
+}
+.chip .tick { color: var(--emerald); font-size: 22px; }
+.s1-foot {
+  position: absolute; left: 124px; right: 124px; bottom: 70px;
+  display: flex; justify-content: space-between; align-items: center;
+  color: var(--muted); font-family: 'JetBrains Mono', monospace; font-size: 22px;
+}
+.s1-foot .stack { display: flex; gap: 14px; align-items: center; }
+.s1-foot .badge {
+  padding: 8px 18px; border-radius: 8px; border: 1px solid var(--line);
+  background: var(--panel); color: var(--ink-soft);
+}
+
+/* ---------- header block for content slides ---------- */
+.head { margin-bottom: 36px; }
+.head .lead { font-size: 76px; }
+
+/* ---------- body helper ---------- */
+.body { flex: 1; min-height: 0; display: flex; }
+
+/* ============================================================
+   SLIDE 2 — TRUSTABLE AI, DEFINED (requirement rows)
+   ============================================================ */
+.reqs { width: 100%; display: flex; flex-direction: column; gap: 16px; justify-content: space-between; }
+.req {
+  display: grid; grid-template-columns: 150px 360px 1fr; align-items: center; gap: 36px;
+  border: 1.5px solid var(--line); border-radius: 18px; background: var(--panel);
+  padding: 24px 38px;
+}
+.req .sec {
+  font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 26px;
+  color: transparent; background: var(--grad); -webkit-background-clip: text; background-clip: text;
+}
+.req .rt { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 32px; }
+.req .rd { color: var(--ink-soft); font-size: 26px; line-height: 1.3; }
+.req .rd b { color: var(--ink); font-weight: 600; }
+
+/* ============================================================
+   SLIDE 3 — ARCHITECTURE (full-width flow, no empty cells)
+   ============================================================ */
+.arch { width: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+.arch-row { display: flex; align-items: stretch; justify-content: center; gap: 24px; }
+
+/* horizontal entry strip */
+.strip { display: flex; align-items: center; gap: 22px; }
+.snode {
+  border-radius: 16px; border: 1.5px solid var(--line-hi); background: var(--panel);
+  padding: 18px 30px; text-align: center;
+}
+.snode .st { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 26px; }
+.snode .ss { font-family: 'JetBrains Mono', monospace; font-size: 17px; color: var(--muted); margin-top: 3px; }
+.strip .ar { color: var(--violet); font-size: 30px; font-weight: 700; }
+
+/* full-width bar (orchestrator / mongo) */
+.bar {
+  width: 100%; border-radius: 20px; border: 2px solid var(--line-hi); background: var(--panel-2);
+  padding: 22px 40px; display: flex; align-items: center; gap: 28px;
+}
+.bar .bicon {
+  flex: none; width: 60px; height: 60px; border-radius: 15px; display: grid; place-items: center;
+  font-size: 30px;
+}
+.bar .btext { flex: 1; }
+.bar .bname { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 36px; }
+.bar .bsub { font-family: 'JetBrains Mono', monospace; font-size: 19px; color: var(--ink-soft); margin-top: 4px; letter-spacing: .03em; }
+.bar.orch {
+  border-color: transparent;
+  background:
+    linear-gradient(var(--bg-2), var(--bg-2)) padding-box,
+    var(--grad) border-box;
+  box-shadow: 0 0 54px rgba(155,123,255,.20);
+}
+.bar.orch .bicon { background: rgba(155,123,255,.18); color: var(--violet); }
+.bar.store { border-color: rgba(46,230,200,.45); background: rgba(46,230,200,.05); }
+.bar.store .bicon { background: rgba(46,230,200,.16); color: var(--teal); }
+.bar .fields { display: flex; gap: 14px; }
+.fchip {
+  font-family: 'JetBrains Mono', monospace; font-size: 18px; color: var(--ink-soft);
+  border: 1px solid rgba(46,230,200,.4); background: rgba(46,230,200,.07);
+  border-radius: 10px; padding: 10px 16px; white-space: nowrap;
+}
+
+/* pipeline cards row */
+.pipes { display: flex; gap: 20px; width: 100%; }
+.pipe {
+  flex: 1; border-radius: 18px; border: 1.5px solid var(--line);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--c, var(--violet)) 7%, transparent), transparent 70%), var(--panel);
+  padding: 26px 24px;
+  display: flex; flex-direction: column; gap: 14px; justify-content: center;
+}
+.pipe .picon {
+  width: 56px; height: 56px; border-radius: 15px; display: grid; place-items: center;
+  color: var(--c, var(--violet)); background: color-mix(in srgb, var(--c, var(--violet)) 16%, transparent);
+}
+.pipe .picon svg { width: 30px; height: 30px; }
+.pipe .pn { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 28px; }
+.pipe .pf {
+  font-family: 'JetBrains Mono', monospace; font-size: 17px; color: var(--c, var(--violet)); align-self: flex-start;
+  background: color-mix(in srgb, var(--c, var(--violet)) 12%, transparent); border-radius: 8px; padding: 6px 13px;
+}
+.pipe .pd { color: var(--muted); font-size: 19px; }
+.pipe.skip { border-style: dashed; }
+.bar .bicon svg { width: 32px; height: 32px; }
+
+/* vertical connector with animated pulse */
+.conn { width: 100%; display: flex; justify-content: center; }
+.conn .line { width: 3px; height: 40px; background: linear-gradient(var(--line-hi), var(--line)); position: relative; overflow: hidden; }
+.conn .line::after {
+  content: ""; position: absolute; left: -1px; width: 5px; height: 16px; border-radius: 4px;
+  background: var(--teal); box-shadow: 0 0 12px var(--teal);
+  animation: drop 1.8s linear infinite;
+}
+@keyframes drop { from { top: -18px; } to { top: 44px; } }
+
+/* ============================================================
+   SLIDE 4 — ORCHESTRATION & ROUTING
+   ============================================================ */
+.split { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 40px; width: 100%; }
+.card {
+  border: 1.5px solid var(--line); border-radius: 26px; background: var(--panel);
+  padding: 40px 44px; display: flex; flex-direction: column; gap: 22px; justify-content: center;
+}
+.card .ct {
+  font-family: 'JetBrains Mono', monospace; font-size: 21px; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--violet);
+}
+.card .cbig { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 38px; line-height: 1.05; }
+.card p { font-size: 26px; color: var(--ink-soft); line-height: 1.38; }
+.card p code, .card .codey { font-family: 'JetBrains Mono', monospace; font-size: 0.82em; color: var(--teal); background: rgba(46,230,200,.1); padding: 2px 9px; border-radius: 6px; }
+
+/* loop diagram */
+.loop { display: flex; align-items: center; justify-content: center; }
+.lbox {
+  border-radius: 18px; border: 2px solid var(--c); padding: 22px 26px; text-align: center; flex: 1;
+  background: rgba(255,255,255,.03);
+}
+.lbox .lk { font-family: 'JetBrains Mono', monospace; font-size: 17px; letter-spacing: .14em; color: var(--c); }
+.lbox .ln { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 28px; margin-top: 6px; }
+.lbox .lm { font-family: 'JetBrains Mono', monospace; font-size: 16px; color: var(--muted); margin-top: 6px; }
+.loop-mid { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 0 20px; }
+.loop-arrow { font-size: 32px; color: var(--ink-soft); }
+.loop-badge {
+  font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 600;
+  border: 1.5px solid var(--violet); color: var(--violet); border-radius: 999px; padding: 6px 16px;
+  animation: pulseGlow 2.2s ease-in-out infinite;
+}
+@keyframes pulseGlow { 0%,100% { box-shadow: 0 0 0 rgba(155,123,255,0); } 50% { box-shadow: 0 0 22px rgba(155,123,255,.5); } }
+.exit-tag {
+  align-self: center; font-family: 'JetBrains Mono', monospace; font-size: 18px; color: var(--emerald);
+  border: 1.5px solid rgba(56,224,160,.5); background: rgba(56,224,160,.07); border-radius: 999px; padding: 8px 20px;
+}
+
+/* route mini-flow */
+.route { display: flex; flex-direction: column; gap: 18px; }
+.route-row { display: flex; align-items: center; gap: 14px; }
+.rtag {
+  font-family: 'JetBrains Mono', monospace; font-size: 19px; padding: 12px 18px; border-radius: 12px;
+  border: 1.5px solid var(--line-hi); background: var(--panel); white-space: nowrap;
+}
+.rtag.ok { border-color: rgba(56,224,160,.5); color: var(--emerald); background: rgba(56,224,160,.07); }
+.rtag.skip { border-color: rgba(255,77,151,.5); color: var(--pink); background: rgba(255,77,151,.07); }
+.route .arr { color: var(--muted); font-size: 24px; }
+
+/* ============================================================
+   SLIDE 5 — MEMORY
+   ============================================================ */
+.mem { width: 100%; display: grid; grid-template-columns: 300px 1fr; gap: 44px; align-items: stretch; }
+.mem-surface {
+  border-radius: 26px; padding: 44px 30px; text-align: center;
+  border: 2px solid transparent;
+  display: flex; flex-direction: column; justify-content: center; gap: 18px;
+  background:
+    linear-gradient(var(--bg-2), var(--bg-2)) padding-box,
+    var(--grad-cool) border-box;
+  box-shadow: 0 0 50px rgba(46,230,200,.16);
+}
+.mem-surface .ms-k { font-family: 'JetBrains Mono', monospace; letter-spacing: .2em; color: var(--muted); font-size: 19px; }
+.mem-surface .ms-code { font-family: 'JetBrains Mono', monospace; font-size: 28px; line-height: 1.3; }
+.mem-surface .ms-code .hi { color: var(--teal); }
+.mem-surface .ms-note { color: var(--ink-soft); font-size: 22px; }
+.mem-tiers { display: flex; flex-direction: column; gap: 22px; }
+.tier {
+  flex: 1; border-radius: 20px; border: 2px solid var(--c); padding: 26px 34px;
+  display: flex; align-items: center; gap: 30px; background: rgba(255,255,255,.025);
+}
+.tier .tnum {
+  flex: none; width: 62px; height: 62px; border-radius: 16px; display: grid; place-items: center;
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 30px;
+  color: var(--c); background: color-mix(in srgb, var(--c) 16%, transparent);
+}
+.tier .tbody { flex: 1; }
+.tier .tk { font-family: 'JetBrains Mono', monospace; font-size: 19px; letter-spacing: .15em; color: var(--c); }
+.tier .th { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 33px; margin-top: 4px; }
+.tier .td2 { color: var(--ink-soft); font-size: 23px; margin-top: 6px; }
+.tier .meta { flex: none; width: 230px; text-align: right; }
+.tier .meta .ml { font-family: 'JetBrains Mono', monospace; font-size: 18px; color: var(--muted); margin-bottom: 10px; }
+.tier .meta .bar2 { height: 9px; border-radius: 5px; background: rgba(255,255,255,.08); overflow: hidden; }
+.tier .meta .bar2 span { display: block; height: 100%; border-radius: 5px; background: var(--c); }
+
+/* ============================================================
+   SLIDE 6 — OBSERVABILITY (flow diagram + features)
+   ============================================================ */
+.obs { width: 100%; display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 40px; align-items: stretch; }
+.obs-flow {
+  border-radius: 24px; border: 1.5px solid var(--line); background: #07070f;
+  padding: 26px; display: flex; flex-direction: column;
+}
+.obs-flow .ofk { font-family: 'JetBrains Mono', monospace; font-size: 18px; letter-spacing: .2em; color: var(--muted); margin-bottom: 8px; }
+.obs-svg { width: 100%; flex: 1; }
+.of-box { fill: rgba(255,255,255,.035); stroke: var(--line-hi); stroke-width: 2; }
+.of-box.otel { stroke: var(--sky); }
+.of-box.lf { stroke: var(--violet); }
+.of-title { fill: var(--ink); font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
+.of-sub   { fill: var(--muted); font-family: 'JetBrains Mono', monospace; }
+.of-edge  { stroke: var(--line-hi); stroke-width: 2.5; fill: none; }
+.of-dot   { fill: var(--teal); }
+.of-dot.v { fill: var(--violet); }
+.feat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.feat {
+  border-radius: 20px; border: 1.5px solid var(--line); background: var(--panel);
+  padding: 30px 32px; display: flex; flex-direction: column; gap: 12px; justify-content: center;
+}
+.feat .fi { width: 54px; height: 54px; border-radius: 14px; display: grid; place-items: center; background: var(--panel-2); }
+.feat .fh { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 29px; }
+.feat .fp { color: var(--ink-soft); font-size: 22px; line-height: 1.32; }
+
+/* ============================================================
+   SLIDE 7 — EVALUATION (three rings)
+   ============================================================ */
+.rings { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 1fr; gap: 32px; width: 100%; flex: 1; min-height: 0; align-items: stretch; }
+.ring {
+  border-radius: 26px; border: 2px solid var(--c); background: rgba(255,255,255,.025);
+  padding: 30px 32px; display: flex; flex-direction: column; gap: 16px;
+  min-height: 0; overflow: hidden;
+}
+.ring.proposed { border-style: dashed; }
+.ring .rhead { display: flex; align-items: center; gap: 20px; }
+.ring .rn {
+  flex: none; width: 70px; height: 70px; border-radius: 18px; display: grid; place-items: center;
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 34px;
+  color: var(--c); background: color-mix(in srgb, var(--c) 16%, transparent);
+}
+.ring .rk { font-family: 'JetBrains Mono', monospace; font-size: 18px; letter-spacing: .14em; color: var(--c); }
+.ring .rh { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 31px; line-height: 1.04; margin-top: 3px; }
+.ring .rp { color: var(--ink-soft); font-size: 22px; line-height: 1.36; }
+.ring .rp .t { color: var(--ink); font-weight: 600; }
+.diag {
+  flex: 1; min-height: 0; border-radius: 16px; border: 1px solid var(--line); background: #07070f;
+  padding: 10px; display: flex; overflow: hidden;
+}
+.diag svg { width: 100%; height: 100%; display: block; }
+
+/* shared diagram primitives */
+.dg-lbl { fill: var(--ink); font-family: 'Space Grotesk', sans-serif; font-weight: 600; }
+.dg-sub { fill: var(--muted); font-family: 'JetBrains Mono', monospace; }
+.dg-edge { stroke: var(--line-hi); stroke-width: 2.5; fill: none; }
+
+/* ============================================================
+   SLIDE 8 — GUARDRAILS & PROVABILITY (4 cards + banner)
+   ============================================================ */
+.guard-wrap { width: 100%; display: flex; flex-direction: column; gap: 26px; min-height: 0; }
+.guard-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: 1fr; gap: 24px; flex: 1; min-height: 0; }
+.guard {
+  border-radius: 22px; border: 1.5px solid var(--line); background: var(--panel);
+  padding: 26px 26px; display: flex; flex-direction: column; gap: 12px;
+  min-height: 0; overflow: hidden;
+}
+.guard .ghead { display: flex; align-items: center; gap: 16px; }
+.guard .gi { flex: none; width: 54px; height: 54px; border-radius: 14px; display: grid; place-items: center; background: color-mix(in srgb, var(--c, var(--violet)) 15%, transparent); }
+.guard .gh { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 26px; line-height: 1.04; }
+.guard .gp { color: var(--ink-soft); font-size: 20px; line-height: 1.32; }
+.banner {
+  border-radius: 22px; padding: 34px 46px; display: flex; align-items: center; gap: 30px;
+  border: 2px solid transparent;
+  background: linear-gradient(var(--bg-2),var(--bg-2)) padding-box, var(--grad) border-box;
+}
+.banner .bigq { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 42px; }
+.banner .bigq .grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* ============================================================
+   SLIDE 9 — COST (stats)
+   ============================================================ */
+.cost { width: 100%; display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+.lever {
+  border-radius: 24px; border: 1.5px solid var(--line); background: var(--panel);
+  padding: 36px 44px; display: flex; align-items: center; gap: 38px;
+}
+.lever .stat { flex: none; min-width: 270px; text-align: left; }
+.lever .stat .big {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 92px; line-height: 0.9;
+  background: var(--c, var(--grad)); -webkit-background-clip: text; background-clip: text; color: transparent;
+  letter-spacing: -0.03em;
+}
+.lever .stat .unit { font-family: 'Space Grotesk', sans-serif; font-size: 36px; }
+.lever .lt { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 31px; line-height: 1.08; }
+.lever .lp { color: var(--ink-soft); font-size: 23px; line-height: 1.34; margin-top: 10px; }
+.lever .lp code { font-family: 'JetBrains Mono', monospace; font-size: .85em; color: var(--teal); }
+
+/* ============================================================
+   SLIDE 10 — STACK
+   ============================================================ */
+.stack-wrap { width: 100%; display: flex; flex-direction: column; }
+.stack-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr; gap: 24px; flex: 1; }
+.tool {
+  border-radius: 22px; border: 1.5px solid var(--line); background: var(--panel);
+  padding: 30px 36px; display: flex; align-items: center; gap: 24px;
+}
+.tool .tlogo {
+  flex: none; width: 70px; height: 70px; border-radius: 18px; display: grid; place-items: center;
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 28px; letter-spacing: -0.02em;
+  background: color-mix(in srgb, var(--c, var(--violet)) 18%, transparent); color: var(--c, var(--violet));
+}
+.tool .tname { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 31px; }
+.tool .trole { color: var(--muted); font-size: 21px; margin-top: 4px; }
+
+/* ---------- nav chrome ---------- */
+.chrome {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+  display: flex; align-items: center; gap: 26px;
+  padding: 22px 40px;
+  background: linear-gradient(0deg, rgba(0,0,0,.55), transparent);
+}
+.dots { display: flex; gap: 12px; }
+.dots .d {
+  width: 13px; height: 13px; border-radius: 50%; border: 1.5px solid var(--line-hi);
+  cursor: pointer; transition: all .25s ease; background: transparent;
+}
+.dots .d.is-on { background: var(--grad); border-color: transparent; transform: scale(1.25); box-shadow: 0 0 14px rgba(255,77,151,.6); }
+.progress { flex: 1; height: 6px; border-radius: 3px; background: rgba(255,255,255,.08); overflow: hidden; cursor: pointer; }
+.progress-fill { height: 100%; width: 0; background: var(--grad); border-radius: 3px; transition: width .45s cubic-bezier(.2,.7,.2,1); }
+.counter { font-family: 'JetBrains Mono', monospace; font-size: 22px; color: var(--ink-soft); letter-spacing: .08em; }
+.counter .cur { color: var(--ink); font-weight: 600; }
+.nav-btns { display: flex; gap: 12px; }
+.nav-btn {
+  width: 56px; height: 56px; border-radius: 14px; border: 1.5px solid var(--line-hi);
+  background: var(--panel); color: var(--ink); display: grid; place-items: center; cursor: pointer;
+  transition: all .2s ease;
+}
+.nav-btn:hover { background: var(--panel-2); border-color: var(--line-hi); transform: translateY(-2px); }
+.nav-btn:active { transform: translateY(0); }
+
+.hint {
+  position: fixed; right: 40px; top: 28px; z-index: 50;
+  font-family: 'JetBrains Mono', monospace; font-size: 18px; color: var(--muted);
+  opacity: .65; transition: opacity .4s ease;
+}
+.hint.hide { opacity: 0; }

@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1" />
+<title>Trustable AI — Executive Summary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="hint">← → or click to advance &nbsp;·&nbsp; F = fullscreen</div>
+
+<div class="deck-wrap">
+<div class="deck">
+  <div class="orb a"></div>
+  <div class="orb b"></div>
+  <div class="orb c"></div>
+
+  <!-- ============================================================
+       SLIDE 1 — TITLE
+       ============================================================ -->
+  <section class="slide s1 is-active" id="slide-1">
+    <div class="s1-eyebrow eyebrow r" style="--d:80"><span class="dot"></span>EXECUTIVE SUMMARY &nbsp;·&nbsp; market_research agent network</div>
+    <h1 class="s1-title display r" style="--d:160">Trustable AI<span class="by">by construction.</span></h1>
+    <p class="s1-sub r" style="--d:340">The proposed agent system for a regulated bank — <b>provable answers, full audit trails, persistent memory and built-in cost control</b>, all on the Google Gemini stack.</p>
+    <div class="s1-chips">
+      <div class="chip r" style="--d:480"><span class="tick">✓</span> Provable</div>
+      <div class="chip r" style="--d:560"><span class="tick">✓</span> Observable</div>
+      <div class="chip r" style="--d:640"><span class="tick">✓</span> Governed</div>
+      <div class="chip r" style="--d:720"><span class="tick">✓</span> Efficient</div>
+    </div>
+    <div class="s1-foot r" style="--d:900">
+      <div class="stack">
+        <span class="badge">Google Gemini</span>
+        <span class="badge">ADK</span>
+        <span class="badge">Langfuse</span>
+        <span class="badge">Vertex AI</span>
+      </div>
+      <div>3224405_AMAL</div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SLIDE 2 — TRUSTABLE AI, DEFINED (requirement → target)
+       ============================================================ -->
+  <section class="slide" id="slide-2">
+    <div class="head">
+      <div class="eyebrow r" style="--d:60"><span class="dot"></span>02 &nbsp;·&nbsp; THE CORE PROBLEM</div>
+      <h2 class="lead r" style="--d:140">Trustable AI, <span class="grad">defined.</span></h2>
+    </div>
+    <div class="body">
+      <div class="reqs">
+        <div class="req r" style="--d:240"><div class="sec">§1.1</div><div class="rt">Provability &amp; Trustability</div><div class="rd">Every answer <b>graded by a stronger model</b> and grounded in cited sources.</div></div>
+        <div class="req r" style="--d:300"><div class="sec">§1.2</div><div class="rt">Memory</div><div class="rd"><b>Short-term, semantic and long-term recall</b> across runs and clients.</div></div>
+        <div class="req r" style="--d:360"><div class="sec">§1.2</div><div class="rt">NLP Routing · Agent Garden</div><div class="rd">Natural-language dispatch into a <b>growing garden of expert agents</b>.</div></div>
+        <div class="req r" style="--d:420"><div class="sec">§1.3</div><div class="rt">Integration &amp; Design Flow</div><div class="rd">A <b>deterministic pipeline</b> persisted to a shared source of truth.</div></div>
+        <div class="req r" style="--d:480"><div class="sec">§1.4</div><div class="rt">Cost &amp; Tokens</div><div class="rd">Right-tier models, <b>bounded loops and conditional branches</b>.</div></div>
+        <div class="req r" style="--d:540"><div class="sec">§2.2</div><div class="rt">Evaluation</div><div class="rd"><b>Live critic, offline benchmarks and runtime guardrails</b>.</div></div>
+        <div class="req r" style="--d:600"><div class="sec">§2.3</div><div class="rt">Observability</div><div class="rd">Full-trace governance with <b>replay and a complete audit trail</b>.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SLIDE 3 — ARCHITECTURE OVERVIEW
+       ============================================================ -->
+  <section class="slide" id="slide-3">
+    <div class="head">
+      <div class="eyebrow r" style="--d:60"><span class="dot"></span>03 &nbsp;·&nbsp; ARCHITECTURE OVERVIEW</div>
+      <h2 class="lead r" style="--d:140">One orchestrator. Five experts. <span class="grad-cool">One source of truth.</span></h2>
+    </div>
+    <div class="body">
+      <div class="arch">
+        <div class="arch-row r" style="--d:240">
+          <div class="strip">
+            <div class="snode"><div class="st">User prompt</div><div class="ss">natural language</div></div>
+            <span class="ar">→</span>
+            <div class="snode"><div class="st">Classifier</div><div class="ss">user_input_analyzer</div></div>
+          </div>
+        </div>
+        <div class="conn r" style="--d:340"><div class="line"></div></div>
+        <div class="arch-row r" style="--d:400">
+          <div class="bar orch">
+            <div class="bicon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="3.6"/><circle cx="16" cy="5" r="2.4"/><circle cx="16" cy="27" r="2.4"/><circle cx="5" cy="16" r="2.4"/><circle cx="27" cy="16" r="2.4"/><path d="M16 12.4V7.4M16 19.6v5M12.4 16H7.4M19.6 16h5"/></svg></div>
+            <div class="btext"><div class="bname">Intelligence Chancellor</div><div class="bsub">SequentialAgent · runs the five pipelines in declared order</div></div>
+          </div>
+        </div>
+        <div class="conn r" style="--d:480"><div class="line"></div></div>
+        <div class="arch-row r" style="--d:540">
+          <div class="pipes">
+            <div class="pipe" style="--c:var(--violet)"><div class="picon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 27h24"/><path d="M7 27v-7M14 27V14M21 27v-9M28 27V8"/><path d="M6 14l6-6 5 4 9-9"/></svg></div><div class="pn">Market</div><div class="pf">→ market_context</div><div class="pd">TAM · SAM · SOM</div></div>
+            <div class="pipe" style="--c:var(--sky)"><div class="picon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="16" cy="16" r="11"/><circle cx="16" cy="16" r="6"/><circle cx="16" cy="16" r="1.6" fill="currentColor"/></svg></div><div class="pn">Segmentation</div><div class="pf">→ market_segment</div><div class="pd">personas · ICP</div></div>
+            <div class="pipe" style="--c:var(--teal)"><div class="picon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="16" height="22" rx="1.5"/><path d="M12 11h2M18 11h2M12 16h2M18 16h2M12 21h2M18 21h2"/><path d="M4 28h24"/></svg></div><div class="pn">Org Intel</div><div class="pf">→ org_research</div><div class="pd">company graph</div></div>
+            <div class="pipe skip" style="--c:var(--pink)"><div class="picon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="22" height="15" rx="2"/><path d="M12 11V8.5A2.5 2.5 0 0 1 14.5 6h3A2.5 2.5 0 0 1 20 8.5V11"/><path d="M5 17h22"/></svg></div><div class="pn">Sales</div><div class="pf">conditional</div><div class="pd">runs only on target</div></div>
+            <div class="pipe" style="--c:var(--amber)"><div class="picon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="12" r="5"/><path d="M7 27c0-5 4-8 9-8s9 3 9 8"/></svg></div><div class="pn">Prospects</div><div class="pf">→ prospect_data</div><div class="pd">contact records</div></div>
+          </div>
+        </div>
+        <div class="conn r" style="--d:640"><div class="line"></div></div>
+        <div class="arch-row r" style="--d:700">
+          <div class="bar store">
+            <div class="bicon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="16" cy="8" rx="10" ry="4"/><path d="M6 8v16c0 2.2 4.5 4 10 4s10-1.8 10-4V8"/><path d="M6 16c0 2.2 4.5 4 10 4s10-1.8 10-4"/></svg></div>
+            <div class="btext"><div class="bname">MongoDB</div><div class="bsub">shared store — downstream apps subscribe here</div></div>
+            <div class="fields">
+              <span class="fchip">market_context</span>
+              <span class="fchip">market_segment</span>
+              <span class="fchip">org_research</span>
+              <span class="fchip">prospect_data</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SLIDE 4 — ORCHESTRATION & ROUTING
+       ============================================================ -->
+  <section class="slide" id="slide-4">
+    <div class="head">
+      <div class="eyebrow r" style="--d:60"><span class="dot"></span>04 &nbsp;·&nbsp; ORCHESTRATION &amp; ROUTING</div>
+      <h2 class="lead r" style="--d:140">Every answer is <span class="grad">graded before it ships.</span></h2>
+    </div>
+    <div class="body">
+      <div class="split">
+        <div class="card r" style="--d:260">
+          <div class="ct">Critic–Worker Loop</div>
+          <div class="cbig">A stronger model grades a cheaper one, and sends it back until it passes.</div>
+          <div class="loop">
+            <div class="lbox" style="--c:var(--teal)">
+              <div class="lk">WORKER</div>
+              <div class="ln">enhanced_search</div>
+              <div class="lm">flash-lite · grounded</div>
+            </div>
+            <div class="loop-mid">
+              <div class="loop-arrow">⇄</div>
+              <div class="loop-badge">↻ ≤ 5×</div>
+            </div>
+            <div class="lbox" style="--c:var(--violet)">
+              <div class="lk">CRITIC</div>
+              <div class="ln">evaluator</div>
+              <div class="lm">flash · typed verdict</div>
+            </div>
+          </div>
+          <div class="exit-tag">PASS → report_composer → exit</div>
+        </div>
+        <div class="card r" style="--d:420">
+          <div class="ct">NLP Dispatch · Agent Garden</div>
+          <div class="cbig">The prompt picks the route — a typed verdict drives a Python gate.</div>
+          <div class="route">
+            <div class="route-row">
+              <span class="rtag">"Sell to Microsoft"</span><span class="arr">→</span>
+              <span class="rtag">classifier</span><span class="arr">→</span>
+              <span class="rtag ok">run sales</span>
+            </div>
+            <div class="route-row">
+              <span class="rtag">"Research the market"</span><span class="arr">→</span>
+              <span class="rtag">classifier</span><span class="arr">→</span>
+              <span class="rtag skip">skip · 0 tokens</span>
+            </div>
+          </div>
+          <p>New capabilities drop into the same <span class="codey">agent garden</span> routing contract.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SLIDE 5 — MEMORY ARCHITECTURE
+       ============================================================ -->
+  <section class="slide" id="slide-5">
+    <div class="head">
+      <div class="eyebrow r" style="--d:60"><span class="dot"></span>05 &nbsp;·&nbsp; MEMORY ARCHITECTURE</div>
+      <h2 class="lead r" style="--d:140">One memory surface. <span class="grad-cool">Three horizons.</span></h2>
+    </div>
+    <div class="body">
+      <div class="mem">
+        <div class="mem-surface r" style="--d:240">
+          <div class="ms-k">ONE API</div>
+          <div class="ms-code">callback<br/>_context<span class="hi">.state</span></div>
+          <div class="ms-note">Same surface — three swappable backends.</div>
+        </div>
+        <div class="mem-tiers">
+          <div class="tier r" style="--c:var(--teal); --d:360">
+            <div class="tnum">1</div>
+            <div class="tbody">
+              <div class="tk">SHORT-TERM</div>
+              <div class="th">In-memory state</div>
+              <div class="td2">Shared by every step within a single run.</div>
+            </div>
+            <div class="meta"><div class="ml">lifetime · one run</div><div class="bar2"><span style="width:30%"></span></div></div>
+          </div>
+          <div class="tier r" style="--c:var(--violet); --d:460">
+            <div class="tnum">2</div>
+            <div class="tbody">
+              <div class="tk">SEMANTIC</div>
+              <div class="th">Vertex AI Vector Search</div>
+              <div class="td2">Recalls similar past projects by meaning.</div>
+            </div>
+            <div class="meta"><div class="ml">lifetime · across projects</div><div class="bar2"><span style="width:65%"></span></div></div>
+          </div>
+          <div class="tier r" style="--c:var(--amber); --d:560">
+            <div class="tnum">3</div>
+            <div class="tbody">
+              <div class="tk">LONG-TERM</div>
+              <div class="th">Vertex AI Memory Bank</div>
+              <div class="td2">Per-client memory retained across sessions.</div>
+            </div>
+            <div class="meta"><div class="ml">lifetime · per client</div><div class="bar2"><span style="width:100%"></span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SLIDE 6 — OBSERVABILITY & GOVERNANCE
+       ============================================================ -->
+  <section class="slide" id="slide-6">
+    <div class="head">
+      <div class="eyebrow r" style="--d:60"><span class="dot"></span>06 &nbsp;·&nbsp; OBSERVABILITY &amp; GOVERNANCE</div>
+      <h2 class="lead r" style="--d:140">Full-trace governance, <span class="grad">by default.</span></h2>
+    </div>
+    <div class="body">
+      <div class="obs">
+        <div class="obs-flow r" style="--d:260">
+          <div class="ofk">HOW IT WIRES IN</div>
+          <svg class="obs-svg" viewBox="0 0 460 600" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <marker id="of-a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#56c9ff"/></marker>
+            </defs>
+
+            <!-- Node 1: ADK agents -->
+            <rect class="of-box" x="60" y="20" width="340" height="104" rx="16"/>
+            <text class="of-title" x="230" y="62" text-anchor="middle" font-size="26">ADK agents</text>
+            <text class="of-sub" x="230" y="94" text-anchor="middle" font-size="17">after_agent_callback · emits spans</text>
+
+            <!-- edge 1 -->
+            <path id="of-p1" class="of-edge" d="M230 124 L230 196" marker-end="url(#of-a)"/>
+
+            <!-- Node 2: OpenTelemetry -->
+            <rect class="of-box otel" x="60" y="200" width="340" height="104" rx="16"/>
+            <text class="of-title" x="230" y="242" text-anchor="middle" font-size="26">OpenTelemetry</text>
+            <text class="of-sub" x="230" y="274" text-anchor="middle" font-size="17">built-in to ADK · OTLP export</text>
+
+            <!-- edge 2 -->
+            <path id="of-p2" class="of-edge" d="M230 304 L230 376" marker-end="url(#of-a)"/>
+
+            <!-- Node 3: Langfuse + waterfall -->
+            <rect class="of-box lf" x="60" y="380" width="340" height="196" rx="16"/>
+            <rect x="84" y="402" width="34" height="34" rx="9" fill="rgba(155,123,255,0.18)"/>
+            <text x="101" y="427" text-anchor="middle" font-size="22" fill="#9b7bff" font-family="JetBrains Mono, monospace" font-weight="700">L</text>
+            <text class="of-title" x="130" y="425" text-anchor="start" font-size="26">Langfuse</text>
+            <!-- trace waterfall -->
+            <rect x="84"  y="456" width="280" height="14" rx="5" fill="rgba(46,230,200,0.55)"/>
+            <rect x="104" y="478" width="232" height="14" rx="5" fill="rgba(86,201,255,0.5)"/>
+            <rect x="124" y="500" width="188" height="14" rx="5" fill="rgba(155,123,255,0.55)"/>
+            <rect x="92"  y="522" width="256" height="14" rx="5" fill="rgba(255,77,151,0.45)"/>
+            <text class="of-sub" x="84" y="560" text-anchor="start" font-size="16">trace · replay · cost · score</text>
+
+            <!-- flowing dots -->
+            <circle class="of-dot" r="5"><animateMotion dur="1.6s" repeatCount="indefinite"><mpath href="#of-p1"/></animateMotion></circle>
+            <circle class="of-dot v" r="5"><animateMotion dur="1.6s" repeatCount="indefinite" begin="0.4s"><mpath href="#of-p2"/></animateMotion></circle>
+          </svg>
+        </div>
+        <div class="feat-grid">
+          <div class="feat r" style="--d:420">
+            <div class="fi"><svg width="32" height="32" viewBox="0 0 34 34"><path d="M5 17 a12 12 0 1 1 4 9" fill="none" stroke="#56c9ff" stroke-width="3.5" stroke-linecap="round"/><path d="M9 30 L7 22 L15 24" fill="#56c9ff"/></svg></div>
+            <div class="fh">Replay any run</div>
+            <div class="fp">Step through every agent and critic call, prompt by prompt.</div>
+          </div>
+          <div class="feat r" style="--d:500">
+            <div class="fi"><svg width="32" height="32" viewBox="0 0 34 34"><path d="M6 24 L13 14 L19 19 L28 7" fill="none" stroke="#38e0a0" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="fh">Audit trail</div>
+            <div class="fp">A complete, queryable record of every decision the system makes.</div>
+          </div>
+          <div class="feat r" style="--d:580">
+            <div class="fi"><svg width="32" height="32" viewBox="0 0 34 34"><circle cx="17" cy="17" r="11" fill="none" stroke="#9b7bff" stroke-width="3.5"/><path d="M17 11 V17 L21 21" fill="none" stroke="#9b7bff" stroke-width="3.5" stroke-linecap="round"/></svg></div>
+            <div class="fh">Latency &amp; cost</div>
+            <div class="fp">p95 per agent and token spend per project, on built-in dashboards.</div>
+          </div>
+          <div class="feat r" style="--d:660">
+            <div class="fi"><svg width="32" height="32" viewBox="0 0 34 34"><path d="M17 4 L29 9 V18 C29 25 24 29 17 31 C10 29 5 25 5 18 V9 Z" fill="none" stroke="#ff4d97" stroke-width="3.5" stroke-linejoin="round"/></svg></div>
+            <div class="fh">Regression alerts</div>
+            <div class="fp">Surface rising critic fail-rates or latency before they reach production.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SLIDE 7 — EVALUATION FRAMEWORK
+       ============================================================ -->
+  <section class="slide" id="slide-7">
+    <div class="head">
+      <div class="eyebrow r" style="--d:60"><span class="dot"></span>07 &nbsp;·&nbsp; EVALUATION FRAMEWORK</div>
+      <h2 class="lead r" style="--d:140">Graded live. Benchmarked offline. <span class="grad">Guarded at runtime.</span></h2>
+    </div>
+    <div class="body">
+      <div class="rings">
+
+        <!-- Ring 1 — in-loop critic -->
+        <div class="ring r" style="--c:var(--emerald); --d:280">
+          <div class="rhead">
+            <div class="rn">1</div>
+            <div><div class="rk">IN THE LOOP</div><div class="rh">Critic grades every answer</div></div>
+          </div>
+          <div class="rp">A stronger Gemini re-checks each draft until it passes — inside the run.</div>
+          <div class="diag">
+            <svg viewBox="0 0 440 460" preserveAspectRatio="xMidYMid meet">
+              <defs>
+                <marker id="e1g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#38e0a0"/></marker>
+                <marker id="e1p" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9b7bff"/></marker>
+              </defs>
+              <!-- draft -->
+              <rect x="130" y="40" width="180" height="100" rx="16" fill="rgba(56,224,160,0.07)" stroke="#38e0a0" stroke-width="2.5"/>
+              <text class="dg-lbl" x="220" y="86" text-anchor="middle" font-size="30">draft</text>
+              <text class="dg-sub" x="220" y="118" text-anchor="middle" font-size="19">worker · flash-lite</text>
+              <!-- critic -->
+              <rect x="130" y="280" width="180" height="100" rx="16" fill="rgba(155,123,255,0.07)" stroke="#9b7bff" stroke-width="2.5"/>
+              <text class="dg-lbl" x="220" y="326" text-anchor="middle" font-size="30">critic</text>
+              <text class="dg-sub" x="220" y="358" text-anchor="middle" font-size="19">grades it · flash</text>
+              <!-- forward -->
+              <path id="e1fwd" d="M220 140 L220 280" stroke="#38e0a0" stroke-width="3" fill="none" marker-end="url(#e1g)"/>
+              <circle r="8" fill="#38e0a0"><animateMotion dur="1.5s" repeatCount="indefinite"><mpath href="#e1fwd"/></animateMotion></circle>
+              <!-- fail loop back (left) -->
+              <path d="M130 330 C 44 330, 44 90, 130 90" stroke="#9b7bff" stroke-width="2.5" fill="none" stroke-dasharray="8 8" marker-end="url(#e1p)">
+                <animate attributeName="stroke-dashoffset" values="32;0" dur="1.2s" repeatCount="indefinite"/>
+              </path>
+              <text class="dg-sub" x="40" y="205" text-anchor="middle" font-size="20" fill="#9b7bff" transform="rotate(-90 40 205)">fail · retry ≤ 5×</text>
+              <!-- pass exit (right) -->
+              <path d="M310 330 L356 330" stroke="#38e0a0" stroke-width="3" fill="none" marker-end="url(#e1g)"/>
+              <circle cx="398" cy="330" r="26" fill="rgba(56,224,160,0.16)" stroke="#38e0a0" stroke-width="2.5">
+                <animate attributeName="r" values="22;28;22" dur="1.5s" repeatCount="indefinite"/>
+              </circle>
+              <path d="M387 330 l8 9 l15 -19" stroke="#38e0a0" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <text class="dg-sub" x="398" y="290" text-anchor="middle" font-size="19" fill="#38e0a0">PASS</text>
+              <text class="dg-sub" x="398" y="382" text-anchor="middle" font-size="19" fill="#38e0a0">exit</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Ring 2 — offline benchmark -->
+        <div class="ring proposed r" style="--c:var(--violet); --d:400">
+          <div class="rhead">
+            <div class="rn">2</div>
+            <div><div class="rk">OFFLINE</div><div class="rh">Benchmark on a golden set</div></div>
+          </div>
+          <div class="rp">Ragas + DP Val score a sampled dataset across environments to catch drift.</div>
+          <div class="diag">
+            <svg viewBox="0 0 440 460" preserveAspectRatio="xMidYMid meet">
+              <defs><marker id="e2a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9b7bff"/></marker></defs>
+              <!-- golden set -->
+              <rect x="26" y="78" width="110" height="68" rx="12" fill="rgba(255,194,75,0.10)" stroke="#ffc24b" stroke-width="2.5"/>
+              <rect x="40" y="62" width="110" height="68" rx="12" fill="rgba(255,194,75,0.13)" stroke="#ffc24b" stroke-width="2.5"/>
+              <rect x="54" y="46" width="110" height="68" rx="12" fill="rgba(255,194,75,0.16)" stroke="#ffc24b" stroke-width="2.5"/>
+              <text class="dg-sub" x="109" y="76" text-anchor="middle" font-size="20" fill="#ffc24b">golden</text>
+              <text class="dg-sub" x="109" y="100" text-anchor="middle" font-size="20" fill="#ffc24b">set</text>
+              <!-- eval -->
+              <path id="e2fwd" d="M170 80 L256 80" stroke="#9b7bff" stroke-width="3" fill="none" marker-end="url(#e2a)"/>
+              <circle r="7" fill="#ffc24b"><animateMotion dur="1.2s" repeatCount="indefinite"><mpath href="#e2fwd"/></animateMotion></circle>
+              <rect x="260" y="44" width="150" height="74" rx="16" fill="rgba(155,123,255,0.08)" stroke="#9b7bff" stroke-width="2.5"/>
+              <text class="dg-lbl" x="335" y="78" text-anchor="middle" font-size="26">Ragas</text>
+              <text class="dg-sub" x="335" y="104" text-anchor="middle" font-size="19">+ DP Val</text>
+              <!-- score bars -->
+              <line x1="34" y1="400" x2="412" y2="400" stroke="#26263a" stroke-width="2.5"/>
+              <g>
+                <rect x="44"  y="400" width="62" height="0" rx="7" fill="#56c9ff"><animate attributeName="height" values="0;150;150;0" keyTimes="0;0.4;0.85;1" dur="3.2s" repeatCount="indefinite"/><animate attributeName="y" values="400;250;250;400" keyTimes="0;0.4;0.85;1" dur="3.2s" repeatCount="indefinite"/></rect>
+                <rect x="120" y="400" width="62" height="0" rx="7" fill="#38e0a0"><animate attributeName="height" values="0;218;218;0" keyTimes="0;0.5;0.85;1" dur="3.2s" begin="0.15s" repeatCount="indefinite"/><animate attributeName="y" values="400;182;182;400" keyTimes="0;0.5;0.85;1" dur="3.2s" begin="0.15s" repeatCount="indefinite"/></rect>
+                <rect x="196" y="400" width="62" height="0" rx="7" fill="#9b7bff"><animate attributeName="height" values="0;176;176;0" keyTimes="0;0.45;0.85;1" dur="3.2s" begin="0.3s" repeatCount="indefinite"/><animate attributeName="y" values="400;224;224;400" keyTimes="0;0.45;0.85;1" dur="3.2s" begin="0.3s" repeatCount="indefinite"/></rect>
+                <rect x="272" y="400" width="62" height="0" rx="7" fill="#ff4d97"><animate attributeName="height" values="0;120;120;0" keyTimes="0;0.5;0.85;1" dur="3.2s" begin="0.45s" repeatCount="indefinite"/><animate attributeName="y" values="400;280;280;400" keyTimes="0;0.5;0.85;1" dur="3.2s" begin="0.45s" repeatCount="indefinite"/></rect>
+                <rect x="348" y="400" width="62" height="0" rx="7" fill="#ffc24b"><animate attributeName="height" values="0;198;198;0" keyTimes="0;0.55;0.85;1" dur="3.2s" begin="0.6s" repeatCount="indefinite"/><animate attributeName="y" values="400;202;202;400" keyTimes="0;0.55;0.85;1" dur="3.2s" begin="0.6s" repeatCount="indefinite"/></rect>
+              </g>
+              <text class="dg-sub" x="223" y="438" text-anchor="middle" font-size="19">metrics scored per sample</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Ring 3 — runtime guardrail -->
+        <div class="ring proposed r" style="--c:var(--pink); --d:520">
+          <div class="rhead">
+            <div class="rn">3</div>
+            <div><div class="rk">AT RUNTIME</div><div class="rh">Guardrail on every call</div></div>
+          </div>
+          <div class="rp">Model Armor filters PII &amp; jailbreaks on live traffic — clean requests pass.</div>
+          <div class="diag">
+            <svg viewBox="0 0 440 460" preserveAspectRatio="xMidYMid meet">
+              <!-- shield -->
+              <path d="M220 110 L300 142 V250 C300 314 264 352 220 372 C176 352 140 314 140 250 V142 Z" fill="rgba(255,77,151,0.08)" stroke="#ff4d97" stroke-width="3"/>
+              <text class="dg-lbl" x="220" y="244" text-anchor="middle" font-size="24" fill="#ff4d97">Model</text>
+              <text class="dg-lbl" x="220" y="274" text-anchor="middle" font-size="24" fill="#ff4d97">Armor</text>
+              <!-- pass lane -->
+              <text class="dg-sub" x="30" y="150" text-anchor="start" font-size="20">request</text>
+              <text class="dg-sub" x="410" y="150" text-anchor="end" font-size="20" fill="#38e0a0">allowed ✓</text>
+              <line x1="30" y1="172" x2="410" y2="172" stroke="#1c1c2c" stroke-width="2.5" stroke-dasharray="3 7"/>
+              <circle r="9" fill="#38e0a0"><animateMotion dur="2.4s" repeatCount="indefinite" path="M30 172 L410 172"/></circle>
+              <!-- block lane -->
+              <text class="dg-sub" x="30" y="318" text-anchor="start" font-size="20" fill="#ff4d97">PII · jailbreak</text>
+              <line x1="30" y1="340" x2="178" y2="340" stroke="#1c1c2c" stroke-width="2.5" stroke-dasharray="3 7"/>
+              <circle r="9" fill="#ff4d97">
+                <animateMotion dur="2.2s" repeatCount="indefinite" keyTimes="0;0.5;1" keyPoints="0;1;1" calcMode="linear" path="M30 340 L174 340"/>
+                <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.46;0.5;1" dur="2.2s" repeatCount="indefinite"/>
+              </circle>
+              <g>
+                <animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.45;0.52;0.62;1" dur="2.2s" repeatCount="indefinite"/>
+                <path d="M196 322 l22 22 M218 322 l-22 22" stroke="#ff4d97" stroke-width="4" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SLIDE 8 — GUARDRAILS & PROVABILITY
+       ============================================================ -->
+  <section class="slide" id="slide-8">
+    <div class="head">
+      <div class="eyebrow r" style="--d:60"><span class="dot"></span>08 &nbsp;·&nbsp; GUARDRAILS &amp; PROVABILITY</div>
+      <h2 class="lead r" style="--d:140">Trust isn't a vibe. <span class="grad">It's enforced.</span></h2>
+    </div>
+    <div class="body">
+      <div class="guard-wrap">
+        <div class="guard-grid">
+
+          <!-- Grounded citations -->
+          <div class="guard r" style="--c:var(--sky); --d:260">
+            <div class="ghead">
+              <div class="gi"><svg width="30" height="30" viewBox="0 0 34 34"><path d="M5 8 H29 M5 16 H22 M5 24 H26" stroke="#56c9ff" stroke-width="3.5" stroke-linecap="round"/><circle cx="29" cy="24" r="3" fill="#56c9ff"/></svg></div>
+              <div class="gh">Grounded citations</div>
+            </div>
+            <div class="gp">Every claim links to a numbered source.</div>
+            <div class="diag">
+              <svg viewBox="0 0 320 330" preserveAspectRatio="xMidYMid meet">
+                <!-- report claim lines -->
+                <text class="dg-sub" x="16" y="14" text-anchor="start" font-size="14">report</text>
+                <rect x="16" y="26" width="192" height="16" rx="8" fill="#262640"/>
+                <rect x="16" y="58" width="162" height="16" rx="8" fill="#262640"/>
+                <rect x="16" y="90" width="148" height="16" rx="8" fill="#262640"/>
+                <!-- citation markers -->
+                <rect x="222" y="22" width="42" height="26" rx="7" fill="rgba(86,201,255,0.16)" stroke="#56c9ff" stroke-width="2"><animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" begin="0s" repeatCount="indefinite"/></rect>
+                <text x="243" y="41" text-anchor="middle" font-size="16" fill="#56c9ff" font-family="JetBrains Mono">[1]</text>
+                <rect x="222" y="54" width="42" height="26" rx="7" fill="rgba(86,201,255,0.16)" stroke="#56c9ff" stroke-width="2"><animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" begin="0.6s" repeatCount="indefinite"/></rect>
+                <text x="243" y="73" text-anchor="middle" font-size="16" fill="#56c9ff" font-family="JetBrains Mono">[2]</text>
+                <rect x="222" y="86" width="42" height="26" rx="7" fill="rgba(86,201,255,0.16)" stroke="#56c9ff" stroke-width="2"><animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" begin="1.2s" repeatCount="indefinite"/></rect>
+                <text x="243" y="105" text-anchor="middle" font-size="16" fill="#56c9ff" font-family="JetBrains Mono">[3]</text>
+                <!-- connectors -->
+                <path id="g1p" d="M243 48 C 220 130, 60 132, 60 206" stroke="#56c9ff" stroke-width="2" fill="none" stroke-dasharray="6 6" opacity="0.45"/>
+                <path id="g2p" d="M243 80 C 240 140, 160 140, 160 206" stroke="#56c9ff" stroke-width="2" fill="none" stroke-dasharray="6 6" opacity="0.45"/>
+                <path id="g3p" d="M243 112 C 252 150, 260 150, 260 206" stroke="#56c9ff" stroke-width="2" fill="none" stroke-dasharray="6 6" opacity="0.45"/>
+                <!-- source cards -->
+                <g>
+                  <rect x="14" y="206" width="92" height="96" rx="11" fill="rgba(86,201,255,0.06)" stroke="#2f4458" stroke-width="2"><animate attributeName="stroke" values="#2f4458;#56c9ff;#2f4458" dur="1.8s" begin="0s" repeatCount="indefinite"/></rect>
+                  <circle cx="36" cy="230" r="13" fill="rgba(86,201,255,0.18)"/><text x="36" y="236" text-anchor="middle" font-size="15" fill="#56c9ff" font-family="JetBrains Mono">1</text>
+                  <rect x="22" y="256" width="76" height="11" rx="5" fill="#2f3a4a"/><rect x="22" y="274" width="56" height="11" rx="5" fill="#2f3a4a"/>
+                </g>
+                <g>
+                  <rect x="114" y="206" width="92" height="96" rx="11" fill="rgba(86,201,255,0.06)" stroke="#2f4458" stroke-width="2"><animate attributeName="stroke" values="#2f4458;#56c9ff;#2f4458" dur="1.8s" begin="0.6s" repeatCount="indefinite"/></rect>
+                  <circle cx="136" cy="230" r="13" fill="rgba(86,201,255,0.18)"/><text x="136" y="236" text-anchor="middle" font-size="15" fill="#56c9ff" font-family="JetBrains Mono">2</text>
+                  <rect x="122" y="256" width="76" height="11" rx="5" fill="#2f3a4a"/><rect x="122" y="274" width="56" height="11" rx="5" fill="#2f3a4a"/>
+                </g>
+                <g>
+                  <rect x="214" y="206" width="92" height="96" rx="11" fill="rgba(86,201,255,0.06)" stroke="#2f4458" stroke-width="2"><animate attributeName="stroke" values="#2f4458;#56c9ff;#2f4458" dur="1.8s" begin="1.2s" repeatCount="indefinite"/></rect>
+                  <circle cx="236" cy="230" r="13" fill="rgba(86,201,255,0.18)"/><text x="236" y="236" text-anchor="middle" font-size="15" fill="#56c9ff" font-family="JetBrains Mono">3</text>
+                  <rect x="222" y="256" width="76" height="11" rx="5" fill="#2f3a4a"/><rect x="222" y="274" width="56" height="11" rx="5" fill="#2f3a4a"/>
+                </g>
+                <text class="dg-sub" x="160" y="322" text-anchor="middle" font-size="14" fill="#56c9ff">grounded sources</text>
+                <!-- traveling dots -->
+                <circle r="5" fill="#56c9ff"><animateMotion dur="1.8s" begin="0s" repeatCount="indefinite"><mpath href="#g1p"/></animateMotion></circle>
+                <circle r="5" fill="#56c9ff"><animateMotion dur="1.8s" begin="0.6s" repeatCount="indefinite"><mpath href="#g2p"/></animateMotion></circle>
+                <circle r="5" fill="#56c9ff"><animateMotion dur="1.8s" begin="1.2s" repeatCount="indefinite"><mpath href="#g3p"/></animateMotion></circle>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Typed verdicts -->
+          <div class="guard r" style="--c:var(--emerald); --d:340">
+            <div class="ghead">
+              <div class="gi"><svg width="30" height="30" viewBox="0 0 34 34"><rect x="6" y="6" width="22" height="22" rx="5" fill="none" stroke="#38e0a0" stroke-width="3.5"/><path d="M11 17 L15 21 L23 12" fill="none" stroke="#38e0a0" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="gh">Typed verdicts</div>
+            </div>
+            <div class="gp">Schema-checked — malformed grades rejected.</div>
+            <div class="diag">
+              <svg viewBox="0 0 320 240" preserveAspectRatio="xMidYMid meet">
+                <rect x="148" y="34" width="24" height="172" rx="8" fill="rgba(56,224,160,0.10)" stroke="#38e0a0" stroke-width="2"/>
+                <text class="dg-sub" x="160" y="226" text-anchor="middle" font-size="14" fill="#38e0a0">schema</text>
+                <!-- valid passes -->
+                <g>
+                  <rect x="-44" y="62" width="58" height="34" rx="9" fill="rgba(56,224,160,0.10)" stroke="#38e0a0" stroke-width="2"/>
+                  <text x="-15" y="84" text-anchor="middle" font-size="18" fill="#38e0a0" font-family="JetBrains Mono">{ }</text>
+                  <animateMotion dur="2.6s" repeatCount="indefinite" path="M60 0 L296 0"/>
+                </g>
+                <text class="dg-sub" x="300" y="74" text-anchor="end" font-size="22" fill="#38e0a0">✓</text>
+                <!-- invalid bounces -->
+                <g>
+                  <rect x="-44" y="150" width="58" height="34" rx="9" fill="rgba(255,77,151,0.10)" stroke="#ff4d97" stroke-width="2"/>
+                  <text x="-15" y="172" text-anchor="middle" font-size="18" fill="#ff4d97" font-family="JetBrains Mono">{!}</text>
+                  <animateMotion dur="2.6s" repeatCount="indefinite" keyTimes="0;0.45;0.9;1" keyPoints="0;1;0;0" calcMode="linear" path="M60 0 L128 0"/>
+                </g>
+                <text class="dg-sub" x="34" y="172" text-anchor="middle" font-size="22" fill="#ff4d97">✗</text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Runtime guardrails -->
+          <div class="guard r" style="--c:var(--pink); --d:420">
+            <div class="ghead">
+              <div class="gi"><svg width="30" height="30" viewBox="0 0 34 34"><path d="M17 4 L29 9 V18 C29 25 24 29 17 31 C10 29 5 25 5 18 V9 Z" fill="none" stroke="#ff4d97" stroke-width="3.5" stroke-linejoin="round"/><circle cx="17" cy="17" r="3.5" fill="#ff4d97"/></svg></div>
+              <div class="gh">Runtime guardrails</div>
+            </div>
+            <div class="gp">PII redacted on every model call.</div>
+            <div class="diag">
+              <svg viewBox="0 0 320 240" preserveAspectRatio="xMidYMid meet">
+                <text x="30" y="64" font-size="17" fill="#c7c3e6" font-family="JetBrains Mono">name:</text>
+                <text x="30" y="142" font-size="17" fill="#c7c3e6" font-family="JetBrains Mono">card:</text>
+                <!-- original tokens -->
+                <text x="108" y="64" font-size="17" fill="#8f8bb3" font-family="JetBrains Mono">John Smith</text>
+                <text x="108" y="142" font-size="17" fill="#8f8bb3" font-family="JetBrains Mono">4111 8920</text>
+                <!-- redaction blocks fade in -->
+                <rect x="104" y="48" width="110" height="22" rx="5" fill="#ff4d97"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.3;0.45;0.9;1" dur="3s" repeatCount="indefinite"/></rect>
+                <rect x="104" y="126" width="110" height="22" rx="5" fill="#ff4d97"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.45;0.6;0.9;1" dur="3s" repeatCount="indefinite"/></rect>
+                <!-- scan line -->
+                <rect x="24" y="40" width="220" height="3" rx="2" fill="rgba(255,77,151,0.7)"><animate attributeName="y" values="40;150;40" dur="3s" repeatCount="indefinite"/></rect>
+                <text class="dg-sub" x="30" y="206" text-anchor="start" font-size="15" fill="#ff4d97">sensitive fields masked</text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Deterministic exit -->
+          <div class="guard r" style="--c:var(--amber); --d:500">
+            <div class="ghead">
+              <div class="gi"><svg width="30" height="30" viewBox="0 0 34 34"><circle cx="17" cy="17" r="12" fill="none" stroke="#ffc24b" stroke-width="3.5"/><path d="M17 11 V17 L21 21" stroke="#ffc24b" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg></div>
+              <div class="gh">Deterministic exit</div>
+            </div>
+            <div class="gp">Loops are capped — then they stop.</div>
+            <div class="diag">
+              <svg viewBox="0 0 320 240" preserveAspectRatio="xMidYMid meet">
+                <text class="dg-sub" x="160" y="48" text-anchor="middle" font-size="16" fill="#ffc24b">iterations · max 5</text>
+                <g>
+                  <circle cx="48"  cy="110" r="18" fill="rgba(255,194,75,0.9)" stroke="#ffc24b" stroke-width="2"><animate attributeName="fill-opacity" values="0;0;1;1;0" keyTimes="0;0.10;0.14;0.86;0.9" dur="4s" repeatCount="indefinite"/></circle>
+                  <circle cx="100" cy="110" r="18" fill="rgba(255,194,75,0.9)" stroke="#ffc24b" stroke-width="2"><animate attributeName="fill-opacity" values="0;0;1;1;0" keyTimes="0;0.24;0.28;0.86;0.9" dur="4s" repeatCount="indefinite"/></circle>
+                  <circle cx="152" cy="110" r="18" fill="rgba(255,194,75,0.9)" stroke="#ffc24b" stroke-width="2"><animate attributeName="fill-opacity" values="0;0;1;1;0" keyTimes="0;0.38;0.42;0.86;0.9" dur="4s" repeatCount="indefinite"/></circle>
+                  <circle cx="204" cy="110" r="18" fill="rgba(255,194,75,0.9)" stroke="#ffc24b" stroke-width="2"><animate attributeName="fill-opacity" values="0;0;1;1;0" keyTimes="0;0.52;0.56;0.86;0.9" dur="4s" repeatCount="indefinite"/></circle>
+                  <circle cx="256" cy="110" r="18" fill="rgba(255,194,75,0.9)" stroke="#ffc24b" stroke-width="2"><animate attributeName="fill-opacity" values="0;0;1;1;0" keyTimes="0;0.66;0.70;0.86;0.9" dur="4s" repeatCount="indefinite"/></circle>
+                </g>
+                <g>
+                  <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.72;0.78;0.88;0.92" dur="4s" repeatCount="indefinite"/>
+                  <rect x="104" y="160" width="112" height="46" rx="12" fill="rgba(56,224,160,0.12)" stroke="#38e0a0" stroke-width="2"/>
+                  <path d="M126 183 l8 8 l14 -16" stroke="#38e0a0" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                  <text class="dg-lbl" x="170" y="189" text-anchor="middle" font-size="20" fill="#38e0a0">EXIT</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+        <div class="banner r" style="--d:640">
+          <div class="bigq display">In a regulated bank, an answer you can <span class="grad">prove</span> is an answer you can <span class="grad">ship.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SLIDE 9 — COST & TOKEN STRATEGY
+       ============================================================ -->
+  <section class="slide" id="slide-9">
+    <div class="head">
+      <div class="eyebrow r" style="--d:60"><span class="dot"></span>09 &nbsp;·&nbsp; COST &amp; TOKEN STRATEGY</div>
+      <h2 class="lead r" style="--d:140">Cheap by <span class="grad">construction.</span></h2>
+    </div>
+    <div class="body">
+      <div class="cost">
+        <div class="lever r" style="--d:280">
+          <div class="stat"><span class="big" style="--c:var(--teal)">~90<span class="unit">%</span></span></div>
+          <div><div class="lt">Right model for the job</div><div class="lp">Most calls run on the cheap tier; only critics use the stronger model.</div></div>
+        </div>
+        <div class="lever r" style="--d:380">
+          <div class="stat"><span class="big" style="--c:var(--violet)">5<span class="unit">× max</span></span></div>
+          <div><div class="lt">Bounded critic loops</div><div class="lp">Hard-capped iterations with a deterministic exit on every loop.</div></div>
+        </div>
+        <div class="lever r" style="--d:480">
+          <div class="stat"><span class="big" style="--c:var(--pink)">~73<span class="unit">%</span></span></div>
+          <div><div class="lt">Conditional pipelines</div><div class="lp">Whole branches skip when unneeded — fewer tokens on no-target runs.</div></div>
+        </div>
+        <div class="lever r" style="--d:580">
+          <div class="stat"><span class="big" style="--c:var(--amber)">Lean</span></div>
+          <div><div class="lt">Scoped context</div><div class="lp">Each agent receives only the fields it needs as compact JSON.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SLIDE 10 — STACK & TOOLING
+       ============================================================ -->
+  <section class="slide" id="slide-10">
+    <div class="head">
+      <div class="eyebrow r" style="--d:60"><span class="dot"></span>10 &nbsp;·&nbsp; STACK &amp; TOOLING</div>
+      <h2 class="lead r" style="--d:140">Built on the <span class="grad-cool">Google Gemini ecosystem.</span></h2>
+    </div>
+    <div class="body">
+      <div class="stack-wrap">
+        <div class="stack-grid">
+          <div class="tool r" style="--c:var(--violet); --d:240"><div class="tlogo">G</div><div><div class="tname">Gemini</div><div class="trole">Flash + Flash-Lite model tiers</div></div></div>
+          <div class="tool r" style="--c:var(--sky); --d:300"><div class="tlogo">A</div><div><div class="tname">ADK</div><div class="trole">Agent orchestration framework</div></div></div>
+          <div class="tool r" style="--c:var(--teal); --d:360"><div class="tlogo">V</div><div><div class="tname">Vertex AI</div><div class="trole">Memory Bank + Vector Search</div></div></div>
+          <div class="tool r" style="--c:var(--violet); --d:420"><div class="tlogo">L</div><div><div class="tname">Langfuse</div><div class="trole">LLM observability &amp; tracing</div></div></div>
+          <div class="tool r" style="--c:var(--sky); --d:480"><div class="tlogo">LC</div><div><div class="tname">LangChain</div><div class="trole">Tooling &amp; integration glue</div></div></div>
+          <div class="tool r" style="--c:var(--pink); --d:540"><div class="tlogo">MA</div><div><div class="tname">Model Armor</div><div class="trole">Runtime safety guardrails</div></div></div>
+          <div class="tool r" style="--c:var(--emerald); --d:600"><div class="tlogo">R</div><div><div class="tname">Ragas + DP Val</div><div class="trole">Offline evaluation benchmarks</div></div></div>
+          <div class="tool r" style="--c:var(--amber); --d:660"><div class="tlogo">OT</div><div><div class="tname">OpenTelemetry</div><div class="trole">Built-in trace export</div></div></div>
+          <div class="tool r" style="--c:var(--teal); --d:720"><div class="tlogo">DB</div><div><div class="tname">MongoDB</div><div class="trole">Shared source of truth</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /.deck -->
+</div><!-- /.deck-wrap -->
+
+<!-- nav chrome -->
+<div class="chrome">
+  <div class="dots"></div>
+  <div class="progress"><div class="progress-fill"></div></div>
+  <div class="counter"><span class="cur">01</span><span class="tot"> / 10</span></div>
+  <div class="nav-btns">
+    <button class="nav-btn prev" aria-label="Previous">
+      <svg width="20" height="20" viewBox="0 0 18 18"><path d="M11 4 L5 9 L11 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button class="nav-btn next" aria-label="Next">
+      <svg width="20" height="20" viewBox="0 0 18 18"><path d="M7 4 L13 9 L7 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
