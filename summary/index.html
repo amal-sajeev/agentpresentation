@@ -366,11 +366,145 @@
   </section>
 
   <!-- ============================================================
-       SLIDE 7 — COST & TOKEN STRATEGY
+       SLIDE 7 — FINAL ANALYSIS AGENT
        ============================================================ -->
   <section class="slide" id="slide-7">
     <div class="head">
-      <div class="eyebrow r" style="--d:60"><span class="dot"></span>07 &nbsp;·&nbsp; COST &amp; TOKEN STRATEGY</div>
+      <div class="eyebrow r" style="--d:60"><span class="dot"></span>07 &nbsp;·&nbsp; FINAL ANALYSIS AGENT</div>
+      <h2 class="lead r" style="--d:140">Five reports in. <span class="grad">One verified score out.</span></h2>
+    </div>
+    <div class="body">
+      <div class="fa-diag r" style="--d:260">
+        <svg viewBox="0 0 1560 480" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <marker id="faa"   viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6b7a94"/></marker>
+            <marker id="faa-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#38e0a0"/></marker>
+            <marker id="faa-v" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9b7bff"/></marker>
+            <linearGradient id="fa-gauge-g" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#9b7bff"/>
+              <stop offset="60%" stop-color="#ff4d97"/>
+              <stop offset="100%" stop-color="#ff8a5b"/>
+            </linearGradient>
+          </defs>
+
+          <!-- ── MongoDB INPUT ── -->
+          <rect x="14" y="90" width="176" height="300" rx="14" fill="rgba(46,230,200,0.04)" stroke="#2ee6c8" stroke-width="2"/>
+          <rect x="14" y="90" width="176" height="50" rx="14" fill="rgba(46,230,200,0.12)"/>
+          <rect x="14" y="128" width="176" height="12" fill="rgba(46,230,200,0.12)"/>
+          <text x="102" y="114" text-anchor="middle" font-size="13" fill="#2ee6c8" font-family="JetBrains Mono" letter-spacing="0.08em">MONGODB · INPUT</text>
+          <text x="102" y="133" text-anchor="middle" font-size="11" fill="#2ee6c8" font-family="JetBrains Mono">chancellor reports</text>
+          <text x="28" y="170" font-size="15" fill="#38e0a0" font-family="JetBrains Mono">· market_context</text>
+          <text x="28" y="204" font-size="15" fill="#38e0a0" font-family="JetBrains Mono">· market_segment</text>
+          <text x="28" y="238" font-size="15" fill="#38e0a0" font-family="JetBrains Mono">· org_research</text>
+          <text x="28" y="272" font-size="15" fill="#38e0a0" font-family="JetBrains Mono">· target_org</text>
+          <text x="28" y="306" font-size="15" fill="#38e0a0" font-family="JetBrains Mono">· prospects</text>
+
+          <!-- ── arrow 1 ── -->
+          <path id="fa-p1" d="M190 240 L214 240" stroke="#6b7a94" stroke-width="2.5" fill="none" marker-end="url(#faa)"/>
+          <circle r="5" fill="#2ee6c8"><animateMotion dur="3s" begin="0s" repeatCount="indefinite"><mpath href="#fa-p1"/></animateMotion></circle>
+
+          <!-- ── Step 1: report_loader ── -->
+          <rect x="218" y="155" width="178" height="170" rx="14" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.17)" stroke-width="1.5"/>
+          <text x="307" y="185" text-anchor="middle" font-size="12" fill="#8f8bb3" font-family="JetBrains Mono" letter-spacing="0.1em">STEP 1</text>
+          <text x="307" y="218" text-anchor="middle" font-size="22" font-weight="700" fill="#f6f4ff" font-family="Space Grotesk">report_loader</text>
+          <text x="307" y="248" text-anchor="middle" font-size="15" fill="#8f8bb3" font-family="JetBrains Mono">reads 5 reports</text>
+          <text x="307" y="270" text-anchor="middle" font-size="15" fill="#8f8bb3" font-family="JetBrains Mono">→ state</text>
+
+          <!-- ── arrow 2 ── -->
+          <path id="fa-p2" d="M396 240 L420 240" stroke="#6b7a94" stroke-width="2.5" fill="none" marker-end="url(#faa)"/>
+          <circle r="5" fill="#56c9ff"><animateMotion dur="3s" begin="0.3s" repeatCount="indefinite"><mpath href="#fa-p2"/></animateMotion></circle>
+
+          <!-- ── Step 2: analysis_planner ── -->
+          <rect x="424" y="155" width="178" height="170" rx="14" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.17)" stroke-width="1.5"/>
+          <text x="513" y="185" text-anchor="middle" font-size="12" fill="#8f8bb3" font-family="JetBrains Mono" letter-spacing="0.1em">STEP 2</text>
+          <text x="513" y="218" text-anchor="middle" font-size="22" font-weight="700" fill="#f6f4ff" font-family="Space Grotesk">analysis_planner</text>
+          <text x="513" y="248" text-anchor="middle" font-size="15" fill="#8f8bb3" font-family="JetBrains Mono">builds scoring</text>
+          <text x="513" y="270" text-anchor="middle" font-size="15" fill="#8f8bb3" font-family="JetBrains Mono">rubric</text>
+
+          <!-- ── arrow 3 ── -->
+          <path id="fa-p3" d="M602 240 L626 240" stroke="#6b7a94" stroke-width="2.5" fill="none" marker-end="url(#faa)"/>
+          <circle r="5" fill="#9b7bff"><animateMotion dur="3s" begin="0.6s" repeatCount="indefinite"><mpath href="#fa-p3"/></animateMotion></circle>
+
+          <!-- ── STEP 3: analysis_quality_loop ── -->
+          <rect x="630" y="24" width="544" height="432" rx="16" fill="rgba(155,123,255,0.03)" stroke="#9b7bff" stroke-width="2" stroke-dasharray="8 6"/>
+          <text x="652" y="54" text-anchor="start" font-size="12" fill="#9b7bff" font-family="JetBrains Mono" letter-spacing="0.1em">STEP 3 · analysis_quality_loop</text>
+          <!-- ≤4× badge -->
+          <rect x="1064" y="32" width="86" height="28" rx="14" fill="rgba(155,123,255,0.16)" stroke="#9b7bff" stroke-width="1.5"/>
+          <text x="1107" y="51" text-anchor="middle" font-size="14" fill="#9b7bff" font-family="JetBrains Mono">≤ 4×</text>
+
+          <!-- Worker box -->
+          <rect x="670" y="68" width="464" height="90" rx="12" fill="rgba(46,230,200,0.06)" stroke="#2ee6c8" stroke-width="2"/>
+          <text x="902" y="92" text-anchor="middle" font-size="12" fill="#2ee6c8" font-family="JetBrains Mono" letter-spacing="0.1em">WORKER · flash-lite</text>
+          <text x="902" y="126" text-anchor="middle" font-size="26" font-weight="700" fill="#f6f4ff" font-family="Space Grotesk">analysis_worker</text>
+
+          <!-- google_search pill -->
+          <rect x="690" y="166" width="424" height="34" rx="9" fill="rgba(255,194,75,0.10)" stroke="#ffc24b" stroke-width="1.5"/>
+          <text x="902" y="188" text-anchor="middle" font-size="14" fill="#ffc24b" font-family="JetBrains Mono">google_search · confirm &amp; cross-check facts</text>
+
+          <!-- arrow: worker → critic -->
+          <path id="fa-inner-dn" d="M902 200 L902 220" stroke="#2ee6c8" stroke-width="2.5" fill="none" marker-end="url(#faa-g)"/>
+          <circle r="4" fill="#2ee6c8"><animateMotion dur="1.6s" begin="0s" repeatCount="indefinite"><mpath href="#fa-inner-dn"/></animateMotion></circle>
+
+          <!-- Critic box -->
+          <rect x="670" y="224" width="464" height="96" rx="12" fill="rgba(155,123,255,0.06)" stroke="#9b7bff" stroke-width="2"/>
+          <text x="902" y="250" text-anchor="middle" font-size="12" fill="#9b7bff" font-family="JetBrains Mono" letter-spacing="0.1em">CRITIC · flash</text>
+          <text x="902" y="284" text-anchor="middle" font-size="26" font-weight="700" fill="#f6f4ff" font-family="Space Grotesk">analysis_evaluator</text>
+          <text x="902" y="308" text-anchor="middle" font-size="14" fill="#8f8bb3" font-family="JetBrains Mono">evidence + cross-report consistency</text>
+
+          <!-- arrow: critic → escalation -->
+          <path d="M902 320 L902 348" stroke="#9b7bff" stroke-width="2.5" fill="none" marker-end="url(#faa-v)"/>
+
+          <!-- Escalation checker -->
+          <rect x="670" y="352" width="464" height="68" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+          <text x="902" y="382" text-anchor="middle" font-size="16" font-weight="600" fill="#f6f4ff" font-family="Space Grotesk">escalation_checker</text>
+          <text x="778" y="408" text-anchor="middle" font-size="14" fill="#ff4d97" font-family="JetBrains Mono">FAIL → retry</text>
+          <text x="1024" y="408" text-anchor="middle" font-size="14" fill="#38e0a0" font-family="JetBrains Mono">PASS → exit</text>
+
+          <!-- loop-back arc on left inside loop box -->
+          <path d="M670 386 C 646 386, 646 113, 670 113" stroke="#9b7bff" stroke-width="2" fill="none" stroke-dasharray="6 5" marker-end="url(#faa-v)">
+            <animate attributeName="stroke-dashoffset" values="22;0" dur="1.4s" repeatCount="indefinite"/>
+          </path>
+
+          <!-- ── arrow 4: PASS exit from loop ── -->
+          <path id="fa-p4" d="M1174 240 L1198 240" stroke="#38e0a0" stroke-width="2.5" fill="none" marker-end="url(#faa-g)"/>
+          <text x="1186" y="224" text-anchor="middle" font-size="13" fill="#38e0a0" font-family="JetBrains Mono">PASS</text>
+          <circle r="5" fill="#38e0a0"><animateMotion dur="3s" begin="0.9s" repeatCount="indefinite"><mpath href="#fa-p4"/></animateMotion></circle>
+
+          <!-- ── Step 4: final_report_composer ── -->
+          <rect x="1202" y="155" width="178" height="170" rx="14" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.17)" stroke-width="1.5"/>
+          <text x="1291" y="185" text-anchor="middle" font-size="12" fill="#8f8bb3" font-family="JetBrains Mono" letter-spacing="0.1em">STEP 4</text>
+          <text x="1291" y="215" text-anchor="middle" font-size="20" font-weight="700" fill="#f6f4ff" font-family="Space Grotesk">final_report_</text>
+          <text x="1291" y="239" text-anchor="middle" font-size="20" font-weight="700" fill="#f6f4ff" font-family="Space Grotesk">composer</text>
+          <text x="1291" y="268" text-anchor="middle" font-size="14" fill="#8f8bb3" font-family="JetBrains Mono">score + analysis</text>
+
+          <!-- ── arrow 5 ── -->
+          <path id="fa-p5" d="M1380 240 L1404 240" stroke="#6b7a94" stroke-width="2.5" fill="none" marker-end="url(#faa)"/>
+          <circle r="5" fill="#f6f4ff"><animateMotion dur="3s" begin="1.2s" repeatCount="indefinite"><mpath href="#fa-p5"/></animateMotion></circle>
+
+          <!-- ── Composite score gauge ── -->
+          <circle cx="1482" cy="240" r="70" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="14"/>
+          <circle cx="1482" cy="240" r="70" fill="none"
+            stroke="url(#fa-gauge-g)" stroke-width="14"
+            stroke-dasharray="0 440" stroke-linecap="round"
+            transform="rotate(-90 1482 240)">
+            <animate attributeName="stroke-dasharray"
+              values="0 440;383 440;383 440;0 440"
+              keyTimes="0;0.4;0.88;1" dur="5s" repeatCount="indefinite"/>
+          </circle>
+          <text x="1482" y="242" text-anchor="middle" font-size="52" font-weight="700" fill="#f6f4ff" font-family="Space Grotesk">87</text>
+          <text x="1482" y="277" text-anchor="middle" font-size="18" fill="#8f8bb3" font-family="JetBrains Mono">/ 100</text>
+          <text x="1482" y="346" text-anchor="middle" font-size="14" fill="#9b7bff" font-family="JetBrains Mono" letter-spacing="0.06em">composite score</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SLIDE 8 — COST & TOKEN STRATEGY
+       ============================================================ -->
+  <section class="slide" id="slide-8">
+    <div class="head">
+      <div class="eyebrow r" style="--d:60"><span class="dot"></span>08 &nbsp;·&nbsp; COST &amp; TOKEN STRATEGY</div>
       <h2 class="lead r" style="--d:140">Cheap by <span class="grad">construction.</span></h2>
     </div>
     <div class="body">
@@ -396,11 +530,11 @@
   </section>
 
   <!-- ============================================================
-       SLIDE 8 — EVALUATION FRAMEWORK
+       SLIDE 9 — EVALUATION FRAMEWORK
        ============================================================ -->
-  <section class="slide" id="slide-8">
+  <section class="slide" id="slide-9">
     <div class="head">
-      <div class="eyebrow r" style="--d:60"><span class="dot"></span>08 &nbsp;·&nbsp; EVALUATION FRAMEWORK</div>
+      <div class="eyebrow r" style="--d:60"><span class="dot"></span>09 &nbsp;·&nbsp; EVALUATION FRAMEWORK</div>
       <h2 class="lead r" style="--d:140">Graded live. Benchmarked offline. <span class="grad">Guarded at runtime.</span></h2>
     </div>
     <div class="body">
@@ -538,11 +672,11 @@
   </section>
 
   <!-- ============================================================
-       SLIDE 9 — AUDITING & GOVERNANCE
+       SLIDE 10 — AUDITING & GOVERNANCE
        ============================================================ -->
-  <section class="slide" id="slide-9">
+  <section class="slide" id="slide-10">
     <div class="head">
-      <div class="eyebrow r" style="--d:60"><span class="dot"></span>09 &nbsp;·&nbsp; AUDITING &amp; GOVERNANCE</div>
+      <div class="eyebrow r" style="--d:60"><span class="dot"></span>10 &nbsp;·&nbsp; AUDITING &amp; GOVERNANCE</div>
       <h2 class="lead r" style="--d:140">Full-trace governance, <span class="grad">by default.</span></h2>
     </div>
     <div class="body">
@@ -614,11 +748,11 @@
   </section>
 
   <!-- ============================================================
-       SLIDE 10 — STACK & TOOLING
+       SLIDE 11 — STACK & TOOLING
        ============================================================ -->
-  <section class="slide" id="slide-10">
+  <section class="slide" id="slide-11">
     <div class="head">
-      <div class="eyebrow r" style="--d:60"><span class="dot"></span>10 &nbsp;·&nbsp; STACK &amp; TOOLING</div>
+      <div class="eyebrow r" style="--d:60"><span class="dot"></span>11 &nbsp;·&nbsp; STACK &amp; TOOLING</div>
       <h2 class="lead r" style="--d:140">Built on the <span class="grad-cool">Google Gemini ecosystem.</span></h2>
     </div>
     <div class="body">
@@ -645,7 +779,7 @@
 <div class="chrome">
   <div class="dots"></div>
   <div class="progress"><div class="progress-fill"></div></div>
-  <div class="counter"><span class="cur">01</span><span class="tot"> / 10</span></div>
+  <div class="counter"><span class="cur">01</span><span class="tot"> / 11</span></div>
   <div class="nav-btns">
     <button class="nav-btn prev" aria-label="Previous">
       <svg width="20" height="20" viewBox="0 0 18 18"><path d="M11 4 L5 9 L11 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
