@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Speaker Scripts — Trustable AI Executive Summary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:       #07070f;
+    --surface:  #0f0f1c;
+    --border:   #1c1c30;
+    --muted:    #4a4a6a;
+    --text:     #d8d4f0;
+    --dim:      #8f8bb3;
+    --violet:   #9b7bff;
+    --sky:      #56c9ff;
+    --teal:     #2ee6c8;
+    --emerald:  #38e0a0;
+    --amber:    #ffc24b;
+    --pink:     #ff4d97;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* ── sticky header ── */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(7, 7, 15, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .site-header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dim);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .site-header span {
+    color: var(--violet);
+  }
+
+  .header-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .btn-print {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--dim);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 7px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s;
+  }
+
+  .btn-print:hover {
+    border-color: var(--violet);
+    color: var(--violet);
+  }
+
+  /* ── main layout ── */
+  main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 48px 40px 80px;
+  }
+
+  /* ── intro note ── */
+  .intro {
+    border-left: 3px solid var(--violet);
+    padding: 14px 20px;
+    background: rgba(155, 123, 255, 0.05);
+    border-radius: 0 8px 8px 0;
+    color: var(--dim);
+    font-size: 0.88rem;
+    margin-bottom: 52px;
+    line-height: 1.6;
+  }
+
+  .intro strong { color: var(--text); }
+
+  /* ── script card ── */
+  .script-card {
+    margin-bottom: 48px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--surface);
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 28px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .slide-num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+
+  .card-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+    flex: 1;
+  }
+
+  .word-count {
+    font-size: 0.75rem;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .card-body {
+    padding: 28px 28px 32px;
+  }
+
+  .card-body p {
+    margin-bottom: 1em;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text);
+  }
+
+  .card-body p:last-child { margin-bottom: 0; }
+
+  /* ── slide-specific accent colors ── */
+  .s1  .slide-num { background: rgba(155,123,255,0.15); color: var(--violet); }
+  .s2  .slide-num { background: rgba(86,201,255,0.15);  color: var(--sky);    }
+  .s3  .slide-num { background: rgba(56,201,255,0.15);  color: var(--sky);    }
+  .s4  .slide-num { background: rgba(46,230,200,0.15);  color: var(--teal);   }
+  .s5  .slide-num { background: rgba(155,123,255,0.15); color: var(--violet); }
+  .s6  .slide-num { background: rgba(46,230,200,0.15);  color: var(--teal);   }
+  .s7  .slide-num { background: rgba(255,194,75,0.15);  color: var(--amber);  }
+  .s8  .slide-num { background: rgba(56,224,160,0.15);  color: var(--emerald);}
+  .s9  .slide-num { background: rgba(86,201,255,0.15);  color: var(--sky);    }
+  .s10 .slide-num { background: rgba(255,77,151,0.15);  color: var(--pink);   }
+
+  .s1  { border-color: rgba(155,123,255,0.3); }
+  .s4  { border-color: rgba(46,230,200,0.3);  }
+  .s7  { border-color: rgba(255,194,75,0.3);  }
+  .s8  { border-color: rgba(56,224,160,0.3);  }
+  .s9  { border-color: rgba(86,201,255,0.3);  }
+
+  /* ── print styles ── */
+  @media print {
+    body { background: #fff; color: #111; font-size: 11pt; }
+    .site-header, .intro { display: none; }
+    main { max-width: 100%; padding: 0; }
+    .script-card {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      break-inside: avoid;
+      margin-bottom: 24pt;
+      background: #fff;
+    }
+    .card-header { border-bottom: 1px solid #ddd; }
+    .slide-num { border: 1px solid #aaa; color: #333 !important; background: #f4f4f4 !important; }
+    .card-title, .card-body p { color: #111 !important; }
+    .word-count { color: #888; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <h1>Speaker Scripts &nbsp;·&nbsp; <span>Trustable AI</span> Executive Summary</h1>
+  <div class="header-actions">
+    <button class="btn-print" onclick="window.print()">Print / PDF</button>
+  </div>
+</header>
+
+<main>
+
+  <div class="intro">
+    <strong>Usage:</strong> Each script is written for approximately one minute of spoken delivery at a conversational pace (~135–145 words). Read ahead of a slide advance, not after — the script sets up what the audience is about to see.
+  </div>
+
+  <!-- ── SLIDE 1 ── -->
+  <article class="script-card s1">
+    <div class="card-header">
+      <span class="slide-num">Slide 01</span>
+      <span class="card-title">Title — Trustable AI by Construction</span>
+      <span class="word-count">~135 words · ~1 min</span>
+    </div>
+    <div class="card-body">
+      <p>Alright, let me ask you something. When an AI system gives your bank an answer — and that answer ends up in a compliance report, a client memo, a regulatory filing — what do you do when someone asks how it got there? "The model said so" is not a defense. I've seen that argument. It doesn't hold up.</p>
+      <p>That's the problem this system solves. Provable answers with cited sources. A complete audit trail baked in from day one. Memory that persists across clients and sessions. And cost controls that run by design, not by luck.</p>
+      <p>All of it on Google's Gemini stack — ADK for orchestration, Langfuse for governance, Vertex AI for memory. Built for a bank that has to answer to regulators, not just users.</p>
+      <p>Provable. Observable. Governed. Efficient. In that order. Let's go.</p>
+    </div>
+  </article>
+
+  <!-- ── SLIDE 2 ── -->
+  <article class="script-card s2">
+    <div class="card-header">
+      <span class="slide-num">Slide 02</span>
+      <span class="card-title">Table of Contents</span>
+      <span class="word-count">~130 words · ~1 min</span>
+    </div>
+    <div class="card-body">
+      <p>Before we get moving, here's the map. Seven topics, nine slides, each one addressing a specific question your risk team, your finance team, or your compliance team will ask before they sign off on anything.</p>
+      <p>We start with Guardrails and Provability, because if the foundation isn't right, nothing else matters. Then Memory Architecture — context is an asset. NLP Routing and the Agent Garden, because the system has to know what you're asking for before it can help. Architecture Overview — the full picture. Cost and Token Strategy, because budget conversations happen whether you plan for them or not. Evaluation Framework — three layers of quality assurance. And Auditing and Governance — the paper trail.</p>
+      <p>After that, the full stack. Seven load-bearing topics. Let's take them in order.</p>
+    </div>
+  </article>
+
+  <!-- ── SLIDE 3 ── -->
+  <article class="script-card s3">
+    <div class="card-header">
+      <span class="slide-num">Slide 03</span>
+      <span class="card-title">Guardrails &amp; Provability</span>
+      <span class="word-count">~140 words · ~1 min</span>
+    </div>
+    <div class="card-body">
+      <p>Here's the situation in a regulated bank: an answer you can't verify is a liability. Every claim needs to link to something real, and the system needs to prove it got there through a defensible process.</p>
+      <p>Four mechanisms do that here. Grounded citations — every claim in every output links to a numbered source. The report doesn't assert things; it cites them. Typed verdicts — the evaluator returns a schema-checked grade. Malformed? Rejected. No exceptions. Runtime guardrails via Model Armor — PII and jailbreak attempts get filtered on every live call, before they touch a model. And deterministic exit — the critic loop is hard-capped at five iterations. The system cannot spin.</p>
+      <p>Stack those four together. You've got an answer a compliance officer can pick up and walk into a meeting with. That's what this slide is about.</p>
+    </div>
+  </article>
+
+  <!-- ── SLIDE 4 ── -->
+  <article class="script-card s4">
+    <div class="card-header">
+      <span class="slide-num">Slide 04</span>
+      <span class="card-title">Memory Architecture</span>
+      <span class="word-count">~140 words · ~1 min</span>
+    </div>
+    <div class="card-body">
+      <p>Every experienced professional keeps files. Not because they're forgetful — because context compounds. What the client told you last quarter matters this quarter. What worked on a similar engagement is worth surfacing before you start from scratch.</p>
+      <p>This system has three tiers of memory, all behind a single API surface. Short-term: in-session state shared across every agent during a single run. The whole pipeline sees the same context simultaneously. Semantic: Vertex AI Vector Search. Ask about fintech in Southeast Asia, and it pulls similar past engagements by meaning, not keyword. That's recall that scales. Long-term: a per-client Memory Bank on Vertex AI that persists across sessions. Your client's history doesn't reset every call.</p>
+      <p>Three tiers. One interface. The agents don't manage backends — they just call the surface. Memory done right means the system gets smarter with use.</p>
+    </div>
+  </article>
+
+  <!-- ── SLIDE 5 ── -->
+  <article class="script-card s5">
+    <div class="card-header">
+      <span class="slide-num">Slide 05</span>
+      <span class="card-title">NLP Routing · Agent Garden</span>
+      <span class="word-count">~143 words · ~1 min</span>
+    </div>
+    <div class="card-body">
+      <p>The routing layer's job is straightforward: take a plain-English prompt and figure out what it's actually asking for. No special syntax. No templates. The user types, the classifier reads it, and a Python gate decides which pipelines run.</p>
+      <p>"Sell to Microsoft" — classifier returns a typed verdict, the sales pipeline activates. "Research the market" — sales branch skips entirely. Zero tokens spent on a branch that wasn't needed. That's the conditional logic working exactly as designed.</p>
+      <p>The Critic-Worker loop sits inside every pipeline. The worker drafts on flash-lite — the cheap model. The critic grades it on flash. Fail? Back to the worker, up to five times. Pass? Forward. The answer that makes it out has been earned.</p>
+      <p>And the Agent Garden means new capabilities slot in without rewriting the orchestrator. Drop it in, register it, done.</p>
+    </div>
+  </article>
+
+  <!-- ── SLIDE 6 ── -->
+  <article class="script-card s6">
+    <div class="card-header">
+      <span class="slide-num">Slide 06</span>
+      <span class="card-title">Architecture Overview</span>
+      <span class="word-count">~136 words · ~1 min</span>
+    </div>
+    <div class="card-body">
+      <p>Let me show you the system end to end. A user prompt comes in. The classifier — the user_input_analyzer — reads it and routes it. The Intelligence Chancellor, a SequentialAgent, picks it up and runs five expert pipelines in declared order: Market Context, Segmentation, Org Intelligence, Sales conditionally, and Prospects.</p>
+      <p>Every pipeline writes its output to one place — MongoDB. One shared source of truth. Your downstream tools, whatever they are, subscribe to that store. They don't pull from five different systems. They pull from one.</p>
+      <p>That's the full architecture. Clean input, clean orchestration, clean output. No data scattered across siloed services.</p>
+      <p>Five experts. One orchestrator. One truth. The complexity lives inside the pipelines, not in how they communicate — and that's precisely what makes the system maintainable at scale.</p>
+    </div>
+  </article>
+
+  <!-- ── SLIDE 7 ── -->
+  <article class="script-card s7">
+    <div class="card-header">
+      <span class="slide-num">Slide 07</span>
+      <span class="card-title">Cost &amp; Token Strategy</span>
+      <span class="word-count">~140 words · ~1 min</span>
+    </div>
+    <div class="card-body">
+      <p>The finance team will ask one question: what does this cost per run? Here's the answer, broken into four parts.</p>
+      <p>About ninety percent of calls run on flash-lite — the cheaper tier. The only calls on the stronger flash model are the critics, because judgment costs more than drafting. That's the right tradeoff.</p>
+      <p>Critic loops are hard-capped at five iterations. The system won't run up an unlimited tab trying to get an answer right. It tries, grades, passes or stops. Deterministic. The sales pipeline only runs when the prompt targets a specific company — on a pure research run, that branch skips, eliminating roughly seventy-three percent of that branch's token spend. And each agent gets a compact JSON context scoped to what it actually needs. No padding, no bloat.</p>
+      <p>Four levers. All of them pull in the same direction.</p>
+    </div>
+  </article>
+
+  <!-- ── SLIDE 8 ── -->
+  <article class="script-card s8">
+    <div class="card-header">
+      <span class="slide-num">Slide 08</span>
+      <span class="card-title">Evaluation Framework</span>
+      <span class="word-count">~142 words · ~1 min</span>
+    </div>
+    <div class="card-body">
+      <p>Three rings of quality control. Let me walk you through them.</p>
+      <p>Ring one: the in-loop critic. This runs during every pipeline, inside the run itself. The worker drafts. The critic — a stronger Gemini — grades it against a typed schema. Fail, and it goes back to the worker. Pass, and the pipeline moves forward. Every run. Every time. No exceptions.</p>
+      <p>Ring two: offline benchmarking. Ragas and DP Val score a golden dataset — market sizing, ICP personas, sector research — across environments. You catch model drift before it affects a client.</p>
+      <p>Ring three: Model Armor at runtime. Every live call gets filtered for PII and jailbreak attempts. Clean requests go through. Everything else doesn't.</p>
+      <p>Three rings, running simultaneously. Two of them you'll never notice working, which means they're doing their job. That's a quality framework worth calling quality.</p>
+    </div>
+  </article>
+
+  <!-- ── SLIDE 9 ── -->
+  <article class="script-card s9">
+    <div class="card-header">
+      <span class="slide-num">Slide 09</span>
+      <span class="card-title">Auditing &amp; Governance</span>
+      <span class="word-count">~143 words · ~1 min</span>
+    </div>
+    <div class="card-body">
+      <p>Your compliance team will have a list of questions. When did the system make that decision? What inputs did it see? Can we replay the run from six months ago? Can we pull a report on all evaluator failures for Q3?</p>
+      <p>The answer to all of those is yes. Every agent emits spans through the after_agent_callback hook. OpenTelemetry picks them up — built into ADK, not added later. Those spans export to Langfuse, where you get a full trace waterfall: every tool call, every critic score, every token cost, every latency figure.</p>
+      <p>Run replay is available for any historical trace. Regression alerts surface rising fail-rates and latency spikes before they reach production. The audit trail is queryable and permanent.</p>
+      <p>The compliance story here isn't a feature bolted on. It's the architecture. Everything gets logged because everything flows through the same trace pipeline.</p>
+    </div>
+  </article>
+
+  <!-- ── SLIDE 10 ── -->
+  <article class="script-card s10">
+    <div class="card-header">
+      <span class="slide-num">Slide 10</span>
+      <span class="card-title">Stack &amp; Tooling</span>
+      <span class="word-count">~140 words · ~1 min</span>
+    </div>
+    <div class="card-body">
+      <p>Last slide. The toolkit — because you're going to get technical questions and they deserve straight answers.</p>
+      <p>Models: Gemini Flash and Flash-Lite. Workers run on Flash-Lite, critics on Flash. Both on Google infrastructure. Orchestration: ADK handles the SequentialAgent pattern, the callbacks, and the OpenTelemetry integration. Memory: Vertex AI — both the semantic Vector Search and the long-term Memory Bank. Evaluation: Ragas and DP Val for offline benchmarking, Model Armor for runtime safety. Tracing and audit: Langfuse. Integration glue: LangChain. Trace export: OpenTelemetry. Data store: MongoDB.</p>
+      <p>Every tool in this stack has a defined job. Nothing is decorative.</p>
+      <p>And the whole thing runs on Google Cloud, which means your IT and security teams have vendor relationships to point at, SLAs to hold, and a support line to call when something needs answering.</p>
+      <p>That's the stack. Deploy it.</p>
+    </div>
+  </article>
+
+</main>
+
+</body>
+</html>
